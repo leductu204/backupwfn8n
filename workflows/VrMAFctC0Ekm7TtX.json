@@ -1,0 +1,1124 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "RSS Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Aggregate",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Aggregate": {
+      "main": [
+        [
+          {
+            "node": "RSS Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Workflow Input Trigger": {
+      "main": [
+        [
+          {
+            "node": "RSS Read 2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read 3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read 5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read 6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read 7",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read 9",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read 10",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read 8",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read 4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Window Buffer Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "RSS Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read 2": {
+      "main": [
+        [
+          {
+            "node": "Limit 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read 1": {
+      "main": [
+        [
+          {
+            "node": "Limit 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read 3": {
+      "main": [
+        [
+          {
+            "node": "Limit 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read 4": {
+      "main": [
+        [
+          {
+            "node": "Limit 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read 5": {
+      "main": [
+        [
+          {
+            "node": "Limit 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read 6": {
+      "main": [
+        [
+          {
+            "node": "Limit 6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read 7": {
+      "main": [
+        [
+          {
+            "node": "Limit 7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read 8": {
+      "main": [
+        [
+          {
+            "node": "Limit 8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read 9": {
+      "main": [
+        [
+          {
+            "node": "Limit 9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read 10": {
+      "main": [
+        [
+          {
+            "node": "Limit 10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out 1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out 2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Split Out 3": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Split Out 4": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Split Out 5": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "Split Out 6": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "Split Out 7": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "Split Out 8": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 7
+          }
+        ]
+      ]
+    },
+    "Split Out 9": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 8
+          }
+        ]
+      ]
+    },
+    "Split Out 10": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 9
+          }
+        ]
+      ]
+    },
+    "Limit 1": {
+      "main": [
+        [
+          {
+            "node": "Split Out 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit 2": {
+      "main": [
+        [
+          {
+            "node": "Split Out 2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit 3": {
+      "main": [
+        [
+          {
+            "node": "Split Out 3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit 4": {
+      "main": [
+        [
+          {
+            "node": "Split Out 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit 5": {
+      "main": [
+        [
+          {
+            "node": "Split Out 5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit 6": {
+      "main": [
+        [
+          {
+            "node": "Split Out 6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit 7": {
+      "main": [
+        [
+          {
+            "node": "Split Out 7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit 8": {
+      "main": [
+        [
+          {
+            "node": "Split Out 8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit 9": {
+      "main": [
+        [
+          {
+            "node": "Split Out 9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit 10": {
+      "main": [
+        [
+          {
+            "node": "Split Out 10",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-03T16:05:51.422Z",
+  "id": "VrMAFctC0Ekm7TtX",
+  "meta": null,
+  "name": "RSS News crawl and gen",
+  "nodes": [
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.1,
+      "position": [
+        1200,
+        1080
+      ],
+      "id": "d25f001f-b244-4bd2-96b0-62225b716eba",
+      "name": "OpenAI Chat Model"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.news_items }}{{ $json.links }}",
+        "options": {
+          "systemMessage": "=#You are a skilled editor who monitors news from RSS feeds, analyses them and compiles a thorough and concise list of the most interesting and important news. Use the list of news that is available to you, add emojis to each news item before the headlines. If you notice news about augmented and virtual reality, artificial intelligence, try to add them to the list.\n\n#You should submit no more than 10 news items in total.\n\n#Each news item should have the following structure, in order:\nnumber, emoji, headline, short description, link to the source.\nYou can get the headline and description from \"news_items\". You can get the link to the source from \"link\". The order of the news items corresponds to the order of the links to them. Translate the news into English if necessary.\n\n#Don't show the news you've already provided before again, choose other news instead or just ignore it."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        1220,
+        860
+      ],
+      "id": "ed90d7f3-52e7-412d-b984-8fe6d5f7c0f5",
+      "name": "RSS Agent",
+      "executeOnce": true,
+      "retryOnFail": true,
+      "waitBetweenTries": 2000
+    },
+    {
+      "parameters": {
+        "numberInputs": 10
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3,
+      "position": [
+        840,
+        680
+      ],
+      "id": "cf1dcce9-2f58-4e14-9f02-63cbc9f4bfe0",
+      "name": "Merge",
+      "alwaysOutputData": true,
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "fieldsToAggregate": {
+          "fieldToAggregate": [
+            {
+              "fieldToAggregate": "contentSnippet",
+              "renameField": true,
+              "outputFieldName": "news_items"
+            },
+            {
+              "fieldToAggregate": "link",
+              "renameField": true,
+              "outputFieldName": "links"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.aggregate",
+      "typeVersion": 1,
+      "position": [
+        1020,
+        860
+      ],
+      "id": "07823573-5331-4e5d-8dd1-b3f66723efa4",
+      "name": "Aggregate"
+    },
+    {
+      "parameters": {
+        "inputSource": "passthrough"
+      },
+      "type": "n8n-nodes-base.executeWorkflowTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -540,
+        860
+      ],
+      "id": "b62d7cca-9fbe-4684-8592-b4447182f8b8",
+      "name": "Workflow Input Trigger"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $json.news_items }}",
+        "contextWindowLength": 20
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
+      "typeVersion": 1.3,
+      "position": [
+        1360,
+        1080
+      ],
+      "id": "bbb8c8b2-f25f-4bc3-a7d3-8865ffd60aae",
+      "name": "Window Buffer Memory"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -540,
+        700
+      ],
+      "id": "facfa40a-0c31-48ed-8b88-f9b4a5cc18d4",
+      "name": "When chat message received",
+      "webhookId": "43edd720-7c51-4ed3-a4ad-6afe92442637"
+    },
+    {
+      "parameters": {
+        "url": "https://techcrunch.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        360
+      ],
+      "id": "aebcce98-209a-463b-ac88-185dc2fca55e",
+      "name": "RSS Read 2"
+    },
+    {
+      "parameters": {
+        "url": "https://www.cnet.com/rss/all/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        220
+      ],
+      "id": "9479d6c5-b92b-4366-9a4b-f006348ca9a1",
+      "name": "RSS Read 1"
+    },
+    {
+      "parameters": {
+        "url": "https://lifehacker.com/feed/rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        500
+      ],
+      "id": "f3709ad3-250b-44c8-b570-ad3e8061d1ee",
+      "name": "RSS Read 3"
+    },
+    {
+      "parameters": {
+        "url": "https://mashable.com/feeds/rss/all",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        660
+      ],
+      "id": "1eb3a346-0908-4938-ac4d-2c910a9751f9",
+      "name": "RSS Read 4"
+    },
+    {
+      "parameters": {
+        "url": "https://www.radiosvoboda.org/api/zmyqmvl-vomx-tpeyrpmr",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        820
+      ],
+      "id": "ae8fee00-2a06-4904-bd14-b24685a8a051",
+      "name": "RSS Read 5"
+    },
+    {
+      "parameters": {
+        "url": "https://uxplanet.org/feed",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        960
+      ],
+      "id": "49d15852-b36b-43b6-bd4b-2d3cde7b0951",
+      "name": "RSS Read 6"
+    },
+    {
+      "parameters": {
+        "url": "https://www.theverge.com/rss/index.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        1100
+      ],
+      "id": "ef5c10c9-6d47-41f6-aba6-580877b68638",
+      "name": "RSS Read 7"
+    },
+    {
+      "parameters": {
+        "url": "https://www.ft.com/news-feed?format=rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        1260
+      ],
+      "id": "a396a1d3-f554-47e3-955a-6445c87b76ce",
+      "name": "RSS Read 8"
+    },
+    {
+      "parameters": {
+        "url": "https://www.roadtovr.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        1420
+      ],
+      "id": "2ba5c70a-e136-4f80-87c8-315070a803af",
+      "name": "RSS Read 9"
+    },
+    {
+      "parameters": {
+        "url": "https://www.wired.com/feed/rss",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        0,
+        1580
+      ],
+      "id": "ddcf6824-8b5b-40b0-938a-79704a973be5",
+      "name": "RSS Read 10"
+    },
+    {
+      "parameters": {
+        "content": "You can choose a trigger depending on your usecase. You can call this agent using your personal assistant or directly in the n8n chat module (simply reconnect RSS nodes with chat node,  click \"Run workflow\" > \"Open chat\")."
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        -840,
+        740
+      ],
+      "typeVersion": 1,
+      "id": "a52c17b4-9400-45bf-beb3-6fce5b7c2642",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "- Each \"Read RSS\" node contains a RSS feed link. To change the source, simply select the node and replace the link with the RSS feed of your choice. Currently, popular English-language publications on technology, startups, AI, AR/VR, and business are selected.\n- The \"Limit node\" allows you to limit the number of news you pull from one source, for #3 it will be the latest 3 news. Be careful with this number as it affects the AI processing time and the number of tokens. 3-4 is optimal.",
+        "height": 200,
+        "width": 480
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        0
+      ],
+      "typeVersion": 1,
+      "id": "5a3be4a7-9d08-4139-b4dd-bf6ac2efd4e6",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "content": "\"Aggregate\" node allows you to combine all extracted news into one list for AI processing.",
+        "height": 120,
+        "width": 150
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1020,
+        720
+      ],
+      "typeVersion": 1,
+      "id": "01eb086d-b4d3-490d-8237-6c8a0284e2c2",
+      "name": "Sticky Note2"
+    },
+    {
+      "parameters": {
+        "content": "The RSS Agent analyses the list of received news according to the specified criteria and generates a list of the 10 most suitable ones with direct links to them. The agent has a memory and instructions not to send the same news that it has already sent, but if the source is rarely updated, the news will be repeated. You can change the prompt to suit your needs by clicking on the RSS Agent and editing the System Message field. The already existing prompt has been tested in practice and works well.",
+        "height": 180,
+        "width": 420
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1220,
+        660
+      ],
+      "typeVersion": 1,
+      "id": "cad10ebc-7dbe-405e-a7ce-f724319e3908",
+      "name": "Sticky Note3"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "contentSnippet, link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        380,
+        220
+      ],
+      "id": "4552218e-a07b-41f0-bd1b-e450523e499e",
+      "name": "Split Out 1"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "contentSnippet, link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        380,
+        360
+      ],
+      "id": "bde71a4c-ba23-46ae-86bf-c5e457a6fe3e",
+      "name": "Split Out 2"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "contentSnippet, link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        380,
+        500
+      ],
+      "id": "1704494c-ae46-4547-806a-cb82ab7d39f3",
+      "name": "Split Out 3"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "contentSnippet, link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        380,
+        660
+      ],
+      "id": "0c61b838-d98c-4025-a04c-a1bfabf6048c",
+      "name": "Split Out 4"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "contentSnippet, link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        380,
+        820
+      ],
+      "id": "f95f42e4-0ddf-4de9-9f8a-3651c3a66687",
+      "name": "Split Out 5"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "contentSnippet, link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        380,
+        960
+      ],
+      "id": "29eae94a-3874-45c6-bbae-f8473264db7a",
+      "name": "Split Out 6"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "contentSnippet, link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        380,
+        1100
+      ],
+      "id": "a283eae2-8b5c-4465-ba81-6401ee32930f",
+      "name": "Split Out 7"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "contentSnippet, link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        380,
+        1260
+      ],
+      "id": "d0891cd4-0460-4c8d-8d12-3e6bf66d6718",
+      "name": "Split Out 8"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "contentSnippet, link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        380,
+        1420
+      ],
+      "id": "5af4c660-1c28-4437-87ac-dbd052834baa",
+      "name": "Split Out 9"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "contentSnippet, link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        380,
+        1580
+      ],
+      "id": "ddab22d3-ec3d-442f-914a-fe4da9ff25d5",
+      "name": "Split Out 10"
+    },
+    {
+      "parameters": {
+        "content": "“Merge” node allows workflow to wait for all news sources to deliver. The maximum number of inputs is 10 and this should be enough. But you can add another Merge node that will be connected to the 10th input of the existing Merge, and thus you will get an additional 10 RSS sources, for a total of 10 RSS sources. 19. ",
+        "width": 300
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        840,
+        500
+      ],
+      "typeVersion": 1,
+      "id": "99f36aa6-eb84-4442-94b6-4802f2880f40",
+      "name": "Sticky Note4"
+    },
+    {
+      "parameters": {
+        "maxItems": 3
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        160,
+        220
+      ],
+      "id": "b92db072-acaf-4e03-92cb-8707e662a111",
+      "name": "Limit 1"
+    },
+    {
+      "parameters": {
+        "maxItems": 3
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        160,
+        360
+      ],
+      "id": "94c5aa7a-3c18-4fe6-acc0-ac3784d30333",
+      "name": "Limit 2"
+    },
+    {
+      "parameters": {
+        "maxItems": 3
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        160,
+        500
+      ],
+      "id": "70827a37-faf8-4ede-bc38-70fadc7144ae",
+      "name": "Limit 3"
+    },
+    {
+      "parameters": {
+        "maxItems": 3
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        160,
+        660
+      ],
+      "id": "f03853c4-4942-496a-92a7-561a95ca8b53",
+      "name": "Limit 4"
+    },
+    {
+      "parameters": {
+        "maxItems": 3
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        160,
+        820
+      ],
+      "id": "acb8fdb7-7bb9-4b04-9ace-3a4abddcd591",
+      "name": "Limit 5"
+    },
+    {
+      "parameters": {
+        "maxItems": 3
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        160,
+        960
+      ],
+      "id": "eca9e7c5-e381-4495-8967-86c0e8899441",
+      "name": "Limit 6"
+    },
+    {
+      "parameters": {
+        "maxItems": 3
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        160,
+        1100
+      ],
+      "id": "1bcdb8c9-55c7-4578-8ec4-249f45288055",
+      "name": "Limit 7"
+    },
+    {
+      "parameters": {
+        "maxItems": 3
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        160,
+        1260
+      ],
+      "id": "9437b9f6-615a-434f-9df9-b83191556ad9",
+      "name": "Limit 8"
+    },
+    {
+      "parameters": {
+        "maxItems": 3
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        160,
+        1420
+      ],
+      "id": "96303f71-055e-4e18-ad54-c8c242329520",
+      "name": "Limit 9"
+    },
+    {
+      "parameters": {
+        "maxItems": 3
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        160,
+        1580
+      ],
+      "id": "5644b1ad-c010-4958-9a83-5256a7df5a97",
+      "name": "Limit 10"
+    },
+    {
+      "parameters": {
+        "content": "The output should be empty if you are communicating with the agent via a chat node or calling it using another agent. If you want to use Telegram, you need to connect it with a \"Telegram Send a text message node\".",
+        "width": 290
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1540,
+        940
+      ],
+      "typeVersion": 1,
+      "id": "4c0cff76-db95-4ee7-a0df-584c2115fa2f",
+      "name": "Sticky Note5"
+    },
+    {
+      "parameters": {
+        "content": "You can use any model by connecting your API key in the \"Credentials\" section.",
+        "height": 80,
+        "width": 290
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1000,
+        1220
+      ],
+      "typeVersion": 1,
+      "id": "0b57c21a-c6a7-4b5c-add0-50c31e57e2fa",
+      "name": "Sticky Note6"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        1340
+      ],
+      "id": "34322a97-f4ed-41c7-b1b9-b31287761ca7",
+      "name": "Google Gemini Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatMistralCloud",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        1340
+      ],
+      "id": "de8d77d1-dbd1-497a-b065-ab1b493d7b1b",
+      "name": "Mistral Cloud Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        1160,
+        1340
+      ],
+      "id": "cc8033f8-954a-44c5-83b3-f7d6395aaeed",
+      "name": "Anthropic Chat Model"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2025-04-03T16:05:40.707Z",
+      "updatedAt": "2025-04-03T16:05:40.707Z",
+      "id": "ZsJ64pNLC6WkoO2k",
+      "name": "sale"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2025-04-03T16:05:51.422Z",
+  "versionId": "fedd4a11-e4d4-4e80-8c30-4b28de6f4441"
+}
