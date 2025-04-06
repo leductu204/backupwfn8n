@@ -1,0 +1,161 @@
+{
+  "active": true,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-03T16:05:10.925Z",
+  "id": "HSAFTAl8wXA2m4q1",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Get data and add to sheet",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "01a71428-52df-4046-8c8f-178895affc6f",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        0,
+        0
+      ],
+      "id": "152b3d71-a500-4b84-95e2-40d5ff7fcdf2",
+      "name": "Webhook",
+      "webhookId": "01a71428-52df-4046-8c8f-178895affc6f"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1HS5GimQNJL9coDt-BpVqe7mnCHCNLpo44yUtXYrteUw",
+          "mode": "list",
+          "cachedResultName": "LOVIA Landing Page Data",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HS5GimQNJL9coDt-BpVqe7mnCHCNLpo44yUtXYrteUw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Trang tính1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1HS5GimQNJL9coDt-BpVqe7mnCHCNLpo44yUtXYrteUw/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Họ và tên": "={{ $json.body.name }}",
+            "Số điện thoại": "={{ $json.body.phone }}",
+            "Địa chỉ": "={{ $json.body.address }}",
+            "Số lượng": "={{ $json.body.quantity }}",
+            "Tình trạng": "Chờ xác nhận"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Họ và tên",
+              "displayName": "Họ và tên",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Số điện thoại",
+              "displayName": "Số điện thoại",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Địa chỉ",
+              "displayName": "Địa chỉ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Số lượng",
+              "displayName": "Số lượng",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Tình trạng",
+              "displayName": "Tình trạng",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        220,
+        0
+      ],
+      "id": "e6d738ae-af57-4a0c-83c6-151f6ee9a814",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "auuSP3w1SNPn3dXZ",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-04-06T13:51:53.348Z",
+  "versionId": "9023a862-7bec-4b64-9327-c70a110b3187"
+}
