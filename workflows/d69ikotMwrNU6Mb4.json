@@ -1,0 +1,198 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-03T16:06:14.547Z",
+  "id": "d69ikotMwrNU6Mb4",
+  "meta": null,
+  "name": "Reels IG downloads",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "8c56f8b6-476a-4f62-bb1a-68f12a9a68bc",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "40e0b6ce-ee1e-4d82-96aa-950905083d4e",
+              "name": "postID",
+              "value": "DGfsYjIS4Nb",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        220,
+        0
+      ],
+      "id": "9ac4d786-602f-42f2-86f5-ba60112e8a3a",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "mode": "runOnceForEachItem",
+        "jsCode": "\n  // Dữ liệu yêu cầu (requestData)\n  const requestData = {\n    av: '0',\n    __d: 'www',\n    __user: '0',\n    __a: '1',\n    __req: '3',\n    __hs: '19624.HYP:instagram_web_pkg.2.1..0.0',\n    dpr: '3',\n    __ccg: 'UNKNOWN',\n    __rev: '1008824440',\n    __s: 'xf44ne:zhh75g:xr51e7',\n    __hsi: '7282217488877343271',\n    __dyn:\n      '7xeUmwlEnwn8K2WnFw9-2i5U4e0yoW3q32360CEbo1nEhw2nVE4W0om78b87C0yE5ufz81s8hwGwQwoEcE7O2l0Fwqo31w9a9x-0z8-U2zxe2GewGwso88cobEaU2eUlwhEe87q7-0iK2S3qazo7u1xwIw8O321LwTwKG1pg661pwr86C1mwraCg',\n    __csr:\n      'gZ3yFmJkillQvV6ybimnG8AmhqujGbLADgjyEOWz49z9XDlAXBJpC7Wy-vQTSvUGWGh5u8KibG44dBiigrgjDxGjU0150Q0848azk48N09C02IR0go4SaR70r8owyg9pU0V23hwiA0LQczA48S0f-x-27o05NG0fkw',\n    __comet_req: '7',\n    lsd: 'AVqbxe3J_YA',\n    jazoest: '2957',\n    __spin_r: '1008824440',\n    __spin_b: 'trunk',\n    __spin_t: '1695523385',\n    fb_api_caller_class: 'RelayModern',\n    fb_api_req_friendly_name: 'PolarisPostActionLoadPostQueryQuery',\n    variables: JSON.stringify({\n      shortcode: $json.postID, // Input shortcode\n      fetch_comment_count: null,\n      fetch_related_profile_media_count: null,\n      parent_comment_count: null,\n      child_comment_count: null,\n      fetch_like_count: null,\n      fetch_tagged_user_count: null,\n      fetch_preview_comment_count: null,\n      has_threaded_comments: false,\n      hoisted_comment_id: null,\n      hoisted_reply_id: null,\n    }),\n    server_timestamps: 'true',\n    doc_id: '10015901848480474',\n  };\n\n  // Hàm mã hóa đối tượng thành query string\n  const encodeParams = (obj) => {\n    const str = [];\n    for (let key in obj) {\n      if (obj.hasOwnProperty(key)) {\n        // Duyệt qua mỗi key và giá trị của đối tượng\n        const value = obj[key] === null ? '' : obj[key];  // Đảm bảo giá trị null được chuyển thành chuỗi rỗng\n        str.push(encodeURIComponent(key) + '=' + encodeURIComponent(value));\n      }\n    }\n    return str.join('&');\n  };\n\n  // Mã hóa dữ liệu thành query string\n  const queryString = encodeParams(requestData);\n\n  // Trả về đối tượng chứa 'encodedData'\n  return {\n    json: {\n      encodedData: queryString,\n    },\n  };\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        0
+      ],
+      "id": "4f7e2239-336d-4605-b83c-c5179eb1872a",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://www.instagram.com/api/graphql",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Accept-Language",
+              "value": "en-US,en;q=0.5"
+            },
+            {
+              "name": "Content-Type",
+              "value": "application/x-www-form-urlencoded"
+            },
+            {
+              "name": "X-FB-Friendly-Name",
+              "value": "PolarisPostActionLoadPostQueryQuery"
+            },
+            {
+              "name": "X-FB-Friendly-Name",
+              "value": "PolarisPostActionLoadPostQueryQuery"
+            },
+            {
+              "name": "X-CSRFToken",
+              "value": "RVDUooU5MYsBbS1CNN3CzVAuEP8oHB52"
+            },
+            {
+              "name": "X-IG-App-ID",
+              "value": "1217981644879628"
+            },
+            {
+              "name": "X-FB-LSD",
+              "value": "AVqbxe3J_YA"
+            },
+            {
+              "name": "X-ASBD-ID",
+              "value": "129477"
+            },
+            {
+              "name": "Sec-Fetch-Dest",
+              "value": "empty"
+            },
+            {
+              "name": "Sec-Fetch-Mode",
+              "value": "cors"
+            },
+            {
+              "name": "Sec-Fetch-Site",
+              "value": "same-origin"
+            },
+            {
+              "name": "User-Agent",
+              "value": "Mozilla/5.0 (Linux; Android 11; SAMSUNG SM-G973U) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/14.2 Chrome/87.0.4280.141 Mobile Safari/537.36"
+            }
+          ]
+        },
+        "sendBody": true,
+        "contentType": "form-urlencoded",
+        "specifyBody": "string",
+        "body": "={{ $json.encodedData }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        660,
+        0
+      ],
+      "id": "10f91f62-c794-4c16-ad50-d58e76045a63",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "import json\n\ninput_data = $input.item.json[\"data\"]\n\ntry:\n    data = json.loads(input_data)\n    if isinstance(data, str):\n        data = json.loads(data)\n        print(data)\nexcept:\n    data = None\n\nvideo_url = None\nif isinstance(data, dict):\n    media = data.get(\"xdt_shortcode_media\", {})\n    video_url = media.get(\"video_url\")\n\noutput = {\n    \"json\": {\n        \"video_url\": video_url or \"NOT FOUND\"\n    }\n}\n\noutput\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        880,
+        0
+      ],
+      "id": "7ee4c710-1967-450e-bf5f-fa8290258f6a",
+      "name": "Code1"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-04-03T16:06:14.547Z",
+  "versionId": "7121ebe1-6be7-45ea-a849-1a30b90b1c7c"
+}
