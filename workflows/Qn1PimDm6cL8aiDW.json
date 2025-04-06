@@ -1,0 +1,237 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request xAI-API",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Notion",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request xAI-API": {
+      "main": [
+        [
+          {
+            "node": "Gmail",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-03T16:04:39.719Z",
+  "id": "Qn1PimDm6cL8aiDW",
+  "meta": null,
+  "name": "Auto send mail reply from form",
+  "nodes": [
+    {
+      "parameters": {
+        "multipleMethods": true,
+        "httpMethod": [
+          "POST"
+        ],
+        "path": "dac72576-946a-420b-a600-1d1cc24b422c",
+        "options": {
+          "responseHeaders": {
+            "entries": [
+              {
+                "name": "Content-Type",
+                "value": "application/json"
+              }
+            ]
+          }
+        }
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -460,
+        140
+      ],
+      "id": "60ed3417-bccc-4e43-b4ec-cba87cf08c15",
+      "name": "Webhook",
+      "webhookId": "dac72576-946a-420b-a600-1d1cc24b422c"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.x.ai/v1/chat/completions",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer xai-Y12xNVtTshfG4O76XFHJ3umRsfFa9w0RicdG7Vxc60qvg0ogipHo1oTs3L6RWFJOQr7XMVBJTKL7SPEa"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"model\": \"grok-2-latest\",\n  \"temperature\": 0.7,\n  \"stream\": false,\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"Bạn là một chuyên gia tư vấn thân thiện.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"Viết nội dung email trả lời cá nhân hoá cho người tên {{ $json.body.name }} dựa trên câu hỏi: '{{ $json.body.question }}'. Giữ giọng văn lịch sự, dễ hiểu và hữu ích với người đọc.\"\n    }\n  ]\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -240,
+        140
+      ],
+      "id": "42e6ee25-4ec5-4f62-925b-b321fee50026",
+      "name": "HTTP Request xAI-API"
+    },
+    {
+      "parameters": {
+        "sendTo": "={{ $('Webhook').item.json.body.email }}",
+        "subject": "=GIẢI ĐÁP CÂU HỎI  {{ $('Webhook').item.json.body.question }}",
+        "message": "={{ \n  $json.choices[0].message.content\n    .replace(/\\*\\*(.*?)\\*\\*/g, '<b>$1</b>')  // chuyển **text** -> bold\n    .replace(/\\n/g, '<br>')                  // chuyển \\n -> xuống dòng HTML\n}}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.gmail",
+      "typeVersion": 2.1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "b804f514-e706-46cc-a681-72d46cf8b5de",
+      "name": "Gmail",
+      "webhookId": "49b6886c-74a9-4448-a556-fdd3ebae138c"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1qrHXFkPtm4PLR92y8vT0MhzwVDLYCDU1ZH8K1ZW7KTw",
+          "mode": "list",
+          "cachedResultName": "n8n data test",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1qrHXFkPtm4PLR92y8vT0MhzwVDLYCDU1ZH8K1ZW7KTw/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Trang tính1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1qrHXFkPtm4PLR92y8vT0MhzwVDLYCDU1ZH8K1ZW7KTw/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Email": "={{ $('Webhook').item.json.body.email }}",
+            "Name": "={{ $('Webhook').item.json.body.name }}",
+            "Question": "={{ $('Webhook').item.json.body.question }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Name",
+              "displayName": "Name",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Email",
+              "displayName": "Email",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Question",
+              "displayName": "Question",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        0,
+        200
+      ],
+      "id": "f5f80ed6-92d0-45e7-afd0-b4ba1cd8dcab",
+      "name": "Google Sheets"
+    },
+    {
+      "parameters": {
+        "resource": "databasePage",
+        "databaseId": {
+          "__rl": true,
+          "value": "1c391020-d218-803d-abf7-ce581149230c",
+          "mode": "list",
+          "cachedResultName": "n8n test",
+          "cachedResultUrl": "https://www.notion.so/1c391020d218803dabf7ce581149230c"
+        },
+        "simple": false,
+        "propertiesUi": {
+          "propertyValues": [
+            {
+              "key": "Name|title",
+              "title": "={{ $node[\"Webhook\"].json[\"body\"][\"name\"] }}"
+            },
+            {
+              "key": "Email|rich_text",
+              "textContent": "={{ $node[\"Webhook\"].json[\"body\"][\"email\"] }}"
+            },
+            {
+              "key": "Question|rich_text",
+              "textContent": "={{ $node[\"Webhook\"].json[\"body\"][\"question\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.notion",
+      "typeVersion": 2.2,
+      "position": [
+        -240,
+        360
+      ],
+      "id": "a63c6ec5-0d21-4782-a0a6-54744c53a56e",
+      "name": "Notion",
+      "alwaysOutputData": false
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-04-03T16:04:52.405Z",
+  "versionId": "f0755b3d-4758-4bc4-9495-16b7d70d9675"
+}
