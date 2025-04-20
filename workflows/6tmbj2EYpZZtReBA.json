@@ -1,0 +1,998 @@
+{
+  "active": false,
+  "connections": {
+    "RAG": {
+      "ai_tool": [
+        [
+          {
+            "node": "Retrive Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Filter": {
+      "main": [
+        [
+          {
+            "node": "Set call fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n8n_call": {
+      "main": [
+        [
+          {
+            "node": "Filter",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get folder": {
+      "main": [
+        [
+          {
+            "node": "Download Files",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Retrive Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Download Files": {
+      "main": [
+        [
+          {
+            "node": "Qdrant Vector Store",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Token Splitter": {
+      "ai_textSplitter": [
+        [
+          {
+            "node": "Default Data Loader",
+            "type": "ai_textSplitter",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set call fields": {
+      "main": [
+        [
+          {
+            "node": "Extract key points",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n8n_rag_function": {
+      "main": [
+        [
+          {
+            "node": "Retrive Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Qdrant Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Extract key points",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Concert start date": {
+      "main": [
+        [
+          {
+            "node": "Google Calendar",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings OpenAI2": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Retrive Qdrant Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract key points": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "RAG",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Retrive Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Concert start date",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Refresh collection": {
+      "main": [
+        [
+          {
+            "node": "Get folder",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Default Data Loader": {
+      "ai_document": [
+        [
+          {
+            "node": "Qdrant Vector Store",
+            "type": "ai_document",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n8n_check_available": {
+      "main": [
+        [
+          {
+            "node": "Concert start date",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Extract key points",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Structured Output Parser1": {
+      "ai_outputParser": [
+        [
+          {
+            "node": "Concert start date",
+            "type": "ai_outputParser",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Retrive Qdrant Vector Store": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "RAG",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Create collection",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Refresh collection",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-16T12:04:51.042Z",
+  "id": "6tmbj2EYpZZtReBA",
+  "meta": null,
+  "name": "Build AI Agent With RAG",
+  "nodes": [
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "version": 2,
+            "leftValue": "",
+            "caseSensitive": true,
+            "typeValidation": "strict"
+          },
+          "combinator": "or",
+          "conditions": [
+            {
+              "id": "cce162e9-50f7-41dc-ae45-763a53a835af",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.body.event }}",
+              "rightValue": "call_ended"
+            },
+            {
+              "id": "b0cec556-f565-4ade-90c9-1cfd74ed238b",
+              "operator": {
+                "name": "filter.operator.equals",
+                "type": "string",
+                "operation": "equals"
+              },
+              "leftValue": "={{ $json.body.event }}",
+              "rightValue": "call_analyzed"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "4ea03470-160f-4de9-a8d0-2b09f565498d",
+      "name": "Filter",
+      "type": "n8n-nodes-base.filter",
+      "position": [
+        300,
+        1580
+      ],
+      "typeVersion": 2.2
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "id": "4361fb31-84cb-4f98-a179-d1aa8f13203d",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        720,
+        1780
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"first_name\": {\n\t\t\t\"type\": \"string\",\n            \"description\":\"\"\n\t\t},\n\t\t\"last_name\": {\n\t\t\t\"type\": \"string\",\n            \"description\":\"\"\n\t\t},\n        \"email\": {\n\t\t\t\"type\": \"string\",\n            \"description\":\"\"\n\t\t},\n        \"telephone\": {\n\t\t\t\"type\": \"string\",\n            \"description\":\"\"\n\t\t},\n        \"summary\": {\n\t\t\t\"type\": \"string\",\n            \"description\":\"\"\n\t\t},\n        \"date\": {\n\t\t\t\"type\": \"date\",\n            \"description\":\"\"\n\t\t},\n        \"date\": {\n\t\t\t\"type\": \"date\",\n            \"description\":\"\"\n\t\t},\n        \"dateTime\": {\n\t\t\t\"type\": \"date\",\n            \"description\":\"\"\n        }\n\t}\n}"
+      },
+      "id": "37070b99-8248-4d52-abd1-f5b20a57582e",
+      "name": "Structured Output Parser",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "position": [
+        1040,
+        1760
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "edb1e894-1210-4902-a34f-a014bbdad8d8",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "69136cf0-f94e-4974-be71-955c0157b278",
+      "name": "n8n_rag_function",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        40,
+        2180
+      ],
+      "webhookId": "edb1e894-1210-4902-a34f-a014bbdad8d8",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "qdrantCollection": {
+          "__rl": true,
+          "mode": "list",
+          "value": "scarperia",
+          "cachedResultName": "scarperia"
+        },
+        "options": {}
+      },
+      "id": "05623beb-5db1-4888-be19-08dd874bc251",
+      "name": "Retrive Qdrant Vector Store",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "position": [
+        420,
+        2600
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "1dd8ee8e-a067-4b58-a707-c48f88b4e372",
+      "name": "Embeddings OpenAI2",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "position": [
+        380,
+        2780
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "name": "company_data",
+        "description": "Retrive data about company knowledge from vector store"
+      },
+      "id": "4191aa74-df0c-4ef8-aad7-a930f038bcbf",
+      "name": "RAG",
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "position": [
+        580,
+        2400
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "id": "a2d854df-de98-411a-914e-dee62bbdae56",
+      "name": "OpenAI Chat Model2",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        380,
+        2400
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "70892c85-6454-428e-96d7-3250921d89af",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "position": [
+        1020,
+        2180
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "id": "3d502c6c-eb9d-4b5c-89b6-be4b81457c7c",
+      "name": "OpenAI Chat Model1",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        740,
+        2620
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "chatId": "CHAT_ID",
+        "text": "=Call summary:\n{{ $json.output.summary }}\n\nFirst name: {{ $json.output.first_name }}\nLast name: {{ $json.output.last_name }}\nEmail: {{ $json.output.email }}\nTelephone: {{ $json.output.telephone }}\nSummary: {{ $json.output.summary }}\nDate: {{ $json.output.date }}\nDateTiem: {{ $json.output.dateTime }}",
+        "additionalFields": {}
+      },
+      "id": "b6553a8e-5d4b-4275-9e4a-7fece0f34a12",
+      "name": "Telegram",
+      "type": "n8n-nodes-base.telegram",
+      "position": [
+        1220,
+        1580
+      ],
+      "webhookId": "44d73068-54dc-458b-a6fb-4b4d10ebed34",
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "calendar": {
+          "__rl": true,
+          "mode": "list",
+          "value": "info@n3w.it",
+          "cachedResultName": "info@n3w.it"
+        },
+        "start": "={{ $json.output.start }}",
+        "end": "={{ $json.output.end }}",
+        "additionalFields": {
+          "description": "Event description",
+          "summary": "Event title"
+        }
+      },
+      "id": "ed8b43c2-f512-40fe-a050-d663b20ae493",
+      "name": "Google Calendar",
+      "type": "n8n-nodes-base.googleCalendar",
+      "position": [
+        2260,
+        1560
+      ],
+      "typeVersion": 1.3
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "mode": "list",
+          "value": "gpt-4o-mini"
+        },
+        "options": {}
+      },
+      "id": "4da149a4-4e6b-4cff-bfe7-a0cd0b909928",
+      "name": "OpenAI Chat Model3",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "position": [
+        1740,
+        1780
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "schemaType": "manual",
+        "inputSchema": "{\n\t\"type\": \"object\",\n\t\"properties\": {\n\t\t\"start\": {\n\t\t\t\"type\": \"string\"\n\t\t},\n\t\t\"end\": {\n\t\t\t\"type\": \"string\"\n\t\t}\n\t}\n}"
+      },
+      "id": "60e7488d-0501-44fa-a2b2-2c91632c458d",
+      "name": "Structured Output Parser1",
+      "type": "@n8n/n8n-nodes-langchain.outputParserStructured",
+      "position": [
+        2040,
+        1780
+      ],
+      "typeVersion": 1.2
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "b352dd49-d3b3-4e0a-a781-17137f7199c8",
+        "options": {}
+      },
+      "id": "29142afa-d1e6-43dc-90ae-98708fffaea8",
+      "name": "n8n_call",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        60,
+        1580
+      ],
+      "webhookId": "b352dd49-d3b3-4e0a-a781-17137f7199c8",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {
+        "content": "# STEP 3 - RETELL AI\n\n- Register on [Retell AI](https://retellai.com) (10$ FREE credits)\n- Create an Agent an set \"Voice & Language\" and add your system prompt\n- In Webhook settings add the \"Agent Level Webhook URL\" with the n8n webhook node url called \"n8n_call\"\n- Buy a new phone number with your FREE credits by Twilio Provider and connect it to the created agent\n- Enter the previously created agency and create the flow as shown in the following image\n![image](https://i.postimg.cc/brtBkgfH/Retellai-flow.png)\n- Aggiungere 2 funzioni (una per RAG e una per il Booking) e inserire l'url apposito ricavato dai webhook di n8n \"n8n_rag_function\" e \"n8n_check_available\"\n\n",
+        "height": 920,
+        "width": 1140
+      },
+      "id": "f3ae4dce-44ff-4ceb-91e9-2466116c26e8",
+      "name": "Sticky Note",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1480,
+        320
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "# STEP 4\nIntercept the \"end call\" event and get the full call transcript\n- Add your CHAT_ID in Telegram node",
+        "width": 1220,
+        "color": 5
+      },
+      "id": "ae320ee6-5af8-44d2-a30d-221b2c4c7ee1",
+      "name": "Sticky Note1",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        60,
+        1360
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "4dcd68b1-91d3-40bc-8aa6-c681126752b2",
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "d1e9c893-8628-46a7-8907-7a837095fa39",
+      "name": "n8n_check_available",
+      "type": "n8n-nodes-base.webhook",
+      "position": [
+        1520,
+        1560
+      ],
+      "webhookId": "4dcd68b1-91d3-40bc-8aa6-c681126752b2",
+      "typeVersion": 2
+    },
+    {
+      "parameters": {},
+      "id": "131a498e-60c6-47b1-88bb-84e647c3e3d8",
+      "name": "When clicking ‘Test workflow’",
+      "type": "n8n-nodes-base.manualTrigger",
+      "position": [
+        0,
+        520
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "mode": "insert",
+        "qdrantCollection": {
+          "__rl": true,
+          "mode": "id",
+          "value": "="
+        },
+        "options": {}
+      },
+      "id": "e7229b13-da55-4111-934a-32b5fbe16029",
+      "name": "Qdrant Vector Store",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreQdrant",
+      "position": [
+        980,
+        640
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://QDRANTURL/collections/COLLECTION",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"filter\": {}\n}",
+        "options": {}
+      },
+      "id": "0768117d-5046-4879-ba62-f9b4187a610e",
+      "name": "Create collection",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        300,
+        380
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://QDRANTURL/collections/COLLECTION/points/delete",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"filter\": {}\n}",
+        "options": {}
+      },
+      "id": "532e65ed-ba12-404f-b791-298f9f82d229",
+      "name": "Refresh collection",
+      "type": "n8n-nodes-base.httpRequest",
+      "position": [
+        300,
+        640
+      ],
+      "typeVersion": 4.2
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "filter": {
+          "driveId": {
+            "__rl": true,
+            "mode": "list",
+            "value": "My Drive",
+            "cachedResultUrl": "https://drive.google.com/drive/my-drive",
+            "cachedResultName": "My Drive"
+          },
+          "folderId": {
+            "__rl": true,
+            "mode": "id",
+            "value": "=test-whatsapp"
+          }
+        },
+        "options": {}
+      },
+      "id": "72f458b0-d71d-4dc7-8fa2-d89e594c8696",
+      "name": "Get folder",
+      "type": "n8n-nodes-base.googleDrive",
+      "position": [
+        520,
+        640
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "={{ $json.id }}"
+        },
+        "options": {
+          "googleFileConversion": {
+            "conversion": {
+              "docsToFormat": "text/plain"
+            }
+          }
+        }
+      },
+      "id": "55254030-bab8-4968-ba78-fc92b37709e7",
+      "name": "Download Files",
+      "type": "n8n-nodes-base.googleDrive",
+      "position": [
+        740,
+        640
+      ],
+      "typeVersion": 3
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "cb626323-272d-4036-a42c-fe9a585b028d",
+      "name": "Embeddings OpenAI",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsOpenAi",
+      "position": [
+        960,
+        840
+      ],
+      "typeVersion": 1.1
+    },
+    {
+      "parameters": {
+        "dataType": "binary",
+        "options": {}
+      },
+      "id": "39bce47c-3dd0-4b63-9f0f-17e3bac3ff61",
+      "name": "Default Data Loader",
+      "type": "@n8n/n8n-nodes-langchain.documentDefaultDataLoader",
+      "position": [
+        1140,
+        840
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "chunkSize": 300,
+        "chunkOverlap": 30
+      },
+      "id": "e4b34f73-006c-49ef-849e-81eef6feaaa3",
+      "name": "Token Splitter",
+      "type": "@n8n/n8n-nodes-langchain.textSplitterTokenSplitter",
+      "position": [
+        1100,
+        1000
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "# STEP 1\n\n## Create Qdrant Collection\nChange:\n- QDRANTURL\n- COLLECTION",
+        "height": 220,
+        "width": 880,
+        "color": 6
+      },
+      "id": "0e00e23d-73a1-47b5-bee0-add9e8041619",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        500,
+        320
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "# STEP 2\n\n\n\n\n\n\n\n\n\n\n\n\n## Documents vectorization with Qdrant and Google Drive\nChange:\n- QDRANTURL\n- COLLECTION",
+        "height": 420,
+        "width": 640,
+        "color": 4
+      },
+      "id": "c21195f2-212e-4b11-9708-9531ed3b8098",
+      "name": "Sticky Note4",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        280,
+        580
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "15b079b9-e36d-4c9b-8ca4-30bf858ce75b",
+              "name": "Transcript",
+              "type": "string",
+              "value": "={{ $json.body.call.transcript }}"
+            },
+            {
+              "id": "f1cbced3-bd9c-4d8f-bd81-060406ff27b0",
+              "name": "Duration (sec)",
+              "type": "string",
+              "value": "={{ $('n8n_call').item.json.body.call.call_cost.total_duration_seconds }}"
+            },
+            {
+              "id": "829ee367-1f5e-4d66-9818-8a27344d7e79",
+              "name": "From",
+              "type": "string",
+              "value": "={{ $('n8n_call').item.json.body.call.from_number }}"
+            },
+            {
+              "id": "38e9e856-d87d-4c23-8486-4ebbac2da595",
+              "name": "To",
+              "type": "string",
+              "value": "={{ $('n8n_call').item.json.body.call.to_number }}"
+            },
+            {
+              "id": "4209d6d3-4881-4296-a1db-fff0c14addda",
+              "name": "Cost ",
+              "type": "string",
+              "value": "={{ $('n8n_call').item.json.body.call.call_cost.combined_cost }}"
+            },
+            {
+              "id": "3c871d3b-95b5-493a-b3fe-3c9bf06a0d62",
+              "name": "Telephony Identifier",
+              "type": "string",
+              "value": "={{ $('n8n_call').item.json.body.call.telephony_identifier.twilio_call_sid }}"
+            },
+            {
+              "id": "0a926748-8aff-4dd7-a252-516f3339210a",
+              "name": "Disconnection reason",
+              "type": "string",
+              "value": "={{ $json.body.call.disconnection_reason }}"
+            },
+            {
+              "id": "9c88eafc-4370-47ad-ad98-d14767c137d0",
+              "name": "Recording url",
+              "type": "string",
+              "value": "={{ $json.body.call.recording_url }}"
+            },
+            {
+              "id": "a737a3bd-c871-4273-85b8-8e423bf7c443",
+              "name": "Public log url",
+              "type": "string",
+              "value": "={{ $json.body.call.public_log_url }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "756cdd9b-2c76-474f-87cf-9867a4b945d1",
+      "name": "Set call fields",
+      "type": "n8n-nodes-base.set",
+      "position": [
+        540,
+        1580
+      ],
+      "typeVersion": 3.4
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=To: {{ $json.To }}\n\nComplete transcript:\n{{ $json.Transcript }} ",
+        "hasOutputParser": true,
+        "messages": {
+          "messageValues": [
+            {
+              "message": "=You are a specialized AI assistant responsible for analyzing complete voice conversation transcripts. Your task is to create concise summaries that extract the essential information from these conversations.\n\nInput: You will receive the complete transcript of a voice conversation between two or more participants.\n\nTask:\n1. Analyze the entire conversation transcript carefully.\n2. Identify and extract the most important key points discussed.\n3. Create a clear, structured summary that captures the essential information.\n4. Highlight any decisions made, action items agreed upon, or critical information shared.\n5. Maintain objectivity in your summary, avoiding interpretation or judgment.\n\nOutput format:\n- Begin with a brief overview of the conversation (1-2 sentences)\n- List the key points in bullet format\n- Include a separate \"Action Items\" section if any tasks or follow-ups were mentioned\n- Keep your summary concise while ensuring all important information is captured\n\nRemember that accuracy is paramount. Focus on extracting what was explicitly stated rather than inferring unstated meanings. If something is unclear in the transcript, note it as such rather than guessing."
+            }
+          ]
+        }
+      },
+      "id": "38eb8001-550a-4717-9576-0c1cd7b7cce4",
+      "name": "Extract key points",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "position": [
+        800,
+        1580
+      ],
+      "typeVersion": 1.6
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Convert this date to a compatible format for Google Calendar APIs for the start date, and for the end date add 1 hour to the start date.\n\nHere is the start date:\n{{ $json.body.args.date }}",
+        "hasOutputParser": true
+      },
+      "id": "4c5727cd-ba79-4218-948d-325824018e34",
+      "name": "Concert start date",
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "position": [
+        1820,
+        1560
+      ],
+      "typeVersion": 1.6
+    },
+    {
+      "parameters": {
+        "content": "# STEP 5\nIf required, create the event in the calendar\n- Enter the title and description of the event",
+        "width": 1100,
+        "color": 5
+      },
+      "id": "6438b4bd-7be8-4925-a079-29521c913dc9",
+      "name": "Sticky Note2",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        1500,
+        1360
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "content": "# STEP 6\nIf required retrive the informations by RAG system",
+        "width": 1220,
+        "color": 5
+      },
+      "id": "fbe40b84-f814-4a8c-a371-ab0478911c4a",
+      "name": "Sticky Note5",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        40,
+        1980
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "agent": "conversationalAgent",
+        "promptType": "define",
+        "text": "={{ $json.body.args.query }}",
+        "options": {
+          "systemMessage": "You are an AI-powered assistant for an electronics store. Answer in Italian. Your primary goal is to assist customers by providing accurate and helpful information about products, troubleshooting tips, and general support. Use the provided knowledge base (retrieved documents) to answer questions with precision and professionalism.\n\n**Guidelines**:\n1. **Product Information**:\n   - Provide detailed descriptions of products, including specifications, features, and compatibility.\n   - Highlight key selling points and differences between similar products.\n   - Mention availability, pricing, and promotions if applicable.\n\n2. **Technical Support**:\n   - Offer step-by-step troubleshooting guides for common issues.\n   - Suggest solutions for setup, installation, or configuration problems.\n   - If the issue is complex, recommend contacting the store’s support team for further assistance.\n\n3. **Customer Service**:\n   - Respond politely and professionally to all inquiries.\n   - If a question is unclear, ask for clarification to provide the best possible answer.\n   - For order-related questions (e.g., status, returns, or cancellations), guide customers on how to proceed using the store’s systems.\n\n4. **Knowledge Base Usage**:\n   - Always reference the provided knowledge base (retrieved documents) to ensure accuracy.\n   - If the knowledge base does not contain relevant information, inform the customer and suggest alternative resources or actions.\n\n5. **Tone and Style**:\n   - Use a friendly, approachable, and professional tone.\n   - Avoid technical jargon unless the customer demonstrates familiarity with the topic.\n   - Keep responses concise but informative.\n\n**Example Interactions**:\n1. **Product Inquiry**:\n   - Customer: \"What’s the difference between the XYZ Smartwatch and the ABC Smartwatch?\"\n   - AI: \"The XYZ Smartwatch features a longer battery life (up to 7 days) and built-in GPS, while the ABC Smartwatch has a brighter AMOLED display and supports wireless charging. Both are compatible with iOS and Android devices. Would you like more details on either product?\"\n\n2. **Technical Support**:\n   - Customer: \"My wireless router isn’t connecting to the internet.\"\n   - AI: \"Please try the following steps: 1) Restart your router and modem. 2) Ensure all cables are securely connected. 3) Check if the router’s LED indicators show a stable connection. If the issue persists, you may need to reset the router to factory settings. Would you like a detailed guide for resetting your router?\"\n\n3. **Customer Service**:\n   - Customer: \"How do I return a defective product?\"\n   - AI: \"To return a defective product, please visit our Returns Portal on our website and enter your order number. You’ll receive a return label and instructions. If you need further assistance, our support team is available at support@electronicsstore.com.\"\n\n**Limitations**:\n- If the question is outside the scope of the knowledge base or requires human intervention, inform the customer and provide contact details for the appropriate department.\n- Do not provide speculative or unverified information. Always rely on the knowledge base or direct the customer to official resources."
+        }
+      },
+      "id": "612706f3-5d44-4aa1-bc03-54afe9c8cc69",
+      "name": "Retrive Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "position": [
+        460,
+        2180
+      ],
+      "typeVersion": 1.7
+    },
+    {
+      "parameters": {
+        "content": "# Create your first AI Phone Agent\n\nBuild, test, deploy, and monitor AI phone agents. Retell is a comprehensive platform for building, testing, deploying, and monitoring reliable AI phone agents.\nConversation flow agent allows you to create multiple nodes to handle different scenarios in the conversation. It provides more fine-grained control over the conversation flow compared to single / multi prompt agent, which unlocks the ability to handle more complex scenarios.\n\nThis Workflow simulates an AI-powered phone agent with two main functions:\n\n📅 Appointment Booking – It can schedule appointments directly into Google Calendar.\n\n🧠 RAG-based Information Retrieval – It provides answers using a Retrieval-Augmented Generation (RAG) system. For example, it can respond to questions such as store opening hours, return policies, or product details.\n\nThe guide also explains how to purchase a dedicated phone number (with a +1 prefix) and link it to the AI agent. This setup is cost-effective, as it uses a free $10 credit to operate without additional charges in the beginning.",
+        "height": 360,
+        "width": 2580,
+        "color": 3
+      },
+      "id": "b79933d2-6ebe-4229-9853-bc512f0d17b9",
+      "name": "Sticky Note6",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        20,
+        -140
+      ],
+      "typeVersion": 1
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-04-18T06:06:01.000Z",
+  "versionId": "2c7122a3-1c51-4a0f-ab1e-246f8ca08c65"
+}
