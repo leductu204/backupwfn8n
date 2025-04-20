@@ -1,0 +1,2373 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Check + Gen Content",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Check Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "FB",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "IG",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "node": "TIKTOK",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Google Sheets3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "FB",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "IG",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "TIKTOK",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets4": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets6": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 4
+          }
+        ]
+      ]
+    },
+    "Google Sheets11": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 6
+          }
+        ]
+      ]
+    },
+    "Google Sheets7": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Google Sheets5": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Google Sheets8": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 3
+          }
+        ]
+      ]
+    },
+    "Google Sheets9": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 5
+          }
+        ]
+      ]
+    },
+    "Google Sheets12": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 7
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        []
+      ]
+    },
+    "Check + Gen Content": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "If2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "FB": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets7",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IG": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets8",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TIKTOK": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets6",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets9",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gen Image": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets11",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets12",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Check Image": {
+      "main": [
+        [
+          {
+            "node": "Gen Image",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-17T17:49:44.431Z",
+  "id": "Ebgw6beekf11N8i3",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "CONTENT FB TIK IG Quoc Modoro",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -120,
+        840
+      ],
+      "id": "76df26cf-0e83-4510-ab91-01e030c9f1ab",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "4f71b9af-fe5f-4be4-b25f-b387c56bc572",
+              "leftValue": "={{ $json['TUYẾN NỘI DUNG'] }}",
+              "rightValue": "Facebook",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        400,
+        -270
+      ],
+      "id": "b9cd479d-7094-44a4-911b-078b215eaabe",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "03a1125c-215b-4a37-a53c-03a86cb7fafd",
+              "leftValue": "={{ $json['TUYẾN NỘI DUNG'] }}",
+              "rightValue": "Instagram",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        400,
+        330
+      ],
+      "id": "420b2f77-2e01-4fdb-9a36-c1b57f137465",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "fffcb18f-3fcd-4296-925b-f239ca28348d",
+              "leftValue": "={{ $json['TUYẾN NỘI DUNG'] }}",
+              "rightValue": "Tiktok",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        400,
+        930
+      ],
+      "id": "782952bd-26fe-454a-86db-e3de58fb81d0",
+      "name": "If2"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Test Automation n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Trang tính1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "CONTENT FB": "NO",
+            "STT": "={{ $('Check + Gen Content').item.json.STT }}"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TIÊU ĐỀ",
+              "displayName": "TIÊU ĐỀ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TUYẾN NỘI DUNG",
+              "displayName": "TUYẾN NỘI DUNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK",
+              "displayName": "CHECK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT FB",
+              "displayName": "CONTENT FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT TIKTOK",
+              "displayName": "CONTENT TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT IG",
+              "displayName": "CONTENT IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ẢNH",
+              "displayName": "ẢNH",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NGÀY ĐĂNG",
+              "displayName": "NGÀY ĐĂNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        698,
+        -120
+      ],
+      "id": "b9552575-1976-4d21-b03b-dd7fc425eaf6",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Test Automation n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Trang tính1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "CONTENT IG": "NO",
+            "STT": "={{ $('Check + Gen Content').item.json.STT }}"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TIÊU ĐỀ",
+              "displayName": "TIÊU ĐỀ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TUYẾN NỘI DUNG",
+              "displayName": "TUYẾN NỘI DUNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK",
+              "displayName": "CHECK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT FB",
+              "displayName": "CONTENT FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT TIKTOK",
+              "displayName": "CONTENT TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT IG",
+              "displayName": "CONTENT IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ẢNH",
+              "displayName": "ẢNH",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NGÀY ĐĂNG",
+              "displayName": "NGÀY ĐĂNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        698,
+        480
+      ],
+      "id": "58b7e5d4-ee8b-4692-a83a-15eec947d5d2",
+      "name": "Google Sheets2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Test Automation n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Trang tính1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "CONTENT TIKTOK": "NO",
+            "TIÊU ĐỀ": "={{ $('Check + Gen Content').item.json.STT }}"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TIÊU ĐỀ",
+              "displayName": "TIÊU ĐỀ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TUYẾN NỘI DUNG",
+              "displayName": "TUYẾN NỘI DUNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK",
+              "displayName": "CHECK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT FB",
+              "displayName": "CONTENT FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT TIKTOK",
+              "displayName": "CONTENT TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT IG",
+              "displayName": "CONTENT IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ẢNH",
+              "displayName": "ẢNH",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NGÀY ĐĂNG",
+              "displayName": "NGÀY ĐĂNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        698,
+        1080
+      ],
+      "id": "7913b859-43ea-447b-b221-e33ff2683ee4",
+      "name": "Google Sheets3",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        708,
+        -300
+      ],
+      "id": "689d76d4-c85a-444d-a163-cbfd89675c89",
+      "name": "xAI Grok Chat Model",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        708,
+        300
+      ],
+      "id": "b16f5c0d-9584-4e46-9965-52d891fbbd3d",
+      "name": "xAI Grok Chat Model1",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        708,
+        900
+      ],
+      "id": "fa448773-912e-4dc0-8297-e8a26d0e242f",
+      "name": "xAI Grok Chat Model2",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Test Automation n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "CONTENT",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "CHECK": "Chờ đăng bài",
+            "CONTENT IG": "={{ $json.output }}",
+            "STT": "={{ $('Check + Gen Content').item.json.STT }}"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TIÊU ĐỀ",
+              "displayName": "TIÊU ĐỀ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TUYẾN NỘI DUNG",
+              "displayName": "TUYẾN NỘI DUNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK",
+              "displayName": "CHECK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT FB",
+              "displayName": "CONTENT FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "KỊCH BẢN TIKTOK",
+              "displayName": "KỊCH BẢN TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "CONTENT IG",
+              "displayName": "CONTENT IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ẢNH",
+              "displayName": "ẢNH",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NGÀY TẠO",
+              "displayName": "NGÀY TẠO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        996,
+        -20
+      ],
+      "id": "b00cf5ef-0089-4eba-98ff-91e14e5807a2",
+      "name": "Google Sheets5",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Test Automation n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "CONTENT",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "STT": "={{ $('Check + Gen Content').item.json.STT }}",
+            "CONTENT FB": "={{ $json.output }}"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TIÊU ĐỀ",
+              "displayName": "TIÊU ĐỀ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TUYẾN NỘI DUNG",
+              "displayName": "TUYẾN NỘI DUNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK",
+              "displayName": "CHECK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT FB",
+              "displayName": "CONTENT FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "KỊCH BẢN TIKTOK",
+              "displayName": "KỊCH BẢN TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT IG",
+              "displayName": "CONTENT IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ẢNH",
+              "displayName": "ẢNH",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NGÀY TẠO",
+              "displayName": "NGÀY TẠO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        996,
+        -520
+      ],
+      "id": "d4aeecc5-53e7-4869-a573-75fbd8fc4ac4",
+      "name": "Google Sheets4",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Test Automation n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "CONTENT",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "STT": "={{ $('Check + Gen Content').item.json.STT }}",
+            "KỊCH BẢN TIKTOK": "={{ $json.output }}"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TIÊU ĐỀ",
+              "displayName": "TIÊU ĐỀ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TUYẾN NỘI DUNG",
+              "displayName": "TUYẾN NỘI DUNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK",
+              "displayName": "CHECK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT FB",
+              "displayName": "CONTENT FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "KỊCH BẢN TIKTOK",
+              "displayName": "KỊCH BẢN TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT IG",
+              "displayName": "CONTENT IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ẢNH",
+              "displayName": "ẢNH",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NGÀY TẠO",
+              "displayName": "NGÀY TẠO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        996,
+        580
+      ],
+      "id": "6d0baec7-7ee5-4d39-9cde-7b6a9b959009",
+      "name": "Google Sheets6",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "TẠO CONTENT FB, IG, TIKTOK\n",
+        "height": 1780,
+        "width": 1020
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        160,
+        -540
+      ],
+      "id": "865e389b-9048-40d3-b5a6-60c708a0a562",
+      "name": "Sticky Note1"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Test Automation n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 907386465,
+          "mode": "list",
+          "cachedResultName": "POST",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=907386465"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "STT": "={{ $('Check + Gen Content').item.json.STT }}",
+            "CONTENT FB": "={{ $json.output }}",
+            "CHECK FB": "Waiting"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "CONTENT FB",
+              "displayName": "CONTENT FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK FB",
+              "displayName": "CHECK FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT IG",
+              "displayName": "CONTENT IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK IG",
+              "displayName": "CHECK IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT TIKTOK",
+              "displayName": "CONTENT TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK TIKTOK",
+              "displayName": "CHECK TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ẢNH",
+              "displayName": "ẢNH",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NGÀY ĐĂNG",
+              "displayName": "NGÀY ĐĂNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        996,
+        -220
+      ],
+      "id": "a517d70e-3ab1-4061-bf26-b064d3441d3e",
+      "name": "Google Sheets7",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Test Automation n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 907386465,
+          "mode": "list",
+          "cachedResultName": "POST",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=907386465"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "STT": "={{ $('Check + Gen Content').item.json.STT }}",
+            "CONTENT IG": "={{ $json.output }}",
+            "CHECK IG": "Waiting"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "CONTENT FB",
+              "displayName": "CONTENT FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK FB",
+              "displayName": "CHECK FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT IG",
+              "displayName": "CONTENT IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK IG",
+              "displayName": "CHECK IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT TIKTOK",
+              "displayName": "CONTENT TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK TIKTOK",
+              "displayName": "CHECK TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ẢNH",
+              "displayName": "ẢNH",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NGÀY ĐĂNG",
+              "displayName": "NGÀY ĐĂNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        996,
+        380
+      ],
+      "id": "69ec8afd-7e50-42ba-838b-bb478bbe22f1",
+      "name": "Google Sheets8",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Test Automation n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 907386465,
+          "mode": "list",
+          "cachedResultName": "POST",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=907386465"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "STT": "={{ $('Check + Gen Content').item.json.STT }}",
+            "CONTENT TIKTOK": "={{ $json.output }}",
+            "CHECK TIKTOK": "Waiting"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "CONTENT FB",
+              "displayName": "CONTENT FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK FB",
+              "displayName": "CHECK FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT IG",
+              "displayName": "CONTENT IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK IG",
+              "displayName": "CHECK IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT TIKTOK",
+              "displayName": "CONTENT TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK TIKTOK",
+              "displayName": "CHECK TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ẢNH",
+              "displayName": "ẢNH",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NGÀY ĐĂNG",
+              "displayName": "NGÀY ĐĂNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        996,
+        880
+      ],
+      "id": "29d335e0-d369-4f75-89fd-129bdf806e8c",
+      "name": "Google Sheets9",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Auto Content Quoc Modoro",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "CONTENT",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "ẢNH": "={{ $json.data[0].url }}",
+            "STT": "={{ $('Check Image').item.json.STT }}"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TIÊU ĐỀ",
+              "displayName": "TIÊU ĐỀ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TUYẾN NỘI DUNG",
+              "displayName": "TUYẾN NỘI DUNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK",
+              "displayName": "CHECK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT FB",
+              "displayName": "CONTENT FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "KỊCH BẢN TIKTOK",
+              "displayName": "KỊCH BẢN TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT IG",
+              "displayName": "CONTENT IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ẢNH",
+              "displayName": "ẢNH",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NGÀY TẠO",
+              "displayName": "NGÀY TẠO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        700,
+        1280
+      ],
+      "id": "83b896ae-2cb9-4e07-8c94-5f4f92715fff",
+      "name": "Google Sheets11",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Test Automation n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 907386465,
+          "mode": "list",
+          "cachedResultName": "POST",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=907386465"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "STT": "={{ $('Check Image').item.json.STT }}",
+            "ẢNH": "={{ $json.data[0].url }}"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "CONTENT FB",
+              "displayName": "CONTENT FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK FB",
+              "displayName": "CHECK FB",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT IG",
+              "displayName": "CONTENT IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK IG",
+              "displayName": "CHECK IG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT TIKTOK",
+              "displayName": "CONTENT TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CHECK TIKTOK",
+              "displayName": "CHECK TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "ẢNH",
+              "displayName": "ẢNH",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NGÀY ĐĂNG",
+              "displayName": "NGÀY ĐĂNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        700,
+        1480
+      ],
+      "id": "d9313a6e-cfa4-485e-94ad-ba23609b519c",
+      "name": "Google Sheets12",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "content": "TẠO ẢNH MINH HỌA",
+        "height": 360,
+        "width": 1020,
+        "color": 2
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        160,
+        1260
+      ],
+      "id": "e45714a4-6588-4796-af2c-ea4249788f65",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "numberInputs": 8
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        1540,
+        380
+      ],
+      "id": "425e03d5-8d05-4b61-b20e-11e6fe4a5455",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json['CHECK FB'] }}",
+                    "rightValue": "Waiting",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "163ee99a-fbdf-4971-93e6-b7266b8359a4"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "adba0633-b960-4b51-8123-c7719e67acc8",
+                    "leftValue": "={{ $json['CHECK IG'] }}",
+                    "rightValue": "Waiting",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "ace44f5b-4b34-45c6-80b0-9983daca160e",
+                    "leftValue": "={{ $json['CHECK TIKTOK'] }}",
+                    "rightValue": "Waiting",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        1720,
+        480
+      ],
+      "id": "c48a8fab-a0ab-407e-9ed9-39a1b6a486a1",
+      "name": "Switch",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Test Automation n8n",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "CONTENT",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "CHECK",
+              "lookupValue": "Chờ tạo content"
+            },
+            {
+              "lookupColumn": "NGÀY TẠO",
+              "lookupValue": "="
+            }
+          ]
+        },
+        "options": {
+          "returnFirstMatch": true
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        180,
+        330
+      ],
+      "id": "68a6ce4c-6bbb-49af-a6fd-b9cca58c7d8b",
+      "name": "Check + Gen Content",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia trong ngành digital marketing, chuyên hỗ trợ agency, marketer hoặc người làm affiliate ứng dụng AI và automation để tăng hiệu suất công việc.\n\nDưới đây là tiêu đề chủ đề content cần viết bài:\n\n{{ $json[\"TIÊU ĐỀ\"] }}\n\nHãy viết một bài content Facebook hấp dẫn theo các yêu cầu sau:\n\nMở đầu bằng một câu gợi mở hoặc insight gây tò mò, có thể dùng emoji, viết hoa nhấn mạnh để tăng độ cuốn hút.\n\nNội dung chia sẻ dạng storytelling hoặc chia sẻ cá nhân (“Mình đã thử...”, “Một case gần đây mình làm là…”).\n\nCó nêu giải pháp ứng dụng AI hoặc automation (dùng tool gì, tiết kiệm gì, tăng hiệu suất thế nào).\n\nKết thúc bằng một câu hỏi mở để tạo tương tác (hoặc CTA nhẹ nhàng khuyến khích comment hoặc inbox).\n\nVăn phong: thân thiện, chia sẻ thật lòng, không bán hàng, không giáo điều.\n\nDài tầm 150–300 từ.\n\nCó sử dụng emoji hợp lý.\nBỏ các ký tự\"**\" khi trả lời.",
+        "hasOutputParser": true,
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.8,
+      "position": [
+        620,
+        -520
+      ],
+      "id": "6bc0d0d3-daa7-4872-a74d-e195e2799a2d",
+      "name": "FB"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia nội dung chuyên viết cho Instagram trong lĩnh vực marketing, agency, affiliate. Đối tượng bạn hướng đến là các agency owner, marketer, freelancer đang tìm cách ứng dụng AI, automation vào công việc.\n\nDưới đây là tiêu đề bài viết cần triển khai:\n\n{{ $json[\"TIÊU ĐỀ\"] }}\n\nHãy viết một caption Instagram hấp dẫn theo các yêu cầu sau:\n\n📌 Yêu cầu:\nMở đầu bằng một câu ngắn gây tò mò hoặc cảm xúc mạnh, có thể sử dụng emoji để tăng vibe và catch mắt khi người dùng lướt feed.\n\nNội dung triển khai theo hướng:\n\nMột insight ngắn →\n\nMột trải nghiệm thực tế hoặc câu chuyện mini →\n\nMột nhận định hoặc lời khuyên nhỏ (áp dụng được).\n\nTổng độ dài: 150–300 ký tự (tối ưu đọc nhanh).\n\nGiọng văn gần gũi, chuyên nghiệp nhưng không \"corporate\" quá nặng. Có thể xen chút vibe “cà phê sáng”, “ngồi ngẫm đời” nhưng mang tính học hỏi.\n\nKết thúc bằng một call to action nhẹ nhàng: “Bạn đã thử dùng AI kiểu này chưa?”, “Comment nếu bạn thấy đúng 😅”, “Bạn muốn mình chia sẻ kỹ hơn không?”\n\nKèm thêm vài #hashtag chuyên ngành phía dưới: ví dụ #AIforAgency #MarketingAutomation #GrowthStack #ToolOfTheDay #WorkSmart\nBỏ các ký tự\"**\" khi trả lời.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.8,
+      "position": [
+        620,
+        80
+      ],
+      "id": "a79cfedb-97a1-4abf-acd3-bc69ab01dd99",
+      "name": "IG"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia sáng tạo nội dung video trên TikTok, chuyên chia sẻ về marketing, agency, affiliate và ứng dụng AI/automation vào công việc thực tế.\n\nDưới đây là tiêu đề chủ đề nội dung:\n\n{{ $json[\"TIÊU ĐỀ\"] }}\n\nHãy viết kịch bản video TikTok dài khoảng 40–60 giây, theo các yêu cầu sau:\n\n🎬 Cấu trúc kịch bản:\nHook (0–5s): Câu mở đầu gây chú ý mạnh – có thể là một nỗi đau, nghịch lý, sự thật bất ngờ hoặc số liệu ấn tượng.\n\nThân bài (5–40s):\n\nMở rộng nội dung theo dạng kể chuyện thực tế:\n\n“Lúc đầu mình nghĩ... nhưng rồi…”\n\n“Team mình đã thử...”\n\n“Và kết quả là...”\n\nNhấn mạnh cách AI hoặc automation đã giúp giải quyết vấn đề gì, tiết kiệm gì, tăng gì.\n\nChốt (40–60s):\n\nMột insight rút ra hoặc lời nhắn đơn giản.\n\nKèm call to action tự nhiên kiểu:\n\n“Anh em đang làm agency nên thử luôn cái này!”\n\n“Nếu muốn mình share công cụ mình dùng, comment nha!”\n\n“Bạn đã thử để AI làm việc này chưa?”\n\n✍️ Yêu cầu khác:\nGiữ giọng văn tự nhiên, gần gũi, như đang trò chuyện với camera.\n\nCó thể thêm yếu tố “meme nhẹ”, “vibe mệt mỏi nhưng vui” nếu muốn relatable.\n\nNếu phù hợp, chèn gợi ý phân cảnh quay (chỉ tay vào màn hình, show app, quay màn hình tool,...)\n\n🧠 Ví dụ tiêu đề:\n“Bỏ 1 nhân sự, thêm 1 con AI – Agency tôi đã tăng 3 lần tốc độ triển khai mà không cần tuyển thêm người”\n\n👉 Với tiêu đề đó, kịch bản sẽ mở đầu kiểu:\n\n“Trước đây, việc làm proposal mất 2 tiếng, giờ còn 5 phút. Không phải do mình giỏi hơn – mà là có AI support.”\n“Chốt nhanh, gửi đúng insight, và vẫn giữ tone khách cần.”\n“Thật ra, cắt 1 nhân sự mà tốc độ còn tăng gấp 3.”\nBỏ các ký tự \"**\" khi trả lời trong output",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.8,
+      "position": [
+        620,
+        680
+      ],
+      "id": "34e4dd81-dfae-40b5-a633-6d3f314a5883",
+      "name": "TIKTOK"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.openai.com/v1/images/generations",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "name": "Authorization",
+              "value": "Bearer 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"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "model",
+              "value": "dall-e-3"
+            },
+            {
+              "name": "prompt",
+              "value": "=Create an eye-catching digital illustration inspired by the concept:  {{ $json['TIÊU ĐỀ'] }} Visualize a modern, professional environment where AI and automation tools are integrated into daily marketing workflows. Show elements like a team collaborating with AI dashboards, flowing data charts, gears symbolizing automation, or abstract visual metaphors representing productivity, innovation, and efficiency. \nUse a vibrant but clean color palette (e.g., teal, blue, white). Include futuristic tech elements such as glowing icons, holograms, or motion lines. Style can be flat vector-art, isometric, or semi-realistic depending on tone. Leave space for possible text overlay if used in social media."
+            },
+            {
+              "name": "n",
+              "value": "={{ 1 }}"
+            },
+            {
+              "name": "size",
+              "value": "1024x1024"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        400,
+        1380
+      ],
+      "id": "6baae10c-d33d-45e8-8087-4ab2c6f4681e",
+      "name": "Gen Image"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA",
+          "mode": "list",
+          "cachedResultName": "Auto Content Quoc Modoro",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "CONTENT",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/16kBgR7tl8AQf311AKQVXLjcApExtj8j3Cx5o225sTNA/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "CHECK",
+              "lookupValue": "Chờ đăng bài"
+            },
+            {
+              "lookupColumn": "NGÀY TẠO"
+            }
+          ]
+        },
+        "options": {
+          "returnFirstMatch": true
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        180,
+        1380
+      ],
+      "id": "95ccccef-f989-4ccf-86cc-26468c38f64b",
+      "name": "Check Image",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-04-19T14:47:47.000Z",
+  "versionId": "1bc79d4f-5736-4580-9547-fa36d789503b"
+}
