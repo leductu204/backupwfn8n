@@ -1,0 +1,534 @@
+{
+  "active": false,
+  "connections": {
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "RSS Read1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read1": {
+      "main": [
+        [
+          {
+            "node": "Limit ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read": {
+      "main": [
+        [
+          {
+            "node": "Limit 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "RSS Read4": {
+      "main": [
+        [
+          {
+            "node": "Limit 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit 1": {
+      "main": [
+        [
+          {
+            "node": "Split Out 1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit ": {
+      "main": [
+        [
+          {
+            "node": "Split Out ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Limit 4": {
+      "main": [
+        [
+          {
+            "node": "Split Out 4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out 1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out ": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out 4": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        []
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 2
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        []
+      ]
+    },
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "RSS Read",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "RSS Read4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-09T16:10:29.955Z",
+  "id": "aYNIPr3gjBPJ2gfv",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "RSS Telegram 7AM",
+  "nodes": [
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 7
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -180,
+        -120
+      ],
+      "id": "603fda60-c7ee-42a4-9c15-09aa6b692d75",
+      "name": "Schedule Trigger",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "url": "https://news.ycombinator.com/rss",
+        "options": {
+          "ignoreSSL": false
+        }
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        220,
+        0
+      ],
+      "id": "6c9302ee-5a5f-430c-8628-f543a67249df",
+      "name": "RSS Read"
+    },
+    {
+      "parameters": {
+        "url": "https://huggingface.co/blog/feed.xml",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        220,
+        180
+      ],
+      "id": "5d090071-0bf1-4704-96c2-cb5835357c3b",
+      "name": "RSS Read1"
+    },
+    {
+      "parameters": {
+        "url": "https://www.artificialintelligence-news.com/feed/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.rssFeedRead",
+      "typeVersion": 1.1,
+      "position": [
+        220,
+        420
+      ],
+      "id": "e18de597-535f-4f70-b5b1-65cce30028e9",
+      "name": "RSS Read4"
+    },
+    {
+      "parameters": {
+        "maxItems": 20
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        440,
+        20
+      ],
+      "id": "bd01969d-32d4-4119-bcdd-92e9482a63ee",
+      "name": "Limit 1"
+    },
+    {
+      "parameters": {
+        "maxItems": 20
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        440,
+        220
+      ],
+      "id": "a30166f0-0d3c-4871-a7aa-6c23be29a95a",
+      "name": "Limit "
+    },
+    {
+      "parameters": {
+        "maxItems": 20
+      },
+      "type": "n8n-nodes-base.limit",
+      "typeVersion": 1,
+      "position": [
+        400,
+        440
+      ],
+      "id": "bf9cbc69-e305-46d7-b502-1f17682041dc",
+      "name": "Limit 4"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "title,link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        660,
+        20
+      ],
+      "id": "16906368-cb8b-4ba2-8786-bde85af597fb",
+      "name": "Split Out 1"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "title, guid",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        660,
+        200
+      ],
+      "id": "1f439084-8d98-4003-bd2b-faa94d60f58a",
+      "name": "Split Out "
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "contentSnippet, link",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        620,
+        420
+      ],
+      "id": "4835cbe1-9f5d-482f-85ab-cae407361dd3",
+      "name": "Split Out 4"
+    },
+    {
+      "parameters": {
+        "numberInputs": 3
+      },
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        1220,
+        200
+      ],
+      "id": "bcfb3d64-ee77-4bbe-9624-7bf10c7c1937",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "597e8800-8e6c-4b69-8b33-96ec6b91904b",
+              "name": "title",
+              "value": "={{ $json.title }}",
+              "type": "string"
+            },
+            {
+              "id": "74570f48-dbf5-4e85-b4d1-6497ae6b4f38",
+              "name": "link",
+              "value": "={{ $json.link }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        880,
+        20
+      ],
+      "id": "003f634a-370c-43f7-b579-815f05784336",
+      "name": "Edit Fields",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "mode": "raw",
+        "jsonOutput": "={\n  \"title\": \" {{ $json.title }}\",\n  \"link\": \"{{ $json.guid }}\"\n}\n",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        880,
+        200
+      ],
+      "id": "123d8915-ab10-4737-8730-f6f7df0f22cc",
+      "name": "Edit Fields1",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "34d01b59-7d67-42b6-985a-cd91f8876e37",
+              "name": "title",
+              "value": "={{ $json.contentSnippet }}",
+              "type": "string"
+            },
+            {
+              "id": "e0386a4a-912c-42f1-90f6-a5c254760f86",
+              "name": "link",
+              "value": "={{ $json.link }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        880,
+        420
+      ],
+      "id": "72ce9b9e-e32a-499b-a438-de7bda016bb5",
+      "name": "Edit Fields2",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "chatId": "1670978329",
+        "text": "={{ $json.message }}",
+        "additionalFields": {
+          "parse_mode": "HTML"
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        2700,
+        200
+      ],
+      "id": "f44b6552-e6cf-4d28-a10c-5883afc5db9d",
+      "name": "Telegram",
+      "webhookId": "cc53629c-6c72-42ee-a8df-105ee4fc6ec0",
+      "credentials": {
+        "telegramApi": {
+          "id": "R9PcglhXGJlnDafY",
+          "name": "Telegram account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const raw = $input.first().json.output;\nconst chunkSize = 4000;\n\nlet messages = [];\nfor (let i = 0; i < raw.length; i += chunkSize) {\n  messages.push({ message: raw.slice(i, i + chunkSize) });\n}\n\nreturn messages.map(msg => ({ json: msg }));\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2000,
+        200
+      ],
+      "id": "29663ee9-239e-4f24-9b08-85d9cac85343",
+      "name": "Code1",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.x.ai/v1/chat/completions",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer xai-yGxMQr9SjAtK6XjyEEdbUpNyfFzSnIrw8PRdPq7qW2xpM3ID5TI1MhDd6LaQqeHYHlFiZeGd2Z5U9k6H"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"messages\": [\n    {\n      \"role\": \"system\",\n      \"content\": \"Bạn là một biên tập viên lành nghề, người theo dõi tin tức từ các nguồn cấp RSS, phân tích chúng và biên soạn một danh sách đầy đủ và ngắn gọn về những tin tức thú vị và quan trọng nhất. Sử dụng danh sách tin tức có sẵn cho bạn, thêm biểu tượng cảm xúc vào mỗi mục tin tức trước tiêu đề. Nếu bạn thấy tin tức về AI và CODE, hãy thử thêm chúng vào danh sách.\n\nHãy gửi cho tôi ít nhất 15 tin tức. Dưới dạng Tiếng Anh -> Link và bản dịch Tiếng Việt\n\n#Mỗi mục tin tức phải có cấu trúc sau, theo thứ tự:\nsố, biểu tượng cảm xúc, tiêu đề, mô tả ngắn, liên kết đến nguồn.\nBạn có thể lấy tiêu đề và mô tả từ \"{{ $json.title }}\". Bạn có thể lấy liên kết đến nguồn từ \"{{ $json.link }}\". Thứ tự của các mục tin tức tương ứng với thứ tự của các liên kết đến chúng.\"\n    },\n    {\n      \"role\": \"user\",\n      \"content\": \"{{ $json.title }}{{ $json.link }}\"\n    }\n  ],\n  \"model\": \"grok-3-latest\",\n  \"stream\": false,\n  \"temperature\": 0\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1460,
+        200
+      ],
+      "id": "a4160136-fba6-4e70-afe4-056d043bb4b4",
+      "name": "HTTP Request",
+      "alwaysOutputData": true,
+      "executeOnce": true
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -200,
+        220
+      ],
+      "id": "9d82afaf-84b0-4517-a460-2abb17f6e03a",
+      "name": "When clicking ‘Test workflow’"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": {
+    "node:Schedule Trigger": {
+      "recurrenceRules": []
+    }
+  },
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-04-10T09:14:07.000Z",
+  "versionId": "a010fd6c-81b2-497c-9a32-a81f22ae3ab3"
+}
