@@ -1,0 +1,199 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-10T09:43:46.867Z",
+  "id": "z0lK0GrncrKE3jNf",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Excel Sort by PO",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        0
+      ],
+      "id": "2ba2f7c5-74bb-4a8b-b54d-975181a2a0bb",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1i9NnxsOtOpn4baBf31kgYd61gb7z_E4t75-SwDBxxHs",
+          "mode": "list",
+          "cachedResultName": "GG",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1i9NnxsOtOpn4baBf31kgYd61gb7z_E4t75-SwDBxxHs/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 404001391,
+          "mode": "list",
+          "cachedResultName": "PO",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1i9NnxsOtOpn4baBf31kgYd61gb7z_E4t75-SwDBxxHs/edit#gid=404001391"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        240,
+        -40
+      ],
+      "id": "46d65b8b-f29e-4461-b0a6-218d6218021d",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "0eu04TByJ89Qu504",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1i9NnxsOtOpn4baBf31kgYd61gb7z_E4t75-SwDBxxHs",
+          "mode": "list",
+          "cachedResultName": "GG",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1i9NnxsOtOpn4baBf31kgYd61gb7z_E4t75-SwDBxxHs/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1671480410,
+          "mode": "list",
+          "cachedResultName": "Demand",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1i9NnxsOtOpn4baBf31kgYd61gb7z_E4t75-SwDBxxHs/edit#gid=1671480410"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        240,
+        140
+      ],
+      "id": "8e2408fb-18d1-4df1-b208-4547311204fc",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "0eu04TByJ89Qu504",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.map(item => {\n  const row = item.json;\n  return {\n    json: {\n      PO: row.PO.toString().trim(),\n      Item: Number(row.Item),\n      DocumentDate: new Date(row['Document Date']).toISOString().split('T')[0],\n      Supplier: row['Supplier/Supplying Plant']?.trim(),\n      Material: row.Material.toString().trim(),\n      ShortText: row['Short Text']?.trim(),\n      Qty: Number((row['Still to be delivered (qty)'] + '').replace(/,/g, '')),\n      DeliveryDate: new Date(row['Delivery Date']).toISOString().split('T')[0],\n    }\n  };\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        460,
+        -40
+      ],
+      "id": "1ab01136-ee41-4dc0-bc37-1e77dd7fc55f",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.flatMap(item => {\n  const row = item.json;\n  const material = row['Material'].toString().trim();\n  const shortText = row['Short text']?.toString().trim(); // đổi đúng theo key\n  console.log('DEBUG:', row);\n  return Object.entries(row)\n    .filter(([key]) => /\\d{1,2}\\/\\d{1,2}\\/\\d{4}/.test(key))\n    .map(([dateStr, qty]) => ({\n      json: {\n        Material: material,\n        ShortText: shortText,\n        Date: dateStr.split('/').reverse().join('-'), // chuyển DD/MM/YYYY -> YYYY-MM-DD\n        Qty: Number((qty || '0').toString().replace(/,/g, ''))\n      }\n    }))\n    .filter(row => row.json.Qty > 0);\n});\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        420,
+        160
+      ],
+      "id": "0b65ba31-2d2a-4dfc-9fec-e4566ea79336",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "jsCode": "const inputs = $input.all();\n\n// Node Code (sheet PO) là node [0]\nconst poList = inputs[0].map(i => i.json);\n\n// Node Code1 (sheet Demand) là node [1]\nconst demandList = inputs[1].map(i => i.json);\n\nconsole.log('🟡 PO:', poList);\nconsole.log('🟡 Demand:', demandList);\n\nconst output = [\n  ...poList.map(item => ({ json: { ...item, __source: 'PO' } })),\n  ...demandList.map(item => ({ json: { ...item, __source: 'Demand' } })),\n];\n\nreturn output;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        680,
+        60
+      ],
+      "id": "52c69124-5d14-492d-a349-dd310df460c7",
+      "name": "Code2",
+      "alwaysOutputData": false
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-04-16T07:04:02.000Z",
+  "versionId": "012a1f78-37dc-40c4-8e20-edcf5b0ca5ca"
+}
