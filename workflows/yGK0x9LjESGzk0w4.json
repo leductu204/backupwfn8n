@@ -1,0 +1,888 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        []
+      ]
+    },
+    "xAI Grok Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "TIÊU ĐÈ",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "MỤC TIÊU",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "VẤN ĐỀ",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "NỖI ĐAU",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TIÊU ĐÈ": {
+      "main": [
+        [
+          {
+            "node": "MỤC TIÊU",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "MỤC TIÊU": {
+      "main": [
+        [
+          {
+            "node": "VẤN ĐỀ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "TÌM DÒNG RỖNG": {
+      "main": [
+        [
+          {
+            "node": "TIÊU ĐÈ",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "VẤN ĐỀ": {
+      "main": [
+        [
+          {
+            "node": "NỖI ĐAU",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "NỖI ĐAU": {
+      "main": [
+        [
+          {
+            "node": "HOOK",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "HOOK",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HOOK": {
+      "main": [
+        [
+          {
+            "node": "CONTENT TIKTOK",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "CONTENT TIKTOK",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CONTENT TIKTOK": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI": {
+      "main": [
+        [
+          {
+            "node": "Google Drive",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model6": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "PROMPT IMAGE",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "PROMPT IMAGE": {
+      "main": [
+        [
+          {
+            "node": "OpenAI1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model7": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Drive": {
+      "main": [
+        [
+          {
+            "node": "PROMPT IMAGE",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Schedule Trigger": {
+      "main": [
+        [
+          {
+            "node": "TÌM DÒNG RỖNG",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-18T18:19:09.973Z",
+  "id": "yGK0x9LjESGzk0w4",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "CONTENT FB TIK - Hai Academy",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -140,
+        -220
+      ],
+      "id": "caf299af-acf2-498e-90bf-a1234509d76d",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {
+          "temperature": 1.2,
+          "topP": 1
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        220,
+        -240
+      ],
+      "id": "b649e2dc-a4a5-4916-975d-1a6789cf8ef1",
+      "name": "xAI Grok Chat Model",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1i8HpBp4DenQlGr8H9P9-2qsgjNfQmrDFA6ErbuSHF0s",
+          "mode": "list",
+          "cachedResultName": "Gen Content - Hai Academy ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1i8HpBp4DenQlGr8H9P9-2qsgjNfQmrDFA6ErbuSHF0s/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "CONTENT",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1i8HpBp4DenQlGr8H9P9-2qsgjNfQmrDFA6ErbuSHF0s/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "STT": "={{ $('TÌM DÒNG RỖNG').item.json.STT }}",
+            "TIÊU ĐỀ": "={{ $('TIÊU ĐÈ').item.json.text }}",
+            "MỤC TIÊU": "={{ $('MỤC TIÊU').item.json.text }}",
+            "VẤN ĐỀ": "={{ $('VẤN ĐỀ').item.json.text }}",
+            "NỖI ĐAU": "={{ $('NỖI ĐAU').item.json.text }}",
+            "HOOK": "={{ $('HOOK').item.json.text }}",
+            "TIKTOK": "={{ $('CONTENT TIKTOK').item.json.output }}",
+            "FACEBOOK": "={{ $('AI Agent').item.json.output }}",
+            "TÌNH TRẠNG": "CONTENT",
+            "ẢNH": "={{ $json.url }}",
+            "VOICE": "={{ $('Google Drive').item.json.webViewLink }}"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TIÊU ĐỀ",
+              "displayName": "TIÊU ĐỀ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "MỤC TIÊU",
+              "displayName": "MỤC TIÊU",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "VẤN ĐỀ",
+              "displayName": "VẤN ĐỀ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NỖI ĐAU",
+              "displayName": "NỖI ĐAU",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "HOOK",
+              "displayName": "HOOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "FACEBOOK",
+              "displayName": "FACEBOOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TIKTOK",
+              "displayName": "TIKTOK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "VOICE",
+              "displayName": "VOICE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "ẢNH",
+              "displayName": "ẢNH",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TÌNH TRẠNG",
+              "displayName": "TÌNH TRẠNG",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1640,
+        -60
+      ],
+      "id": "39eb3820-db14-4a75-97b9-f6d29e5e214e",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        400,
+        -240
+      ],
+      "id": "df679011-b9f0-46e6-9fa0-7926d4cb23e3",
+      "name": "xAI Grok Chat Model1",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        220,
+        -60
+      ],
+      "id": "c78c9d98-808f-4ef2-8dff-3db1f26c2d44",
+      "name": "xAI Grok Chat Model2",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        380,
+        -40
+      ],
+      "id": "2f375039-d091-4cd0-8577-737cf46fb52a",
+      "name": "xAI Grok Chat Model3",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Tiêu đề: {{ $json.text }}\nGợi ý vấn đề dưới dạng đơn giản, dễ hiểu và đúng bối cảnh thực tế.\n\nOutput dạng liệt kê:\n– Vấn đề 1: …\n– Vấn đề 2: …",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Bạn là một chuyên gia nghiên cứu insight khách hàng trong ngành marketing và quảng cáo. Dựa trên tiêu đề sau, hãy suy luận ra 1–2 vấn đề phổ biến mà khách hàng mục tiêu có thể đang gặp phải liên quan đến nội dung đó."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        540,
+        -240
+      ],
+      "id": "b2c3324d-c2bb-4707-a159-c6b8a3bdfc1d",
+      "name": "VẤN ĐỀ"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "Act as a creative marketing strategist for a digital agency.\nYour task is to generate 1 short, attention-grabbing RANDOM content titles targeting small business owners and solo marketers. The topics should relate to digital marketing, AI automation, running performance ads (Facebook, TikTok), productivity tools, or marketing strategy.\n Output requirements: – Titles must be in Vietnamese – Title must be unique, non-repetitive, and highly clickable – Style: emotional, curiosity-driven, problem-solution based – Avoid common clichés or overly generic language – Return as a plain list (not numbered) - Output a Content titles only and no give more.\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        220,
+        -400
+      ],
+      "id": "f81bee67-e3be-4110-a626-7c2c527d10c7",
+      "name": "TIÊU ĐÈ"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Tiêu đề:  {{ $json.text }}\nTrả về kết quả ngắn gọn (1–2 dòng), thể hiện rõ mục tiêu như: tăng nhận diện thương hiệu, tăng tương tác, định hướng niềm tin, tăng chuyển đổi, xây dựng chuyên gia, v.v.\n\nOutput mong muốn: Dạng gợi ý hành vi hoặc tác động cụ thể đến người đọc.",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Bạn là một chuyên gia chiến lược nội dung trong lĩnh vực marketing và agency. Dựa trên tiêu đề sau, hãy xác định rõ mục tiêu truyền thông chính của bài viết."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        560,
+        -400
+      ],
+      "id": "f20132a7-90a3-494b-b956-7d27e0d65dda",
+      "name": "MỤC TIÊU"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1i8HpBp4DenQlGr8H9P9-2qsgjNfQmrDFA6ErbuSHF0s",
+          "mode": "list",
+          "cachedResultName": "Gen Content - Hai Academy ",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1i8HpBp4DenQlGr8H9P9-2qsgjNfQmrDFA6ErbuSHF0s/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "CONTENT",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1i8HpBp4DenQlGr8H9P9-2qsgjNfQmrDFA6ErbuSHF0s/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "TÌNH TRẠNG"
+            }
+          ]
+        },
+        "options": {
+          "returnFirstMatch": true
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        20,
+        -400
+      ],
+      "id": "618bdcf6-145b-4781-b7d4-2d96083273a2",
+      "name": "TÌM DÒNG RỖNG",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Vấn đề: {{ $json.text }}\nMỗi nỗi đau nên được diễn đạt theo hướng cảm xúc và tác động rõ rệt đến tâm lý, doanh thu, thời gian hoặc hiệu quả công việc.\n\nOutput:\n– Nỗi đau 1: … Nỗi đau 2: … Nỗi đau 3 ...",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Bạn là một chuyên gia đào insight trong lĩnh vực marketing. Dựa trên các vấn đề sau, hãy diễn giải thành các nỗi đau thực tế mà khách hàng đang cảm nhận."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        540,
+        -80
+      ],
+      "id": "8885638d-863f-4410-93c9-becd07a1308e",
+      "name": "NỖI ĐAU"
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        380,
+        120
+      ],
+      "id": "1afe63a5-3ef2-4ed8-b45f-fe60c5d954e4",
+      "name": "xAI Grok Chat Model4",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Vấn đề:  {{ $('VẤN ĐỀ').item.json.text }}\nNỗi đau: {{ $json.text }}\nCâu hook cần có tính giật tít, bất ngờ, đánh trúng cảm xúc hoặc sự tò mò, có thể sử dụng icon hoặc từ viết HOA để nhấn mạnh.\n\nOutput mong muốn:\n– HOOK: ….",
+        "messages": {
+          "messageValues": [
+            {
+              "message": "Bạn là một chuyên gia sáng tạo nội dung viral. Dựa trên các nỗi đau và vấn đề dưới đây, hãy tạo một câu mở đầu HOOK thật thu hút người đọc, người nghe trong 3 giây đầu tiên."
+            }
+          ]
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        580,
+        80
+      ],
+      "id": "9083deaf-011c-41be-882b-295724f96f63",
+      "name": "HOOK"
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        920,
+        -280
+      ],
+      "id": "9186534e-5a4a-468f-806c-07227d649efe",
+      "name": "xAI Grok Chat Model5",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Dưới đây là thông tin đầu vào để bạn tạo một kịch bản video TikTok hoàn chỉnh:\n- Tiêu đề nội dung:  {{ $('TIÊU ĐÈ').item.json.text }}\n- Mục tiêu: {{ $('MỤC TIÊU').item.json.text }}\n- Vấn đề khách hàng thường gặp: {{ $('TIÊU ĐÈ').item.json.text }}\n- Nỗi đau sâu sắc của khách hàng: {{ $('NỖI ĐAU').item.json.text }}\n- HOOK {{ $('HOOK').item.json.text }}\nYêu cầu đầu ra:\nHãy viết kịch bản video TikTok hoàn chỉnh, gồm:\nHOOK mở đầu:\nLàm nổi bật sự bất ngờ, mâu thuẫn hoặc nỗi đau\nCó thể dùng câu hỏi, số liệu, lời tuyên bố gây sốc\nViết ngắn gọn như câu thoại thật\nThân bài:\nKể lại vấn đề + ví dụ thực tế\nLồng ghép giải pháp hoặc gợi mở hướng đi (dùng AI, automation, mẹo marketing...)\nCó thể thêm chia nhỏ thành bullet\nChốt:\nRút ra 1 thông điệp ngắn hoặc 1 bài học\nKèm 1 CTA nhẹ (comment, follow, share, hỏi lại...)\nKỊCH BẢN ĐƯA CHO TÔI DƯỚI DẠNG 1 ĐOẠN VĂN LIÊN TỤC, KHÔNG TÁCH RỜI, CHỈ ĐƯA CONTENT VÀ KHÔNG CẦN GIẢI THÍCH KỊCH BẢN VIDEO TIKTOK, MỞ BÀI, THÂN BÀI, CHỐT,... VÀ KHÔNG NÓI GÌ THÊM",
+        "options": {
+          "systemMessage": "Bạn là một chuyên gia sáng tạo nội dung TikTok, chuyên sản xuất video ngắn (30–60s) cho lĩnh vực marketing, agency, quảng cáo và automation. "
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.8,
+      "position": [
+        920,
+        -420
+      ],
+      "id": "99e99dc0-f4fd-4779-923d-1a5ccb341111",
+      "name": "CONTENT TIKTOK"
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "input": "={{ $('CONTENT TIKTOK').item.json.output }}",
+        "voice": "onyx",
+        "options": {
+          "response_format": "mp3",
+          "speed": 1.1
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1600,
+        -420
+      ],
+      "id": "b56af6b7-f1b2-4c8b-94eb-7bfe972bd2f5",
+      "name": "OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "zcfVShxOG85MEJBf",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        1140,
+        100
+      ],
+      "id": "3caa5739-9ebf-456a-ba6b-dc4cb74ea710",
+      "name": "xAI Grok Chat Model6",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "prompt": "={{ $('PROMPT IMAGE').item.json.text }}",
+        "options": {
+          "returnImageUrls": true
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1480,
+        -60
+      ],
+      "id": "b5609584-dff9-4159-957e-74b85988da0b",
+      "name": "OpenAI1",
+      "credentials": {
+        "openAiApi": {
+          "id": "zcfVShxOG85MEJBf",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia hình ảnh AI.\n\nDưới đây là một tiêu đề nội dung được dùng để viết bài cho các nền tảng như Facebook, TikTok, LinkedIn, Instagram,...\n\nTiêu đề: {{ $('TIÊU ĐÈ').item.json.text }}\nDựa trên tiêu đề này, hãy viết một mô tả ngắn (bằng tiếng Anh) để tạo ra một hình ảnh minh họa phù hợp.\n\nYêu cầu:\n– Mô tả phải có tính hình dung cao, truyền tải đúng ý tưởng cốt lõi của tiêu đề\n– Có thể dùng hình ảnh trừu tượng (biểu tượng AI, dữ liệu, con người đang thao tác, dòng công việc, v.v.)\n– Tông màu nên chuyên nghiệp, hiện đại (trắng, xanh, xám, đen, neon, tùy trường hợp)\n– Không dùng ký tự đặc biệt hay markdown\n– Output là 1 câu tiếng Anh mô tả ảnh dùng được với DALL·E, Midjourney, Firefly,..."
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        1140,
+        -60
+      ],
+      "id": "c11c01cf-96c9-4ae4-9337-75f0852978bc",
+      "name": "PROMPT IMAGE"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=- Tiêu đề nội dung:  {{ $('TIÊU ĐÈ').item.json.text }}\n- Mục tiêu: {{ $('MỤC TIÊU').item.json.text }}\n- Vấn đề khách hàng thường gặp: {{ $('TIÊU ĐÈ').item.json.text }}\n- Nỗi đau sâu sắc của khách hàng: {{ $('NỖI ĐAU').item.json.text }}\n- HOOK {{ $('HOOK').item.json.text }}",
+        "options": {
+          "systemMessage": "Bạn là một chuyên gia viết content Facebook trong lĩnh vực marketing, agency và AI automation.\n\nTôi sẽ cung cấp cho bạn 5 yếu tố đầu vào, nhiệm vụ của bạn là viết một bài post Facebook hoàn chỉnh, bắt mắt, có icon, có cảm xúc và thu hút người đọc ngay từ dòng đầu tiên.\nHãy viết một bài post Facebook có cấu trúc như sau:\n\nMở đầu bằng HOOK thật giật, có thể viết hoa, có emoji phù hợp để gây chú ý.\n\nMở rộng vấn đề và nỗi đau mà người đọc đang gặp phải → khiến họ cảm thấy \"đúng cái mình đang bị\".\n\nChia sẻ hướng giải quyết hoặc trải nghiệm thực tế (có thể là trải nghiệm của bạn, team bạn hoặc case study ngắn).\n\nChốt bài bằng 1 thông điệp tích cực hoặc lời khuyên ngắn gọn.\n\nKết bài bằng 1 câu hỏi mở hoặc CTA nhẹ để khuyến khích comment, chia sẻ hoặc lưu bài viết.\n🧠 Yêu cầu khác:\n\nDùng emoji để bài viết dễ đọc và có cảm xúc hơn (nhưng không lạm dụng).\n\nNgắt dòng hợp lý để bài viết không bị dày đặc.\n\nViết bằng giọng văn tự nhiên, chân thật, giống người trong ngành chia sẻ thật.\n\nKhông được viết theo kiểu quảng cáo, không nhồi nhét bán hàng.\n\nTổng độ dài khoảng 200–400 từ."
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.8,
+      "position": [
+        1240,
+        -420
+      ],
+      "id": "ede9b10b-e6db-40f6-80cf-345be908bb26",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        1240,
+        -260
+      ],
+      "id": "6be5d3cd-775f-4728-be4a-3eeae46bb0fa",
+      "name": "xAI Grok Chat Model7",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "name": "=voice-{{ $('TÌM DÒNG RỖNG').item.json.row_number }}",
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "https://drive.google.com/drive/u/0/folders/1bgH3FaXQ1qzBAL_zWnka8kCtUZNGsHsR",
+          "mode": "url"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        980,
+        -60
+      ],
+      "id": "e935d2ec-a200-4a63-9dc9-66a8d4302b8c",
+      "name": "Google Drive",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "N6i6s2BSw6Ghb0GK",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "triggerAtHour": 10
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -140,
+        -400
+      ],
+      "id": "aeb11a51-69a6-4f5d-9919-fa41abc422f2",
+      "name": "Schedule Trigger"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-04-19T09:00:03.000Z",
+  "versionId": "233b8e0f-312f-420f-b583-991b15143e7e"
+}
