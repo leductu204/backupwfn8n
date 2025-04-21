@@ -1,0 +1,1096 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "H1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "H1",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model1": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "INTRO",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model2": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "H3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Summary",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "META-DES",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "H2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "INTRO": {
+      "main": [
+        [
+          {
+            "node": "H2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "H1": {
+      "main": [
+        [
+          {
+            "node": "IMG-1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "H2": {
+      "main": [
+        [
+          {
+            "node": "IMG-2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model6": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "H3-2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "H3": {
+      "main": [
+        [
+          {
+            "node": "IMG-3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "H3-2": {
+      "main": [
+        [
+          {
+            "node": "IMG-4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "META-DES": {
+      "main": [
+        [
+          {
+            "node": "IMG-6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Summary": {
+      "main": [
+        [
+          {
+            "node": "Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model7": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Final",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Final": {
+      "main": [
+        [
+          {
+            "node": "Content-Final",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model8": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "H3-3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "H3-3": {
+      "main": [
+        [
+          {
+            "node": "IMG-5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IMG-1": {
+      "main": [
+        [
+          {
+            "node": "INTRO",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IMG-2": {
+      "main": [
+        [
+          {
+            "node": "H3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IMG-3": {
+      "main": [
+        [
+          {
+            "node": "H3-2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IMG-4": {
+      "main": [
+        [
+          {
+            "node": "H3-3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IMG-5": {
+      "main": [
+        [
+          {
+            "node": "META-DES",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "IMG-6": {
+      "main": [
+        [
+          {
+            "node": "Summary",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Content-Final",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        []
+      ]
+    },
+    "Content-Final": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-21T18:06:20.494Z",
+  "id": "bWTpohCa1NtYTw1z",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Phan Thanh Binh",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -560,
+        -280
+      ],
+      "id": "349247da-6076-4ffe-8ae6-bf8c44de4270",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1UjCP5OFV29OFXt_eF52wImCLx6UFFrY7wBRjrmwdIFQ",
+          "mode": "list",
+          "cachedResultName": "Auto Content SEO - Thanh Binh",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1UjCP5OFV29OFXt_eF52wImCLx6UFFrY7wBRjrmwdIFQ/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Trang tính1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1UjCP5OFV29OFXt_eF52wImCLx6UFFrY7wBRjrmwdIFQ/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "CHECK"
+            }
+          ]
+        },
+        "options": {
+          "returnFirstMatch": true
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        -340,
+        -280
+      ],
+      "id": "6bf4f625-ee9d-4276-86cf-16c55cfed6c1",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        -32,
+        -60
+      ],
+      "id": "87b0b85d-00c2-430a-841c-ccb2654f9944",
+      "name": "xAI Grok Chat Model",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        564,
+        -60
+      ],
+      "id": "f0246c29-731c-4c80-a90f-8d3a4b1920ea",
+      "name": "xAI Grok Chat Model1",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        1536,
+        -60
+      ],
+      "id": "60c30818-a374-436f-8800-a28db48c6d32",
+      "name": "xAI Grok Chat Model2",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        3920,
+        -60
+      ],
+      "id": "0e1794d2-935c-40b6-84b0-f567813c2874",
+      "name": "xAI Grok Chat Model3",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        3324,
+        -60
+      ],
+      "id": "702d5da1-6b8d-4dea-92f7-6dc492519c8c",
+      "name": "xAI Grok Chat Model4",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        940,
+        -60
+      ],
+      "id": "e2653b89-5b8d-44a4-9752-cf15efe15fef",
+      "name": "xAI Grok Chat Model5",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia content SEO trong lĩnh vực thời trang.\n\nNhiệm vụ của bạn là viết **đoạn mở bài (intro)** thật thu hút và chuẩn SEO cho một bài blog với tiêu đề H1 :\n {{ $json.text }}\n\nYêu cầu cụ thể:\n- Viết bằng tiếng Việt, dài khoảng 80–120 từ\n- Phải nhắc lại **từ khóa chính** một cách tự nhiên\n- Mở đầu nên dùng câu hỏi, cảm thán, hoặc hình ảnh gợi cảm xúc\n- Văn phong trẻ trung, gần gũi, mang cảm hứng thời trang\n- Kết thúc bằng một câu mở để dẫn người đọc đọc tiếp\n- Không chú thích, không chèn lại tiêu đề, không nói gì ngoài đoạn văn\n- Output không có dấu \"**\"\n\nHãy viết thật thu hút và giữ đúng giọng điệu dành cho người trẻ yêu thời trang."
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        476,
+        -280
+      ],
+      "id": "3ad88668-a7a8-4acb-898e-f8b3297e2cee",
+      "name": "INTRO"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia viết nội dung thời trang chuẩn SEO.\n\nDựa trên tiêu đề bài viết và đoạn mở bài (intro) dưới đây, hãy viết một đoạn nội dung tương ứng cho **một mục H2 đầu tiên** trong bài viết.\n\n**Tiêu đề H1:**{{ $('H1').item.json.text }}\n**Intro:**{{ $json.text }}\n\nYêu cầu cụ thể:\n- Viết bằng tiếng Việt, dài khoảng 80–120 từ\n- Nhắc lại từ khóa chính một cách tự nhiên\n- Mở đầu nên dùng câu hỏi, cảm thán, hoặc hình ảnh gợi cảm xúc\n- Văn phong trẻ trung, gần gũi, mang cảm hứng thời trang\n- Kết thúc bằng một câu mở để dẫn người đọc đọc tiếp mục tiếp theo\n- Không chú thích, không chèn lại tiêu đề, không nói gì ngoài đoạn văn\n- Output không có dấu \"**\""
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        852,
+        -280
+      ],
+      "id": "eac6f2d1-9903-4944-9cd6-3f5975e2b71f",
+      "name": "H2"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia content SEO trong lĩnh vực thời trang.Nhiệm vụ của bạn là viết \"tiêu đề H1 thật hấp dẫn\" cho một bài viết blog.Hãy đảm bảo tiêu đề có chứa từ khóa chính, không quá 60 ký tự, mang tính thu hút để người dùng muốn click.\nTIÊU ĐỀ CHÍNH: {{ $json.TITLE }}\n\nYêu cầu cụ thể:\n\nNgôn ngữ: tiếng Việt\n\nĐối tượng đọc bài: người trẻ 18–30 tuổi yêu thời trang, tìm kiếm cảm hứng phối đồ\n\nNgữ điệu: trẻ trung, gần gũi, có chút trendy\n\nTừ khóa chính: lấy từ tiêu đề chính\n\nNếu có thể, hãy mở đầu bằng câu hỏi, fact thú vị, hoặc gợi hình ảnh\n\nHãy trả về H1 dưới dạng văn bản chuẩn SEO, không cung cấp nội dung thừa thãi và không nói gì thêm. Không thêm kí tự \"**\" vào output "
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        -120,
+        -280
+      ],
+      "id": "1902854a-8fe1-4276-8ab8-3953720983b1",
+      "name": "H1"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia content SEO trong lĩnh vực thời trang.\n\nDựa trên tiêu đề bài viết và một mục H2 cụ thể dưới đây, hãy viết nội dung tương ứng cho một **mục H3 nằm trong H2 đó**.\n\n**Tiêu đề H1:**  {{ $('H1').item.json.text }}\n**Tiêu đề H2:**  {{ $('H2').item.json.text }}\n\nYêu cầu cụ thể:\n- Viết bằng tiếng Việt, độ dài khoảng 80–100 từ\n- Nội dung cần cụ thể hơn, chi tiết hóa nội dung H2 (nêu ví dụ, hướng dẫn cụ thể, mô tả hình ảnh, mẹo hay…)\n- Nhắc lại từ khóa chính hoặc từ khóa phụ một cách tự nhiên\n- Văn phong trẻ trung, gần gũi, truyền cảm hứng thời trang\n- Không chèn lại H1 hay H2 trong nội dung\n- Không thêm tiêu đề, không giải thích gì ngoài đoạn văn\n- Không dùng dấu \"**\"\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        1448,
+        -280
+      ],
+      "id": "bef82633-1f5f-455a-863c-9450cf02cfbe",
+      "name": "H3"
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {
+          "temperature": 1.1
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        2132,
+        -60
+      ],
+      "id": "767cefaa-b92e-4e5e-94c0-497a4a0829a8",
+      "name": "xAI Grok Chat Model6",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia content SEO trong lĩnh vực thời trang.\n\nDựa trên tiêu đề bài viết và một mục H2 cụ thể dưới đây, hãy viết nội dung tương ứng cho một **mục H3 nằm trong H2 đó**.\n\n**Tiêu đề H1:**  {{ $('H1').item.json.text }}\n**Tiêu đề H2:**  {{ $('H2').item.json.text }}\n\nYêu cầu cụ thể:\n- Viết bằng tiếng Việt, độ dài khoảng 80–100 từ\n- Nội dung cần cụ thể hơn, chi tiết hóa nội dung H2 (nêu ví dụ, hướng dẫn cụ thể, mô tả hình ảnh, mẹo hay…)\n- Nhắc lại từ khóa chính hoặc từ khóa phụ một cách tự nhiên\n- Văn phong trẻ trung, gần gũi, truyền cảm hứng thời trang\n- Không chèn lại H1 hay H2 trong nội dung\n- Không thêm tiêu đề, không giải thích gì ngoài đoạn văn\n- Không dùng dấu \"**\"\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        2044,
+        -280
+      ],
+      "id": "f92bdc08-4b97-4eef-adad-057a2e856615",
+      "name": "H3-2"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia SEO.\n\nHãy viết **thẻ meta description chuẩn SEO** cho bài viết blog với thông tin sau:\n\n- **Tiêu đề bài viết (H1):**  {{ $('H1').item.json.text }}\n- **Từ khóa chính:*: Thời trang,  {{ $('Google Sheets').item.json.TITLE }}, {{ $('H1').item.json.text }}\n- **Mô tả nội dung:**  {{ $('INTRO').item.json.text }}\n\nYêu cầu cụ thể:\n- Viết bằng tiếng Việt\n- Độ dài tối ưu: khoảng 140–160 ký tự (không vượt quá 165 ký tự)\n- Phải có từ khóa chính một cách tự nhiên\n- Giới thiệu hấp dẫn để kích thích người dùng click\n- Không thêm tiêu đề lại, không giải thích gì khác, chỉ trả về chuỗi mô tả ngắn\n\nOutput: chỉ là đoạn mô tả meta description duy nhất, không có chú thích, không thừa ký hiệu.\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        3236,
+        -280
+      ],
+      "id": "e3f268f1-fda4-45fc-9b38-54aab3881596",
+      "name": "META-DES"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Tóm tắt cho tôi các ý chính của các phần trong bài viết SEO sau đây:\nH1:  {{ $('H1').item.json.text }}\nH2:  {{ $('H2').item.json.text }}\nH3:  {{ $('H3').item.json.text }}\nH3:  {{ $('H3-2').item.json.text }}\nMeta Description:  {{ $('META-DES').item.json.text }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        3832,
+        -280
+      ],
+      "id": "91133b58-0fb0-49b2-8881-85a06aded905",
+      "name": "Summary"
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        4296,
+        -60
+      ],
+      "id": "4eddb22c-706a-4982-a226-81c47e1b0bd2",
+      "name": "xAI Grok Chat Model7",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia content SEO trong lĩnh vực thời trang.\nHãy viết **đoạn kết luận cuối cùng (FINAL)** cho một bài blog với các nội dung chính:\n {{ $('Summary').item.json.text }}\nYêu cầu cụ thể:\n- Viết bằng tiếng Việt, độ dài khoảng 80–120 từ  \n- Tóm gọn lại tinh thần và nội dung chính của bài viết  \n- Mang tính truyền cảm hứng, gợi cảm giác hào hứng/thỏa mãn sau khi đọc  \n- Chèn lời kêu gọi hành động nhẹ nhàng (ví dụ: chia sẻ, lưu bài, thử áp dụng, comment cảm nhận...)  \n- Văn phong trẻ trung, thân thiện, đúng tone thời trang  \n- Không lặp lại nguyên văn tiêu đề, không nói “kết luận là” hoặc “tóm lại là”  \n- Không dùng dấu ** hay chú thích\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        4208,
+        -280
+      ],
+      "id": "43ab4259-864a-47e9-bc47-f9240e35e6a1",
+      "name": "Final"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentId": {
+          "__rl": true,
+          "value": "1UjCP5OFV29OFXt_eF52wImCLx6UFFrY7wBRjrmwdIFQ",
+          "mode": "list",
+          "cachedResultName": "Auto Content SEO - Thanh Binh",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1UjCP5OFV29OFXt_eF52wImCLx6UFFrY7wBRjrmwdIFQ/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Trang tính1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1UjCP5OFV29OFXt_eF52wImCLx6UFFrY7wBRjrmwdIFQ/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "CHECK": "CONTENT",
+            "TIÊU ĐỀ (H1)": "={{ $('H1').item.json.text }}",
+            "INTRO": "={{ $('INTRO').item.json.text }}",
+            "H2": "={{ $('H2').item.json.text }}",
+            "H3": "={{ $('H3').item.json.text }}",
+            "H3-2": "={{ $('H3-2').item.json.text }}",
+            "META DESCIRPTION": "={{ $('META-DES').item.json.text }}",
+            "FINAL": "={{ $('Final').item.json.text }}",
+            "CONTENT FINAL": "={{ $json.output }}",
+            "STT": "={{ $('Google Sheets').item.json.STT }}"
+          },
+          "matchingColumns": [
+            "STT"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TITLE",
+              "displayName": "TITLE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "CHECK",
+              "displayName": "CHECK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TIÊU ĐỀ (H1)",
+              "displayName": "TIÊU ĐỀ (H1)",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "INTRO",
+              "displayName": "INTRO",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "H2",
+              "displayName": "H2",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "H3",
+              "displayName": "H3",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "H3-2",
+              "displayName": "H3-2",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "META DESCIRPTION",
+              "displayName": "META DESCIRPTION",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "FINAL",
+              "displayName": "FINAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "CONTENT FINAL",
+              "displayName": "CONTENT FINAL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "IMAGE 1",
+              "displayName": "IMAGE 1",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "IMAGE 2",
+              "displayName": "IMAGE 2",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "IMAGE 3",
+              "displayName": "IMAGE 3",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "IMAGE 4",
+              "displayName": "IMAGE 4",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "IMAGE 5",
+              "displayName": "IMAGE 5",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "IMAGE 6",
+              "displayName": "IMAGE 6",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "row_number",
+              "displayName": "row_number",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "readOnly": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        4960,
+        -280
+      ],
+      "id": "faff9261-3a01-4d9d-974d-4b782a4b45a2",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {
+          "temperature": 1.1
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        2728,
+        -60
+      ],
+      "id": "88c19bce-05b7-497e-bb65-4a4cd6c09781",
+      "name": "xAI Grok Chat Model8",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia content SEO trong lĩnh vực thời trang.\n\nDựa trên tiêu đề bài viết và 2 mục H3 trước đó, hãy viết thêm cho tôi 1 mục H3 nữa\n\n**Tiêu đề H1:**  {{ $('H1').item.json.text }}\n** H3:**  {{ $('H3').item.json.text }}\n** H3-2:**  {{ $('H3-2').item.json.text }}\n\nYêu cầu cụ thể:\n- Viết bằng tiếng Việt, độ dài khoảng 80–100 từ\n- Nội dung cần cụ thể hơn, chi tiết hóa nội dung H2 (nêu ví dụ, hướng dẫn cụ thể, mô tả hình ảnh, mẹo hay…)\n- Nhắc lại từ khóa chính hoặc từ khóa phụ một cách tự nhiên\n- Văn phong trẻ trung, gần gũi, truyền cảm hứng thời trang\n- Không chèn lại H1 hay H2 trong nội dung\n- Không thêm tiêu đề, không giải thích gì ngoài đoạn văn\n- Không dùng dấu \"**\"\n"
+      },
+      "type": "@n8n/n8n-nodes-langchain.chainLlm",
+      "typeVersion": 1.6,
+      "position": [
+        2640,
+        -280
+      ],
+      "id": "3df8aae8-3be4-49ec-8205-b960f2a2d15d",
+      "name": "H3-3"
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "prompt": "=A stylish fashion model wearing {{ $('Google Sheets').item.json.TITLE }}, posing confidently in a modern editorial photoshoot. The setting is clean and minimalistic, with soft shadows and neutral background tones.\nStyle: editorial fashion photography  \nMood: confident, trendy, modern  \nLighting: soft studio light  \nShot type: full body, standing pose  \nColor palette: white, beige, light grey  \nelegant East Asian fashion model, sharp jawline, confident eyes, glowing skin, professional posing\n--ar 1:1 --style raw --v 6\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        256,
+        -280
+      ],
+      "id": "7289aabb-e08a-477f-aca6-ee27c29c26e7",
+      "name": "IMG-1",
+      "credentials": {
+        "openAiApi": {
+          "id": "zcfVShxOG85MEJBf",
+          "name": "OpenAi account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "prompt": "=A fashionable model demonstrating the outfit:  “{{ $json.text }}”.  \nThe model is posing naturally in a well-lit space, with a clear background that enhances the clothing.  \nStyle: modern editorial or street-style fashion photography  \nMood: confident, trendy, stylish  \nLighting: soft natural or studio light  \nShot type: full body or medium shot depending on context  \nColor tones: match the outfit described in the H2  \n--ar 1:1 --style raw --v 6\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1228,
+        -280
+      ],
+      "id": "32544ebd-cbf2-4e47-8aec-fce987ec05f8",
+      "name": "IMG-2",
+      "credentials": {
+        "openAiApi": {
+          "id": "zcfVShxOG85MEJBf",
+          "name": "OpenAi account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "prompt": "=Tạo một bức ảnh thời trang chất lượng cao mô tả nội dung sau: “{{ $json.text }}”.  \nẢnh chỉ hiển thị người mẫu hoặc trang phục thời trang phù hợp với mô tả, không có chữ, không có logo, không có watermark.  \nBối cảnh đơn giản, ánh sáng đẹp, phối màu hài hòa theo nội dung.  \nPhong cách ảnh: editorial fashion photography hoặc lifestyle thời trang hiện đại.  \nCảm xúc: [phân tích cảm xúc từ đoạn – ví dụ: tự tin, nữ tính, năng động,...]  \nTỷ lệ ảnh: 2:3 (chân dung toàn thân)  \ntrendy Korean-style model, 20s, pastel outfit, soft lighting, soft facial features\nKhông chèn bất kỳ nội dung văn bản nào trong ảnh.\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        1824,
+        -280
+      ],
+      "id": "ac708660-290b-48c9-8ba5-dea8f8b7d837",
+      "name": "IMG-3",
+      "credentials": {
+        "openAiApi": {
+          "id": "zcfVShxOG85MEJBf",
+          "name": "OpenAi account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "prompt": "=Tạo một bức ảnh thời trang chất lượng cao mô tả nội dung sau: “{{ $json.text }}”.  \nẢnh chỉ hiển thị người mẫu hoặc trang phục thời trang phù hợp với mô tả, không có chữ, không có logo, không có watermark.  \nBối cảnh đơn giản, ánh sáng đẹp, phối màu hài hòa theo nội dung.  \nPhong cách ảnh: editorial fashion photography hoặc lifestyle thời trang hiện đại.  \nCảm xúc: [phân tích cảm xúc từ đoạn – ví dụ: tự tin, nữ tính, năng động,...]  \nTỷ lệ ảnh: 2:3 (chân dung toàn thân)  \ncute Gen Z Asian girl, sporty fashion, cheerful expression, lifestyle scene\nKhông chèn bất kỳ nội dung văn bản nào trong ảnh.\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        2420,
+        -280
+      ],
+      "id": "5eaa5f87-e53a-4c91-a1de-e1f16719a326",
+      "name": "IMG-4",
+      "credentials": {
+        "openAiApi": {
+          "id": "zcfVShxOG85MEJBf",
+          "name": "OpenAi account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "prompt": "=Tạo một bức ảnh thời trang chất lượng cao mô tả nội dung sau: “{{ $json.text }}”.  \nẢnh chỉ hiển thị người mẫu hoặc trang phục thời trang phù hợp với mô tả, không có chữ, không có logo, không có watermark.  \nBối cảnh đơn giản, ánh sáng đẹp, phối màu hài hòa theo nội dung.  \nPhong cách ảnh: editorial fashion photography hoặc lifestyle thời trang hiện đại.  \nCảm xúc: [phân tích cảm xúc từ đoạn – ví dụ: tự tin, nữ tính, năng động,...]  \nTỷ lệ ảnh: 2:3 (chân dung toàn thân)  \ncute Gen Z Asian girl, sporty fashion, cheerful expression, lifestyle scene\nKhông chèn bất kỳ nội dung văn bản nào trong ảnh.\n",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        3016,
+        -280
+      ],
+      "id": "a3adc465-6ca5-48d1-88fe-5fdcc7a64b52",
+      "name": "IMG-5",
+      "credentials": {
+        "openAiApi": {
+          "id": "zcfVShxOG85MEJBf",
+          "name": "OpenAi account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "prompt": "=Tạo một bức ảnh thời trang chất lượng cao mô tả nội dung sau: “{{ $json.text }}”.  \nẢnh chỉ hiển thị người mẫu hoặc trang phục thời trang (châu Á)  phù hợp với mô tả, không có chữ, không có logo, không có watermark.  \nBối cảnh đơn giản, ánh sáng đẹp, phối màu hài hòa theo nội dung.  \nPhong cách ảnh: editorial fashion photography hoặc lifestyle thời trang hiện đại.  \nCảm xúc: [phân tích cảm xúc từ đoạn – ví dụ: tự tin, nữ tính, năng động,...]  \nTỷ lệ ảnh: 2:3 (chân dung toàn thân)  \nKhông chèn bất kỳ nội dung văn bản nào trong ảnh.",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        3612,
+        -280
+      ],
+      "id": "74e0ad7c-6afb-49eb-a839-dc7889d97e33",
+      "name": "IMG-6",
+      "credentials": {
+        "openAiApi": {
+          "id": "zcfVShxOG85MEJBf",
+          "name": "OpenAi account"
+        }
+      },
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "model": {
+          "__rl": true,
+          "value": "gpt-4o",
+          "mode": "list",
+          "cachedResultName": "gpt-4o"
+        },
+        "options": {
+          "maxTokens": 5000,
+          "temperature": 0.9
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
+      "position": [
+        4580,
+        -80
+      ],
+      "id": "f3e786bc-3f9a-4b09-b047-f5a9c29a32fa",
+      "name": "OpenAI Chat Model",
+      "credentials": {
+        "openAiApi": {
+          "id": "zcfVShxOG85MEJBf",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=Bạn là một chuyên gia SEO content trong lĩnh vực thời trang.\n\nDưới đây là một bài viết blog đã có sẵn theo format:  \nTIÊU ĐỀ (H1), Intro, H2, H3, H3-2, H3-3, META-DES, Final.\n\nNhiệm vụ của bạn là:\n- Kiểm tra toàn bộ nội dung\n- Giữ nguyên format và cấu trúc từng phần\n- Tối ưu lại từ ngữ để thân thiện hơn với công cụ tìm kiếm (SEO)\n- Đảm bảo từ khóa chính xuất hiện hợp lý, tự nhiên\n- Cải thiện trải nghiệm đọc bằng cách thêm từ nối, ví dụ, hình ảnh gợi cảm xúc (nếu cần)\n- Chỉnh lại ngữ điệu cho đúng tone: thời trang, trẻ trung, gần gũi\n- META-DES cần đúng chuẩn <160 ký tự, có từ khóa\n- Không thêm dấu **, không xóa bỏ cấu trúc format đã cho\n\nHãy trả lại bài viết đã chỉnh sửa, với cùng format ban đầu:\nTIÊU ĐỀ (H1)  \nIntro  \nH2  \nH3  \nH3-2  \nH3-3  \nMETA-DES  \nFinal\n(không chú thích Tiêu đề H1, H2, H3,... Cứ theo format mà viết)\nDưới đây là bài viết gốc:\n{{ $('H1').item.json.text }}\n{{ $('INTRO').item.json.text }}\n{{ $('H2').item.json.text }}\n{{ $('H3').item.json.text }}\n{{ $('H3-2').item.json.text }}\n{{ $('H3-3').item.json.text }}\n{{ $('META-DES').item.json.text }}\n{{ $json.text }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.8,
+      "position": [
+        4580,
+        -280
+      ],
+      "id": "a5403b85-cc8d-400b-9fca-243592ae0cc8",
+      "name": "Content-Final"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-04-21T19:14:05.000Z",
+  "versionId": "ae8f8744-ea08-44ab-b744-8208b1defcaf"
+}
