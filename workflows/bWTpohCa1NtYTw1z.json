@@ -383,8 +383,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
       "typeVersion": 1,
       "position": [
-        -32,
-        -60
+        -160,
+        -100
       ],
       "id": "87b0b85d-00c2-430a-841c-ccb2654f9944",
       "name": "xAI Grok Chat Model",
@@ -403,8 +403,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
       "typeVersion": 1,
       "position": [
-        564,
-        -60
+        -80,
+        60
       ],
       "id": "f0246c29-731c-4c80-a90f-8d3a4b1920ea",
       "name": "xAI Grok Chat Model1",
@@ -423,8 +423,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
       "typeVersion": 1,
       "position": [
-        1536,
-        -60
+        660,
+        80
       ],
       "id": "60c30818-a374-436f-8800-a28db48c6d32",
       "name": "xAI Grok Chat Model2",
@@ -443,8 +443,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
       "typeVersion": 1,
       "position": [
-        3920,
-        -60
+        2280,
+        100
       ],
       "id": "0e1794d2-935c-40b6-84b0-f567813c2874",
       "name": "xAI Grok Chat Model3",
@@ -463,8 +463,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
       "typeVersion": 1,
       "position": [
-        3324,
-        -60
+        1880,
+        80
       ],
       "id": "702d5da1-6b8d-4dea-92f7-6dc492519c8c",
       "name": "xAI Grok Chat Model4",
@@ -483,8 +483,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
       "typeVersion": 1,
       "position": [
-        940,
-        -60
+        480,
+        100
       ],
       "id": "e2653b89-5b8d-44a4-9752-cf15efe15fef",
       "name": "xAI Grok Chat Model5",
@@ -503,8 +503,8 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
       "position": [
-        476,
-        -280
+        0,
+        -80
       ],
       "id": "3ad88668-a7a8-4acb-898e-f8b3297e2cee",
       "name": "INTRO"
@@ -517,8 +517,8 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
       "position": [
-        852,
-        -280
+        560,
+        -80
       ],
       "id": "eac6f2d1-9903-4944-9cd6-3f5975e2b71f",
       "name": "H2"
@@ -545,8 +545,8 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
       "position": [
-        1448,
-        -280
+        960,
+        -100
       ],
       "id": "bef82633-1f5f-455a-863c-9450cf02cfbe",
       "name": "H3"
@@ -561,8 +561,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
       "typeVersion": 1,
       "position": [
-        2132,
-        -60
+        980,
+        220
       ],
       "id": "767cefaa-b92e-4e5e-94c0-497a4a0829a8",
       "name": "xAI Grok Chat Model6",
@@ -581,8 +581,8 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
       "position": [
-        2044,
-        -280
+        1020,
+        60
       ],
       "id": "f92bdc08-4b97-4eef-adad-057a2e856615",
       "name": "H3-2"
@@ -595,8 +595,8 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
       "position": [
-        3236,
-        -280
+        1840,
+        -100
       ],
       "id": "e3f268f1-fda4-45fc-9b38-54aab3881596",
       "name": "META-DES"
@@ -609,8 +609,8 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
       "position": [
-        3832,
-        -280
+        2300,
+        -80
       ],
       "id": "91133b58-0fb0-49b2-8881-85a06aded905",
       "name": "Summary"
@@ -623,8 +623,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
       "typeVersion": 1,
       "position": [
-        4296,
-        -60
+        2640,
+        120
       ],
       "id": "4eddb22c-706a-4982-a226-81c47e1b0bd2",
       "name": "xAI Grok Chat Model7",
@@ -643,8 +643,8 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
       "position": [
-        4208,
-        -280
+        2620,
+        -100
       ],
       "id": "43ab4259-864a-47e9-bc47-f9240e35e6a1",
       "name": "Final"
@@ -678,7 +678,13 @@
             "META DESCIRPTION": "={{ $('META-DES').item.json.text }}",
             "FINAL": "={{ $('Final').item.json.text }}",
             "CONTENT FINAL": "={{ $json.output }}",
-            "STT": "={{ $('Google Sheets').item.json.STT }}"
+            "STT": "={{ $('Google Sheets').item.json.STT }}",
+            "IMAGE 1": "={{ $('IMG-1').item.json.url }}",
+            "IMAGE 2": "={{ $('IMG-2').item.json.url }}",
+            "IMAGE 3": "={{ $('IMG-3').item.json.url }}",
+            "IMAGE 4": "={{ $('IMG-4').item.json.url }}",
+            "IMAGE 5": "={{ $('IMG-5').item.json.url }}",
+            "IMAGE 6": "={{ $('IMG-6').item.json.url }}"
           },
           "matchingColumns": [
             "STT"
@@ -860,8 +866,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        4960,
-        -280
+        3400,
+        -100
       ],
       "id": "faff9261-3a01-4d9d-974d-4b782a4b45a2",
       "name": "Google Sheets1",
@@ -882,8 +888,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
       "typeVersion": 1,
       "position": [
-        2728,
-        -60
+        1600,
+        220
       ],
       "id": "88c19bce-05b7-497e-bb65-4a4cd6c09781",
       "name": "xAI Grok Chat Model8",
@@ -902,8 +908,8 @@
       "type": "@n8n/n8n-nodes-langchain.chainLlm",
       "typeVersion": 1.6,
       "position": [
-        2640,
-        -280
+        1580,
+        60
       ],
       "id": "3df8aae8-3be4-49ec-8205-b960f2a2d15d",
       "name": "H3-3"
@@ -912,12 +918,14 @@
       "parameters": {
         "resource": "image",
         "prompt": "=A stylish fashion model wearing {{ $('Google Sheets').item.json.TITLE }}, posing confidently in a modern editorial photoshoot. The setting is clean and minimalistic, with soft shadows and neutral background tones.\nStyle: editorial fashion photography  \nMood: confident, trendy, modern  \nLighting: soft studio light  \nShot type: full body, standing pose  \nColor palette: white, beige, light grey  \nelegant East Asian fashion model, sharp jawline, confident eyes, glowing skin, professional posing\n--ar 1:1 --style raw --v 6\n",
-        "options": {}
+        "options": {
+          "returnImageUrls": true
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.8,
       "position": [
-        256,
+        220,
         -280
       ],
       "id": "7289aabb-e08a-477f-aca6-ee27c29c26e7",
@@ -927,20 +935,21 @@
           "id": "zcfVShxOG85MEJBf",
           "name": "OpenAi account"
         }
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
         "resource": "image",
         "prompt": "=A fashionable model demonstrating the outfit:  “{{ $json.text }}”.  \nThe model is posing naturally in a well-lit space, with a clear background that enhances the clothing.  \nStyle: modern editorial or street-style fashion photography  \nMood: confident, trendy, stylish  \nLighting: soft natural or studio light  \nShot type: full body or medium shot depending on context  \nColor tones: match the outfit described in the H2  \n--ar 1:1 --style raw --v 6\n",
-        "options": {}
+        "options": {
+          "returnImageUrls": true
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.8,
       "position": [
-        1228,
-        -280
+        840,
+        -240
       ],
       "id": "32544ebd-cbf2-4e47-8aec-fce987ec05f8",
       "name": "IMG-2",
@@ -949,20 +958,21 @@
           "id": "zcfVShxOG85MEJBf",
           "name": "OpenAi account"
         }
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
         "resource": "image",
         "prompt": "=Tạo một bức ảnh thời trang chất lượng cao mô tả nội dung sau: “{{ $json.text }}”.  \nẢnh chỉ hiển thị người mẫu hoặc trang phục thời trang phù hợp với mô tả, không có chữ, không có logo, không có watermark.  \nBối cảnh đơn giản, ánh sáng đẹp, phối màu hài hòa theo nội dung.  \nPhong cách ảnh: editorial fashion photography hoặc lifestyle thời trang hiện đại.  \nCảm xúc: [phân tích cảm xúc từ đoạn – ví dụ: tự tin, nữ tính, năng động,...]  \nTỷ lệ ảnh: 2:3 (chân dung toàn thân)  \ntrendy Korean-style model, 20s, pastel outfit, soft lighting, soft facial features\nKhông chèn bất kỳ nội dung văn bản nào trong ảnh.\n",
-        "options": {}
+        "options": {
+          "returnImageUrls": true
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.8,
       "position": [
-        1824,
-        -280
+        820,
+        40
       ],
       "id": "ac708660-290b-48c9-8ba5-dea8f8b7d837",
       "name": "IMG-3",
@@ -971,20 +981,21 @@
           "id": "zcfVShxOG85MEJBf",
           "name": "OpenAi account"
         }
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
         "resource": "image",
         "prompt": "=Tạo một bức ảnh thời trang chất lượng cao mô tả nội dung sau: “{{ $json.text }}”.  \nẢnh chỉ hiển thị người mẫu hoặc trang phục thời trang phù hợp với mô tả, không có chữ, không có logo, không có watermark.  \nBối cảnh đơn giản, ánh sáng đẹp, phối màu hài hòa theo nội dung.  \nPhong cách ảnh: editorial fashion photography hoặc lifestyle thời trang hiện đại.  \nCảm xúc: [phân tích cảm xúc từ đoạn – ví dụ: tự tin, nữ tính, năng động,...]  \nTỷ lệ ảnh: 2:3 (chân dung toàn thân)  \ncute Gen Z Asian girl, sporty fashion, cheerful expression, lifestyle scene\nKhông chèn bất kỳ nội dung văn bản nào trong ảnh.\n",
-        "options": {}
+        "options": {
+          "returnImageUrls": true
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.8,
       "position": [
-        2420,
-        -280
+        1400,
+        60
       ],
       "id": "5eaa5f87-e53a-4c91-a1de-e1f16719a326",
       "name": "IMG-4",
@@ -993,20 +1004,21 @@
           "id": "zcfVShxOG85MEJBf",
           "name": "OpenAi account"
         }
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
         "resource": "image",
         "prompt": "=Tạo một bức ảnh thời trang chất lượng cao mô tả nội dung sau: “{{ $json.text }}”.  \nẢnh chỉ hiển thị người mẫu hoặc trang phục thời trang phù hợp với mô tả, không có chữ, không có logo, không có watermark.  \nBối cảnh đơn giản, ánh sáng đẹp, phối màu hài hòa theo nội dung.  \nPhong cách ảnh: editorial fashion photography hoặc lifestyle thời trang hiện đại.  \nCảm xúc: [phân tích cảm xúc từ đoạn – ví dụ: tự tin, nữ tính, năng động,...]  \nTỷ lệ ảnh: 2:3 (chân dung toàn thân)  \ncute Gen Z Asian girl, sporty fashion, cheerful expression, lifestyle scene\nKhông chèn bất kỳ nội dung văn bản nào trong ảnh.\n",
-        "options": {}
+        "options": {
+          "returnImageUrls": true
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.8,
       "position": [
-        3016,
-        -280
+        1700,
+        -100
       ],
       "id": "a3adc465-6ca5-48d1-88fe-5fdcc7a64b52",
       "name": "IMG-5",
@@ -1015,20 +1027,21 @@
           "id": "zcfVShxOG85MEJBf",
           "name": "OpenAi account"
         }
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
         "resource": "image",
         "prompt": "=Tạo một bức ảnh thời trang chất lượng cao mô tả nội dung sau: “{{ $json.text }}”.  \nẢnh chỉ hiển thị người mẫu hoặc trang phục thời trang (châu Á)  phù hợp với mô tả, không có chữ, không có logo, không có watermark.  \nBối cảnh đơn giản, ánh sáng đẹp, phối màu hài hòa theo nội dung.  \nPhong cách ảnh: editorial fashion photography hoặc lifestyle thời trang hiện đại.  \nCảm xúc: [phân tích cảm xúc từ đoạn – ví dụ: tự tin, nữ tính, năng động,...]  \nTỷ lệ ảnh: 2:3 (chân dung toàn thân)  \nKhông chèn bất kỳ nội dung văn bản nào trong ảnh.",
-        "options": {}
+        "options": {
+          "returnImageUrls": true
+        }
       },
       "type": "@n8n/n8n-nodes-langchain.openAi",
       "typeVersion": 1.8,
       "position": [
-        3612,
-        -280
+        2140,
+        -100
       ],
       "id": "74e0ad7c-6afb-49eb-a839-dc7889d97e33",
       "name": "IMG-6",
@@ -1037,8 +1050,7 @@
           "id": "zcfVShxOG85MEJBf",
           "name": "OpenAi account"
         }
-      },
-      "disabled": true
+      }
     },
     {
       "parameters": {
@@ -1056,8 +1068,8 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
       "typeVersion": 1.2,
       "position": [
-        4580,
-        -80
+        2920,
+        100
       ],
       "id": "f3e786bc-3f9a-4b09-b047-f5a9c29a32fa",
       "name": "OpenAI Chat Model",
@@ -1077,8 +1089,8 @@
       "type": "@n8n/n8n-nodes-langchain.agent",
       "typeVersion": 1.8,
       "position": [
-        4580,
-        -280
+        2920,
+        -100
       ],
       "id": "a5403b85-cc8d-400b-9fca-243592ae0cc8",
       "name": "Content-Final"
@@ -1091,6 +1103,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-04-21T19:14:05.000Z",
-  "versionId": "ae8f8744-ea08-44ab-b744-8208b1defcaf"
+  "updatedAt": "2025-04-22T13:42:18.000Z",
+  "versionId": "2e8a871f-7eb7-41d5-bb99-14d91276b624"
 }
