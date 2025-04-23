@@ -1,0 +1,696 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Get Token",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Token": {
+      "main": [
+        [
+          {
+            "node": "Cal TimeStamp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Order Details": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Price Details": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "Split Page",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Get order",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cal TimeStamp": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Split GMV Camp",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get Data Camp": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get order": {
+      "main": [
+        [
+          {
+            "node": "Split Page",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Page": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Order Details",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Price Details",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-23T18:26:57.063Z",
+  "id": "2x2QVzRRkJ1reiv8",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Demo Tiktok Report",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        0,
+        160
+      ],
+      "id": "ffdee9de-b2f5-4545-be83-3c4e00314c6b",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "url": "https://auth.tiktok-shops.com/api/v2/token/get?app_key=6fthmlr49q2vq&app_secret=7128db0cf283fa41af650d057d2d63a40619f7bd&auth_code=36004004&grant_type=authorized_code",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        180,
+        140
+      ],
+      "id": "fe758d25-8397-4eaa-baba-dced23b016ad",
+      "name": "Get Token"
+    },
+    {
+      "parameters": {
+        "url": "https://open-api.tiktokglobalshop.com/order/202309/orders?timestamp=1623812664&shop_cipher=GCP_XF90igAAAABh00qsWgtvOiGFNqyubMt3&ids=57668123555,57668123555&app_key=38abcd&sign=5361235029d141222525e303d742f9e38aea052d10896d3197ab9d6233730b8c",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-tts-access-token",
+              "value": "TTP_pwSm2AAAAABmmtFz1xlyKMnwg74T2GJ5s0uQbS8jPjb_GkdFVCxPqzQXSyuyfXdQa0AqyDsea2tYFNVf4XeqgZHFfPyv0Vs659QqyLYfsGzanZ5XZAin3_ZkcIxxS0_In6u6XDeU96k"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1540,
+        320
+      ],
+      "id": "a6ade911-c92f-4aed-8c9c-21091fd1d8af",
+      "name": "Order Details"
+    },
+    {
+      "parameters": {
+        "url": "https://open-api.tiktokglobalshop.com/order/202407/orders/576461413038785752/price_detail",
+        "sendQuery": true,
+        "queryParameters": {
+          "parameters": [
+            {
+              "name": "sign",
+              "value": "5361235029d141222525e303d742f9e38aea052d10896d3197ab9d6233730b8c"
+            },
+            {
+              "name": "shop_cipher",
+              "value": "GCP_XF90igAAAABh00qsWgtvOiGFNqyubMt3"
+            },
+            {
+              "name": "timestamp",
+              "value": "1623812664"
+            },
+            {
+              "name": "app_key",
+              "value": "38abcd"
+            }
+          ]
+        },
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-tts-access-token",
+              "value": "TTP_pwSm2AAAAABmmtFz1xlyKMnwg74T2GJ5s0uQbS8jPjb_GkdFVCxPqzQXSyuyfXdQa0AqyDsea2tYFNVf4XeqgZHFfPyv0Vs659QqyLYfsGzanZ5XZAin3_ZkcIxxS0_In6u6XDeU96k"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {}
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1540,
+        140
+      ],
+      "id": "a4d515b1-e855-4e2e-8c52-5b5dbb22c0bf",
+      "name": "Price Details"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        1760,
+        260
+      ],
+      "id": "0352649b-1994-4ade-90e1-497bc3f2c606",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Đầu vào là mảng đơn hàng (từ node trước)\nconst output = [];\n\nfor (const order of items[0].json.data.order_list) {\n  const orderId = order.order_id;\n  const createTime = new Date(order.create_time * 1000).toISOString();\n  const status = order.order_status;\n  const totalPaid = order.payment_info?.total_amount || 0;\n  const afterVoucher = order.payment_info?.payment_amount || 0;\n  const cancelReason = order.cancel_reason || \"\";\n  const shopName = order.shop_name || \"Unknown\";\n\n  for (const product of order.item_list) {\n    output.push({\n      json: {\n        shop: shopName,\n        order_id: orderId,\n        create_time: createTime,\n        status: status,\n        total_paid: totalPaid,\n        after_voucher: afterVoucher,\n        cancel_reason: cancelReason,\n        product_name: product.product_name,\n        quantity: product.quantity_purchased,\n        sku_id: product.sku_id\n      }\n    });\n  }\n}\n\nreturn output;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1540,
+        -40
+      ],
+      "id": "f3ca4ab7-6cf4-40a4-b3aa-7d5cec84380e",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU",
+          "mode": "list",
+          "cachedResultName": "Job 04/23",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Root",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TIKTOK Order ID",
+              "displayName": "TIKTOK Order ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Order Date",
+              "displayName": "Order Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Address",
+              "displayName": "Address",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LINK",
+              "displayName": "LINK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "VOTE",
+              "displayName": "VOTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Giá SP",
+              "displayName": "Giá SP",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SL",
+              "displayName": "SL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "VNĐ",
+              "displayName": "VNĐ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Mail",
+              "displayName": "Mail",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Order ID",
+              "displayName": "Order ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TRACK",
+              "displayName": "TRACK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Checker",
+              "displayName": "Checker",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Trạng thái xử lý",
+              "displayName": "Trạng thái xử lý",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1780,
+        -40
+      ],
+      "id": "4e573ee3-d517-4f3e-a66e-259c6cad6f22",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3f6e4a2a-133a-42c9-81bf-ec0cfdb4dd28",
+              "name": "",
+              "value": "",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        660,
+        160
+      ],
+      "id": "534be0bf-d9e9-4460-997d-da84e8740e9b",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "jsCode": "const now = Math.floor(Date.now() / 1000);\nconst from = now - 15 * 24 * 60 * 60;\n\nitem.json.create_time_from = from;\nitem.json.create_time_to = now;\n\nreturn item;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        160
+      ],
+      "id": "2793009d-a67d-4d82-b3f6-54d863d62b5a",
+      "name": "Cal TimeStamp"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "={data}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        340,
+        560
+      ],
+      "id": "a9bc7566-0860-4865-9bd3-467cc5ccede2",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "0dc9c240-fdf8-4116-8265-9fca0204fad6",
+              "leftValue": "campaign_name",
+              "rightValue": "GMV",
+              "operator": {
+                "type": "string",
+                "operation": "contains"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        560,
+        560
+      ],
+      "id": "69d0ec12-844d-498e-9e8b-cbf0f9ddd0e9",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "url": "https://business-api.tiktok.com/open_api/v1.3/report/integrated/get/",
+        "sendQuery": true,
+        "specifyQuery": "json",
+        "jsonQuery": "{\n  \"advertiser_id\": \"123456789\",\n  \"report_type\": \"BASIC\",\n  \"data_level\": \"AUCTION_CAMPAIGN\",\n  \"dimensions\": [\"stat_time_day\", \"campaign_id\", \"campaign_name\"],\n  \"metrics\": [\"spend\", \"purchase\"],\n  \"start_date\": \"2025-04-17\",\n  \"end_date\": \"2025-04-23\",\n  \"page_size\": 1000\n}\n",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Access-Token"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        120,
+        560
+      ],
+      "id": "5bd290ad-91dc-429e-bae2-e2bc3cd4a1ea",
+      "name": "Get Data Camp"
+    },
+    {
+      "parameters": {
+        "jsCode": "const output = [];\n\nfor (const item of items) {\n  const name = item.json.campaign_name || \"\";\n  const lowerName = name.toLowerCase();\n\n  if (!lowerName.includes(\"gmv\")) continue;\n\n\n  const parts = name.split(/[_\\-]/).map(part => part.trim());\n\n  const sku = parts[1] || \"Unknown\";\n  const staff = parts[2] || \"Unknown\";\n  const project = parts[3] || \"Unknown\";\n\n  output.push({\n    json: {\n      date: item.json.stat_time_day || \"\",\n      campaign_name: name,\n      spend: item.json.spend || 0,\n      purchases: item.json.purchase || 0,\n      sku: sku,\n      staff: staff,\n      project: project\n    }\n  });\n}\n\nreturn output;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        780,
+        560
+      ],
+      "id": "33ab357c-82ce-470a-947e-23cee9618144",
+      "name": "Split GMV Camp"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://open-api.tiktokglobalshop.com/order/202309/orders/search?timestamp=1623812664&page_token=6AsPQsUMvH3RkchNUPPh22NROHkE0D8pmq/N5M1kHYcZmtRyv9aVrNv65W7Q6tFA+7D1ud64MPNz5OaT&page_size=20&sort_order=ASC&sort_field=create_time&app_key=38abcd&sign=5361235029d141222525e303d742f9e38aea052d10896d3197ab9d6233730b8c&shop_cipher=GCP_XF90igAAAABh00qsWgtvOiGFNqyubMt3",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "x-tts-access-token",
+              "value": "TTP_pwSm2AAAAABmmtFz1xlyKMnwg74T2GJ5s0uQbS8jPjb_GkdFVCxPqzQXSyuyfXdQa0AqyDsea2tYFNVf4XeqgZHFfPyv0Vs659QqyLYfsGzanZ5XZAin3_ZkcIxxS0_In6u6XDeU96k"
+            },
+            {
+              "name": "content-type",
+              "value": "application/json"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "{\n  \"order_status\": \"UNPAID\",\n  \"create_time_ge\": 1623812664,\n  \"create_time_lt\": 1623812664,\n  \"update_time_ge\": 1623812664,\n  \"update_time_lt\": 1623812664,\n  \"shipping_type\": \"TIKTOK\",\n  \"buyer_user_id\": \"7213489962827123654\",\n  \"is_buyer_request_cancel\": false,\n  \"warehouse_ids\": [\n    \"7000714532876273888\",\n    \"7000714532876273666\"\n  ]\n}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        880,
+        160
+      ],
+      "id": "108c7bbe-2c0e-456a-a1a4-46373abc2dd6",
+      "name": "Get order"
+    },
+    {
+      "parameters": {
+        "language": "python",
+        "pythonCode": "current_page = 1\nwhile True:\n    response = requests.get(url, params={'page': current_page})\n    process_orders(response.json()['data'])\n    if not response.json()['has_more']: break\n    current_page += 1\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        160
+      ],
+      "id": "7b886471-53b8-4ecf-a795-7d753c4db7fe",
+      "name": "Split Page"
+    },
+    {
+      "parameters": {
+        "batchSize": "={{ current_page }}",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1320,
+        160
+      ],
+      "id": "6c82a249-141a-4b1e-8b5f-c33b7536e21d",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "content": "Get Data TT SHOP",
+        "height": 640,
+        "width": 2020
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        -120
+      ],
+      "id": "dba39660-af98-49c8-8d0b-3d6af196d610",
+      "name": "Sticky Note"
+    },
+    {
+      "parameters": {
+        "content": "Get GMV_Max Camp",
+        "height": 200,
+        "width": 960,
+        "color": 4
+      },
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        60,
+        540
+      ],
+      "id": "c01394c1-8536-47db-9f6e-47fbd83570ca",
+      "name": "Sticky Note1"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-04-23T20:27:53.000Z",
+  "versionId": "479f7a6e-4ea6-48c5-aa32-21cbf74cfbf6"
+}
