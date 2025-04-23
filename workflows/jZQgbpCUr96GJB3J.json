@@ -99,8 +99,9 @@
         "operation": "upload",
         "title": "This is title",
         "regionCode": "VN",
-        "categoryId": "18",
+        "categoryId": "24",
         "options": {
+          "license": "youtube",
           "privacyStatus": "private"
         }
       },
@@ -127,6 +128,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-04-23T14:21:10.000Z",
-  "versionId": "0128d8af-7ddc-4b1a-aa91-a2c8b433c370"
+  "updatedAt": "2025-04-23T17:14:36.000Z",
+  "versionId": "a5495c70-920a-424c-b1af-875a5cca12c0"
 }
