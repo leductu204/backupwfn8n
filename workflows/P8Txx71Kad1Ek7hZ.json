@@ -1,0 +1,86 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-23T07:29:47.106Z",
+  "id": "P8Txx71Kad1Ek7hZ",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -220,
+        -40
+      ],
+      "id": "392e0f27-ed33-4fcd-b577-55dadb306b84",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU",
+          "mode": "list",
+          "cachedResultName": "Job 04/23",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Trang tính1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Check"
+            }
+          ]
+        },
+        "options": {
+          "returnFirstMatch": true
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        0,
+        -40
+      ],
+      "id": "9358785f-734f-40e4-bda8-cd2b2b4c5bcb",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-04-23T07:29:47.106Z",
+  "versionId": "a14bdcf4-c8e5-42cd-853e-6cc87b9e43e3"
+}
