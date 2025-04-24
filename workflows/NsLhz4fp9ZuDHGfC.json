@@ -34,23 +34,45 @@
         ]
       ]
     },
-    "OpenAI Chat Model": {
-      "ai_languageModel": [
-        [
-          {
-            "node": "AI Agent",
-            "type": "ai_languageModel",
-            "index": 0
-          }
-        ]
-      ]
-    },
     "AI Agent": {
       "main": [
         [
           {
             "node": "Telegram",
             "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets2": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xAI Grok Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
             "index": 0
           }
         ]
@@ -91,8 +113,10 @@
       "parameters": {
         "promptType": "define",
         "text": "={{ $json.message.text }}",
+        "hasOutputParser": true,
         "options": {
-          "systemMessage": "Bạn là 1 nhân viên thân thiện tư vấn - báo giá dịch vụ xe tải cho khách hàng. \nTrả lời ngắn gọn, xúc tích, không miên man dài dòng.\nNếu tuyến đường khách hỏi chưa có giá trong dữ liệu thì báo với khách chưa có giá, hãy liên hệ thông tin : henry.hung@sotrans.com.vn\nSDT 075943316. Ví dụ dữ liệu là Xe 1T 800, sẽ là 800.000VND, 900 sẽ là 900.000 VND"
+          "systemMessage": "Bạn là 1 nhân viên thân thiện tư vấn - báo giá dịch vụ xe tải - xe cont (container) cho khách hàng. Hãy luôn mở đầu bằng câu hỏi khách hàng muốn đặt xe từ nơi đi - nơi đến và xác nhận lại nơi đi - nơi đến trước khi báo giá , loại xe gì (xe tải x Tấn hoặc xe cont - container 20 feet, 40 feet). Hãy trả lời dựa theo nhu cầu khách hàng cung cấp. \nBạn đang trong một cuộc hội thoại liên tục, hãy ghi nhớ những gì khách hàng đã nói để trả lời nối tiếp hợp lý. Nếu khách chỉ nói địa điểm đến hoặc loại xe, hãy kiểm tra thông tin trước đó để suy luận và tiếp tục báo giá hoặc hỏi lại để xác nhận chính xác thông tin. \n\nxe cont cũng là xe container. \nXe tải đơn vị trọng lượng là Tấn (T) tính tiền theo cột Tấn, xe cont đơn vị trọng lượng là feet. Tính tiền theo giá trị Feet\nTrả lời ngắn gọn, xúc tích, dễ hiểu.\n🔸 Với xe tải:\n- Giá chưa VAT\n- Chỉ gồm phí vận chuyển\n- Giờ vào TP: Xe 1T, 2T (09h-16h & 20h-06h); xe >2T (22h-06h)\n- Nhận buổi đêm phụ thu +200k\n\n🔸 Với xe container:\n- Giá chưa VAT\n- Chỉ gồm phí vận chuyển\n- Hạ xa Bình Dương, Đồng Nai: +300k\n- Q7 phụ thu: +400k/chiều\n\nNếu tuyến đường khách hỏi chưa có giá trong dữ liệu thì báo với khách chưa có giá, hãy liên hệ thông tin : henry.hung@sotrans.com.vn - SDT 0775943316.\nĐơn vị tiền là K, ví dụ 900 -> 900K",
+          "maxIterations": 10
         }
       },
       "type": "@n8n/n8n-nodes-langchain.agent",
@@ -140,41 +164,17 @@
     {
       "parameters": {
         "sessionIdType": "customKey",
-        "sessionKey": "={{ $('Telegram Trigger').item.json.message.text }}",
+        "sessionKey": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
         "contextWindowLength": 10
       },
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3,
       "position": [
-        320,
+        300,
         220
       ],
       "id": "9a5923bf-0c4a-447b-b5df-6d8aefbfaad6",
       "name": "Simple Memory"
-    },
-    {
-      "parameters": {
-        "model": {
-          "__rl": true,
-          "mode": "list",
-          "value": "gpt-4o-mini"
-        },
-        "options": {}
-      },
-      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
-      "typeVersion": 1.2,
-      "position": [
-        160,
-        200
-      ],
-      "id": "6e8750ae-70dd-4cc9-af69-6c9aa9966aea",
-      "name": "OpenAI Chat Model",
-      "credentials": {
-        "openAiApi": {
-          "id": "zcfVShxOG85MEJBf",
-          "name": "OpenAi account"
-        }
-      }
     },
     {
       "parameters": {
@@ -199,6 +199,176 @@
           "name": "Báo Giá Xe Tải"
         }
       }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o",
+          "mode": "list",
+          "cachedResultName": "Báo giá",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 675864141,
+          "mode": "list",
+          "cachedResultName": "Xe Cont",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit#gid=675864141"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [
+        580,
+        200
+      ],
+      "id": "d366dd21-f402-435f-92f8-57006856cfb3",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o",
+          "mode": "list",
+          "cachedResultName": "Báo giá",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1713519982,
+          "mode": "list",
+          "cachedResultName": "Xe Tải",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit#gid=1713519982"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "NƠI ĐI",
+              "displayName": "NƠI ĐI",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "NƠI ĐẾN",
+              "displayName": "NƠI ĐẾN",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Giá xe 1 Tấn",
+              "displayName": "Giá xe 1 Tấn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Giá xe 2 Tấn",
+              "displayName": "Giá xe 2 Tấn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Giá xe 3.5 Tấn",
+              "displayName": "Giá xe 3.5 Tấn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Giá xe 5 Tấn",
+              "displayName": "Giá xe 5 Tấn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Giá xe 8 Tấn",
+              "displayName": "Giá xe 8 Tấn",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "10T",
+              "displayName": "10T",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [
+        800,
+        200
+      ],
+      "id": "dd60caac-66cc-4239-b487-9ab18286c051",
+      "name": "Google Sheets2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "model": "grok-3-fast-beta",
+        "options": {
+          "responseFormat": "json_object"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
+      "typeVersion": 1,
+      "position": [
+        180,
+        220
+      ],
+      "id": "4b8bf92d-90a9-42ef-8a2d-6ab2cb059a73",
+      "name": "xAI Grok Chat Model",
+      "credentials": {
+        "xAiApi": {
+          "id": "r4vGbfq9f7pTNS4F",
+          "name": "xAi account"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -208,6 +378,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-04-24T10:28:39.000Z",
-  "versionId": "6f7f59e7-c137-41a1-9b69-833ab5169103"
+  "updatedAt": "2025-04-24T16:55:35.000Z",
+  "versionId": "b59ca73d-6f54-4943-a034-759fa208d6ed"
 }
