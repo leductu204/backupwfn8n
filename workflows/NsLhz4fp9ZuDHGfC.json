@@ -56,18 +56,7 @@
         ]
       ]
     },
-    "Google Sheets2": {
-      "ai_tool": [
-        [
-          {
-            "node": "AI Agent",
-            "type": "ai_tool",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "xAI Grok Chat Model": {
+    "OpenAI Chat Model": {
       "ai_languageModel": [
         [
           {
@@ -96,7 +85,7 @@
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.1,
       "position": [
-        0,
+        -40,
         0
       ],
       "id": "f2d201a6-152a-47e0-9a49-7897e65ff868",
@@ -113,9 +102,8 @@
       "parameters": {
         "promptType": "define",
         "text": "={{ $json.message.text }}",
-        "hasOutputParser": true,
         "options": {
-          "systemMessage": "Bạn là 1 nhân viên thân thiện tư vấn - báo giá dịch vụ xe tải - xe cont (container) cho khách hàng. Hãy luôn mở đầu bằng câu hỏi khách hàng muốn đặt xe từ nơi đi - nơi đến và xác nhận lại nơi đi - nơi đến trước khi báo giá , loại xe gì (xe tải x Tấn hoặc xe cont - container 20 feet, 40 feet). Hãy trả lời dựa theo nhu cầu khách hàng cung cấp. \nBạn đang trong một cuộc hội thoại liên tục, hãy ghi nhớ những gì khách hàng đã nói để trả lời nối tiếp hợp lý. Nếu khách chỉ nói địa điểm đến hoặc loại xe, hãy kiểm tra thông tin trước đó để suy luận và tiếp tục báo giá hoặc hỏi lại để xác nhận chính xác thông tin. \n\nxe cont cũng là xe container. \nXe tải đơn vị trọng lượng là Tấn (T) tính tiền theo cột Tấn, xe cont đơn vị trọng lượng là feet. Tính tiền theo giá trị Feet\nTrả lời ngắn gọn, xúc tích, dễ hiểu.\n🔸 Với xe tải:\n- Giá chưa VAT\n- Chỉ gồm phí vận chuyển\n- Giờ vào TP: Xe 1T, 2T (09h-16h & 20h-06h); xe >2T (22h-06h)\n- Nhận buổi đêm phụ thu +200k\n\n🔸 Với xe container:\n- Giá chưa VAT\n- Chỉ gồm phí vận chuyển\n- Hạ xa Bình Dương, Đồng Nai: +300k\n- Q7 phụ thu: +400k/chiều\n\nNếu tuyến đường khách hỏi chưa có giá trong dữ liệu thì báo với khách chưa có giá, hãy liên hệ thông tin : henry.hung@sotrans.com.vn - SDT 0775943316.\nĐơn vị tiền là K, ví dụ 900 -> 900K",
+          "systemMessage": "Bạn là 1 nhân viên thân thiện tư vấn - báo giá dịch vụ xe tải - xe cont (container) cho khách hàng. Hãy báo giá các lựa chọn cho khách hàng \nTrả lời ngắn gọn, xúc tích, không dài dòng.\nNếu khách hỏi giá xe với nơi đi hoặc nơi đến không khớp hoàn toàn với dữ liệu, hãy thử tìm dòng gần đúng nhất trong danh sách sheet. Dùng giá trị nếu độ khớp > 50%. Ưu tiên tìm theo cụm từ “chứa”, hoặc “gần giống về mặt âm vị”.\n\nSau khi báo giá xong với khách hàng hãy chú thích thêm:\n🔸 Với xe tải:\n- Giá chưa VAT\n- Chỉ gồm phí vận chuyển\n- Giờ vào TP: Xe 1T, 2T (09h-16h & 20h-06h); xe >2T (22h-06h)\n- Nhận buổi đêm phụ thu +200k\n\n🔸 Với xe container:\n- Giá chưa VAT\n- Chỉ gồm phí vận chuyển\n- Hạ xa Bình Dương, Đồng Nai: +300k\n- Q7 phụ thu: +400k/chiều\n\nNếu tuyến đường hoặc loại xe trọng lượng khách hỏi chưa có giá trong dữ liệu thì báo với khách chưa có giá, hãy liên hệ thông tin : henry.hung@sotrans.com.vn - SDT 0775943316.\n",
           "maxIterations": 10
         }
       },
@@ -149,8 +137,8 @@
       "type": "n8n-nodes-base.googleSheetsTool",
       "typeVersion": 4.5,
       "position": [
-        460,
-        200
+        440,
+        240
       ],
       "id": "31e0292a-e03c-47e3-9ced-e1d3e2f60db0",
       "name": "Google Sheets",
@@ -170,8 +158,8 @@
       "type": "@n8n/n8n-nodes-langchain.memoryBufferWindow",
       "typeVersion": 1.3,
       "position": [
-        300,
-        220
+        280,
+        240
       ],
       "id": "9a5923bf-0c4a-447b-b5df-6d8aefbfaad6",
       "name": "Simple Memory"
@@ -216,13 +204,25 @@
           "cachedResultName": "Xe Cont",
           "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit#gid=675864141"
         },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Nơi đi",
+              "lookupValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Value', ``, 'string') }}"
+            },
+            {
+              "lookupColumn": "Nơi Đến",
+              "lookupValue": "={{ /*n8n-auto-generated-fromAI-override*/ $fromAI('Value', ``, 'string') }}"
+            }
+          ]
+        },
         "options": {}
       },
       "type": "n8n-nodes-base.googleSheetsTool",
       "typeVersion": 4.5,
       "position": [
-        580,
-        200
+        600,
+        220
       ],
       "id": "d366dd21-f402-435f-92f8-57006856cfb3",
       "name": "Google Sheets1",
@@ -235,138 +235,28 @@
     },
     {
       "parameters": {
-        "operation": "appendOrUpdate",
-        "documentId": {
+        "model": {
           "__rl": true,
-          "value": "1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o",
           "mode": "list",
-          "cachedResultName": "Báo giá",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit?usp=drivesdk"
+          "value": "gpt-4o-mini"
         },
-        "sheetName": {
-          "__rl": true,
-          "value": 1713519982,
-          "mode": "list",
-          "cachedResultName": "Xe Tải",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit#gid=1713519982"
-        },
-        "columns": {
-          "mappingMode": "defineBelow",
-          "value": {},
-          "matchingColumns": [],
-          "schema": [
-            {
-              "id": "NƠI ĐI",
-              "displayName": "NƠI ĐI",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "NƠI ĐẾN",
-              "displayName": "NƠI ĐẾN",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Giá xe 1 Tấn",
-              "displayName": "Giá xe 1 Tấn",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Giá xe 2 Tấn",
-              "displayName": "Giá xe 2 Tấn",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Giá xe 3.5 Tấn",
-              "displayName": "Giá xe 3.5 Tấn",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Giá xe 5 Tấn",
-              "displayName": "Giá xe 5 Tấn",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "Giá xe 8 Tấn",
-              "displayName": "Giá xe 8 Tấn",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            },
-            {
-              "id": "10T",
-              "displayName": "10T",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            }
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.googleSheetsTool",
-      "typeVersion": 4.5,
-      "position": [
-        800,
-        200
-      ],
-      "id": "dd60caac-66cc-4239-b487-9ab18286c051",
-      "name": "Google Sheets2",
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "YoIXrvHkddxXAEp7",
-          "name": "Google Sheets account 2"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "model": "grok-3-fast-beta",
         "options": {
-          "responseFormat": "json_object"
+          "maxRetries": 3,
+          "topP": 0.9
         }
       },
-      "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
-      "typeVersion": 1,
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1.2,
       "position": [
-        180,
+        100,
         220
       ],
-      "id": "4b8bf92d-90a9-42ef-8a2d-6ab2cb059a73",
-      "name": "xAI Grok Chat Model",
+      "id": "e13cfbe3-399a-4341-a60d-7b3afd7d2509",
+      "name": "OpenAI Chat Model",
       "credentials": {
-        "xAiApi": {
-          "id": "r4vGbfq9f7pTNS4F",
-          "name": "xAi account"
+        "openAiApi": {
+          "id": "zcfVShxOG85MEJBf",
+          "name": "OpenAi account"
         }
       }
     }
@@ -378,6 +268,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-04-24T16:55:35.000Z",
-  "versionId": "b59ca73d-6f54-4943-a034-759fa208d6ed"
+  "updatedAt": "2025-04-24T18:26:31.000Z",
+  "versionId": "4f6136fb-1330-4a49-8cfd-33a504368b32"
 }
