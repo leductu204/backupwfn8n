@@ -1,0 +1,381 @@
+{
+  "active": true,
+  "connections": {
+    "Telegram Trigger": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Telegram",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "HTTP Request2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request2": {
+      "main": [
+        [
+          {
+            "node": "Telegram1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-25T00:41:27.840Z",
+  "id": "JtK7ALKXfGqVWxaV",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Bot Báo Giá Xe Tải - New",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "message"
+        ],
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.telegramTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        60,
+        -40
+      ],
+      "id": "0b9da452-f8b0-4ce4-98f2-97ad304b054b",
+      "name": "Telegram Trigger",
+      "webhookId": "0032562c-6c48-4c3d-91a1-ef587b2aef66",
+      "credentials": {
+        "telegramApi": {
+          "id": "IdrrCPMQtILmnfj3",
+          "name": "Báo Giá Xe Tải"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.dify.ai/v1/chat-messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer app-ucZMRDyCmWB73Upp7UQGLqe3"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"inputs\": {},\n  \"query\": \"{{ $('Telegram Trigger').item.json.message.text }}\",\n  \"response_mode\": \"blocking\",\n  \"conversation_id\": \"\",\n  \"user\": \"{{ $('Telegram Trigger').item.json.message.chat.username }}\"\n} \n",
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        840,
+        -120
+      ],
+      "id": "de820789-a73c-4ad4-a016-8cad1101f957",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o",
+          "mode": "list",
+          "cachedResultName": "Báo giá",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1638909860,
+          "mode": "list",
+          "cachedResultName": "Chat Logs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit#gid=1638909860"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Username": "={{ $('Telegram Trigger').item.json.message.chat.username }}",
+            "Conversation ID": "={{ $json.conversation_id }}"
+          },
+          "matchingColumns": [
+            "Username"
+          ],
+          "schema": [
+            {
+              "id": "Username",
+              "displayName": "Username",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversation ID",
+              "displayName": "Conversation ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1000,
+        -120
+      ],
+      "id": "63086700-8edd-4937-8b05-bc2098ad15bb",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://api.dify.ai/v1/chat-messages",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "Bearer app-ucZMRDyCmWB73Upp7UQGLqe3"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"inputs\": {},\n  \"query\": \"{{ $('Telegram Trigger').item.json.message.text }}\",\n  \"response_mode\": \"blocking\",\n  \"conversation_id\": \"{{ $json['Conversation ID'] }}\",\n  \"user\": \"{{ $('Telegram Trigger').item.json.message.chat.username }}\"\n} ",
+        "options": {
+          "redirect": {
+            "redirect": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        840,
+        80
+      ],
+      "id": "512c9a08-a528-47de-93df-c5f822ecc002",
+      "name": "HTTP Request2"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "19a9eab5-3d90-440b-80a1-3faaeddb29d7",
+              "leftValue": "={{ $('Telegram Trigger').item.json.message.chat.username }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "052268f7-57a7-4ecd-b4be-e9acb218f7e3",
+              "leftValue": "={{ $json['Conversation ID'] }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "empty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        580,
+        -80
+      ],
+      "id": "fe835166-eae5-4339-aaf1-2f3c60a6b0f1",
+      "name": "If1"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o",
+          "mode": "list",
+          "cachedResultName": "Báo giá",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1638909860,
+          "mode": "list",
+          "cachedResultName": "Chat Logs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit#gid=1638909860"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "Username",
+              "lookupValue": "={{ $json.message.from.username }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        340,
+        -60
+      ],
+      "id": "95184e01-1c7b-45f5-9434-969d7f64d2b7",
+      "name": "Google Sheets1",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ $('HTTP Request').item.json.answer }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1220,
+        -120
+      ],
+      "id": "89a7cc91-75c6-4c90-872a-3c8d26216338",
+      "name": "Telegram",
+      "webhookId": "5e554cc0-32bd-4804-9132-f7e095c48edd",
+      "credentials": {
+        "telegramApi": {
+          "id": "IdrrCPMQtILmnfj3",
+          "name": "Báo Giá Xe Tải"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ $json.answer }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1060,
+        80
+      ],
+      "id": "eae417f9-62b4-4727-8db5-f37fd521317a",
+      "name": "Telegram1",
+      "webhookId": "363dc770-a38c-48c0-8b21-0f7ba77c860a",
+      "credentials": {
+        "telegramApi": {
+          "id": "IdrrCPMQtILmnfj3",
+          "name": "Báo Giá Xe Tải"
+        }
+      }
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 1,
+  "updatedAt": "2025-04-25T01:47:08.000Z",
+  "versionId": "ad708fb6-97b0-4bbc-a685-cf36cfd8a71d"
+}
