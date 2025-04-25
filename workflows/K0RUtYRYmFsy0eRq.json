@@ -1,0 +1,260 @@
+{
+  "active": false,
+  "connections": {
+    "Set": {
+      "main": [
+        [
+          {
+            "node": "get_access_token_lark",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_access_token_zns": {
+      "main": [
+        [
+          {
+            "node": "Update",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_access_token_lark": {
+      "main": [
+        [
+          {
+            "node": "get_id_record_lark",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get_id_record_lark": {
+      "main": [
+        [
+          {
+            "node": "get_access_token_zns",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Update": {
+      "main": [
+        [
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Set",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-04-25T17:12:10.699Z",
+  "id": "K0RUtYRYmFsy0eRq",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Lark - Get zalo access token",
+  "nodes": [
+    {
+      "parameters": {
+        "values": {
+          "string": [
+            {
+              "name": "appId",
+              "value": "cli_a5802404cbf89010"
+            },
+            {
+              "name": "appSecret",
+              "value": "02kfgZDSynlLX0EXqyCHCj2zimkUlMyx"
+            },
+            {
+              "name": "record_id",
+              "value": "recOD2QE9i"
+            },
+            {
+              "name": "baseId",
+              "value": "As9UbYsJLaap5TsW3THlvfQNgfg"
+            },
+            {
+              "name": "tableId",
+              "value": "tblYriRLlJbXneQB"
+            }
+          ]
+        },
+        "options": {
+          "dotNotation": true
+        }
+      },
+      "id": "79d13056-e2fc-46e5-bbff-ca90220ca8c4",
+      "name": "Set",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 2,
+      "position": [
+        -740,
+        -440
+      ]
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "incavn6969546712545-c062ed6f-3dfc-469c-bcc7-f249b728e1c0",
+        "options": {}
+      },
+      "id": "fad08229-7335-4ca5-be64-afe3750a7af1",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        -920,
+        -440
+      ],
+      "webhookId": "fd6dda56-164f-407c-8961-622faf03ba4e"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://oauth.zaloapp.com/v4/oa/access_token?grant_type=refresh_token&app_id=2628037251114299116&refresh_token={{ $('get_id_record_lark').item.json[\"data\"][\"items\"][0][\"fields\"][\"refresh_token\"] }}",
+        "sendHeaders": true,
+        "specifyHeaders": "json",
+        "jsonHeaders": "{\n\"Content-Type\": \"application/x-www-form-urlencoded\",\n\"secret_key\": \"Xc9W334HrYMXb4KN7y7R\" \n}",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "json"
+            }
+          }
+        }
+      },
+      "id": "1d296ee4-ae57-45c0-9f80-90833e6d739a",
+      "name": "get_access_token_zns",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -160,
+        -440
+      ]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://open.larksuite.com/open-apis/auth/v3/app_access_token/internal",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n\"app_id\" : \"{{ $('Set').item.json[\"appId\"] }}\",\n\"app_secret\" : \"{{ $('Set').item.json[\"appSecret\"] }}\" \n}",
+        "options": {}
+      },
+      "id": "fd915019-eb21-4f59-936d-78ebf5c282e7",
+      "name": "get_access_token_lark",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -560,
+        -440
+      ]
+    },
+    {
+      "parameters": {
+        "url": "=https://open.larksuite.com/open-apis/bitable/v1/apps/{{ $('Set').item.json[\"baseId\"] }}/tables/{{ $('Set').item.json[\"tableId\"] }}/records?filter=CurrentValue.[record_id] = \"{{ $('Set').item.json[\"record_id\"] }}\"",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $('get_access_token_lark').item.json[\"app_access_token\"] }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "fed941ee-2a05-4d71-b564-9f1f922c18fa",
+      "name": "get_id_record_lark",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        -360,
+        -440
+      ]
+    },
+    {
+      "parameters": {
+        "method": "PUT",
+        "url": "=https://open.larksuite.com/open-apis/bitable/v1/apps/{{ $('Set').item.json[\"baseId\"] }}/tables/{{ $('Set').item.json[\"tableId\"]}}/records/{{ $('Set').item.json[\"record_id\"] }}",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "Authorization",
+              "value": "=Bearer {{ $('get_access_token_lark').item.json[\"app_access_token\"] }}"
+            }
+          ]
+        },
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={\n  \"fields\":\n  { \n    \"access_token\":\"{{ $('get_access_token_zns').item.json[\"access_token\"] }}\",\n    \"refresh_token\":\"{{ $('get_access_token_zns').item.json[\"refresh_token\"] }}\"\n   }\n}",
+        "options": {}
+      },
+      "id": "9aa17d6e-f911-481e-b385-a8814bfca3d5",
+      "name": "Update",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.1,
+      "position": [
+        20,
+        -440
+      ]
+    },
+    {
+      "parameters": {
+        "amount": 24
+      },
+      "id": "66485e22-2be6-42d1-a35f-8ffe8c06d00d",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1,
+      "position": [
+        200,
+        -440
+      ],
+      "webhookId": "96fe50a0-7f9f-4c25-a73f-b2e42d8c411a"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-04-25T17:12:24.000Z",
+  "versionId": "b9b453bb-74a9-44a6-9cef-203eaeacfc42"
+}
