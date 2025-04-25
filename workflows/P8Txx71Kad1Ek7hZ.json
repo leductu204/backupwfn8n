@@ -340,7 +340,7 @@
   "meta": {
     "templateCredsSetupCompleted": true
   },
-  "name": "My workflow",
+  "name": "Chia việc NV",
   "nodes": [
     {
       "parameters": {},
@@ -1417,6 +1417,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-04-25T09:33:52.000Z",
-  "versionId": "1ce42a61-e3b9-48b0-b793-0f264860c3a6"
+  "updatedAt": "2025-04-25T16:59:06.000Z",
+  "versionId": "42596b3d-9212-46b6-b4a2-7da687cf1e65"
 }
