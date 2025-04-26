@@ -124,13 +124,7 @@
     },
     "Loop Over Items1": {
       "main": [
-        [
-          {
-            "node": "Edit Fields3",
-            "type": "main",
-            "index": 0
-          }
-        ],
+        [],
         [
           {
             "node": "thêm dữ liệu mới",
@@ -327,6 +321,17 @@
       "main": [
         [
           {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
             "node": "Loop Over Items1",
             "type": "main",
             "index": 0
@@ -348,7 +353,7 @@
       "typeVersion": 1,
       "position": [
         -180,
-        -300
+        -275
       ],
       "id": "392e0f27-ed33-4fcd-b577-55dadb306b84",
       "name": "When clicking ‘Test workflow’"
@@ -377,7 +382,7 @@
       "typeVersion": 4.5,
       "position": [
         40,
-        -300
+        -275
       ],
       "id": "9358785f-734f-40e4-bda8-cd2b2b4c5bcb",
       "name": "Google Sheets",
@@ -396,7 +401,7 @@
       "typeVersion": 2,
       "position": [
         260,
-        150
+        75
       ],
       "id": "f0438d3d-b9d4-4d5a-927f-f0c755b8ab69",
       "name": "Code"
@@ -420,7 +425,7 @@
       "typeVersion": 3.4,
       "position": [
         700,
-        150
+        75
       ],
       "id": "d1442e7a-5091-4973-b7e4-db06d07abb14",
       "name": "Edit Fields",
@@ -452,7 +457,7 @@
       "typeVersion": 1,
       "position": [
         480,
-        150
+        75
       ],
       "id": "3912a61c-8b40-488d-85dd-261b92dce9d1",
       "name": "Split Out"
@@ -476,8 +481,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        1200,
-        180
+        1140,
+        175
       ],
       "id": "61e04227-9881-4f72-9be8-83cd11bb4322",
       "name": "Google Sheets4",
@@ -507,7 +512,7 @@
       "typeVersion": 2,
       "position": [
         1360,
-        -300
+        -175
       ],
       "id": "d96bca5d-a285-4daf-ba6f-ad8e58123e42",
       "name": "lọc data"
@@ -625,8 +630,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        1420,
-        280
+        1360,
+        275
       ],
       "id": "198c761d-425b-4592-a6d5-3707176b224d",
       "name": "Edit Fields2"
@@ -720,7 +725,7 @@
       "typeVersion": 3.1,
       "position": [
         2460,
-        -500
+        -450
       ],
       "id": "3dabc8c9-2249-4c97-b2be-598e9395df0b",
       "name": "Merge2"
@@ -733,7 +738,7 @@
       "typeVersion": 2,
       "position": [
         2680,
-        -500
+        -450
       ],
       "id": "9e2a575a-9acf-4c42-ae06-75237f4a2439",
       "name": "Code6"
@@ -846,19 +851,6 @@
       ],
       "id": "fa39d1cf-9000-4d54-8f24-6fdec1355927",
       "name": "Edit Fields1"
-    },
-    {
-      "parameters": {
-        "options": {}
-      },
-      "type": "n8n-nodes-base.set",
-      "typeVersion": 3.4,
-      "position": [
-        2020,
-        -250
-      ],
-      "id": "a48959d5-82e3-4faa-98be-899f508cd0d0",
-      "name": "Edit Fields3"
     },
     {
       "parameters": {
@@ -1265,7 +1257,7 @@
             "Address": "={{ $json.Address }}",
             "Order Date": "={{ $json['Order Date'] }}",
             "TRACK": "={{ $json.TRACK }}",
-            "Trạng thái xử lý": "={{ $json['Trạng thái đang giao xử lý'] }}"
+            "Trạng thái xử lý": "=Nhận"
           },
           "matchingColumns": [],
           "schema": [
@@ -1396,7 +1388,7 @@
       "typeVersion": 4.5,
       "position": [
         2020,
-        -50
+        -175
       ],
       "id": "af9df23c-46e6-472d-a9cf-759260eb23a6",
       "name": "thêm dữ liệu mới",
@@ -1408,6 +1400,191 @@
         }
       },
       "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU",
+          "mode": "list",
+          "cachedResultName": "Job 04/23",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Root",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Trạng thái đang giao xử lý": "Nhận",
+            "TIKTOK Order ID": "={{ $json['TIKTOK Order ID'] }}"
+          },
+          "matchingColumns": [
+            "TIKTOK Order ID"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TIKTOK Order ID",
+              "displayName": "TIKTOK Order ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Order Date",
+              "displayName": "Order Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Address",
+              "displayName": "Address",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "LINK",
+              "displayName": "LINK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "VOTE",
+              "displayName": "VOTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Giá SP",
+              "displayName": "Giá SP",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "SL",
+              "displayName": "SL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "VNĐ",
+              "displayName": "VNĐ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Mail",
+              "displayName": "Mail",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Order ID",
+              "displayName": "Order ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TRACK",
+              "displayName": "TRACK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Checker",
+              "displayName": "Checker",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Trạng thái đang giao xử lý",
+              "displayName": "Trạng thái đang giao xử lý",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "check",
+              "displayName": "check",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2240,
+        -100
+      ],
+      "id": "b26db807-fd23-427f-b2c3-0b5ef934b295",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
     }
   ],
   "pinData": {},
@@ -1417,6 +1594,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-04-25T16:59:06.000Z",
-  "versionId": "42596b3d-9212-46b6-b4a2-7da687cf1e65"
+  "updatedAt": "2025-04-26T03:12:29.000Z",
+  "versionId": "f7b3740f-da1f-4cd5-aaf7-a03ec1327e3e"
 }
