@@ -14,13 +14,7 @@
     },
     "Google Drive": {
       "main": [
-        [
-          {
-            "node": "YouTube",
-            "type": "main",
-            "index": 0
-          }
-        ]
+        []
       ]
     }
   },
@@ -92,33 +86,6 @@
           "name": "Google Drive account"
         }
       }
-    },
-    {
-      "parameters": {
-        "resource": "video",
-        "operation": "upload",
-        "title": "This is title",
-        "regionCode": "VN",
-        "categoryId": "24",
-        "options": {
-          "license": "youtube",
-          "privacyStatus": "private"
-        }
-      },
-      "type": "n8n-nodes-base.youTube",
-      "typeVersion": 1,
-      "position": [
-        500,
-        0
-      ],
-      "id": "549118d5-ac91-46a9-96d3-309b8fb44265",
-      "name": "YouTube",
-      "credentials": {
-        "youTubeOAuth2Api": {
-          "id": "AM105mV6g6hseJl0",
-          "name": "YouTube account"
-        }
-      }
     }
   ],
   "pinData": {},
@@ -128,6 +95,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-04-23T17:14:36.000Z",
-  "versionId": "a5495c70-920a-424c-b1af-875a5cca12c0"
+  "updatedAt": "2025-04-26T04:50:21.000Z",
+  "versionId": "5f011a73-b28a-4255-a5fd-0d53056e0f6a"
 }
