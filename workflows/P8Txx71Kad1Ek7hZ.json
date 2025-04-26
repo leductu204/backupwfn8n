@@ -707,8 +707,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        2240,
-        -375
+        2320,
+        -280
       ],
       "id": "f392d66a-fe23-4a09-ba98-43b90343a345",
       "name": "Google Sheets3",
@@ -1594,6 +1594,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-04-26T03:12:29.000Z",
-  "versionId": "f7b3740f-da1f-4cd5-aaf7-a03ec1327e3e"
+  "updatedAt": "2025-04-26T08:35:21.000Z",
+  "versionId": "99a137ea-8b6c-46b6-94a5-99edd1ca66f3"
 }
