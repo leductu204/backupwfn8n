@@ -1,11 +1,11 @@
 {
-  "active": true,
+  "active": false,
   "connections": {
     "Telegram Trigger": {
       "main": [
         [
           {
-            "node": "Google Sheets1",
+            "node": "If",
             "type": "main",
             "index": 0
           }
@@ -34,15 +34,19 @@
         ]
       ]
     },
-    "If1": {
+    "HTTP Request2": {
       "main": [
         [
           {
-            "node": "HTTP Request",
+            "node": "Telegram1",
             "type": "main",
             "index": 0
           }
-        ],
+        ]
+      ]
+    },
+    "If": {
+      "main": [
         [
           {
             "node": "HTTP Request2",
@@ -56,18 +60,7 @@
       "main": [
         [
           {
-            "node": "If1",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "HTTP Request2": {
-      "main": [
-        [
-          {
-            "node": "Telegram1",
+            "node": "HTTP Request",
             "type": "main",
             "index": 0
           }
@@ -85,15 +78,16 @@
     {
       "parameters": {
         "updates": [
-          "message"
+          "message",
+          "*"
         ],
         "additionalFields": {}
       },
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.1,
       "position": [
-        60,
-        -40
+        440,
+        -120
       ],
       "id": "0b9da452-f8b0-4ce4-98f2-97ad304b054b",
       "name": "Telegram Trigger",
@@ -120,7 +114,7 @@
         },
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "={\n  \"inputs\": {},\n  \"query\": \"{{ $('Telegram Trigger').item.json.message.text }}\",\n  \"response_mode\": \"blocking\",\n  \"conversation_id\": \"\",\n  \"user\": \"{{ $('Telegram Trigger').item.json.message.chat.username }}\"\n} \n",
+        "jsonBody": "={\n  \"inputs\": {},\n  \"query\": \"{{ $('Telegram Trigger').item.json.message.text }}\",\n  \"response_mode\": \"blocking\",\n  \"conversation_id\": \"\",\n  \"user\": \"{{ $('Telegram Trigger').item.json.message.from.id }}\"\n} \n",
         "options": {
           "redirect": {
             "redirect": {}
@@ -130,8 +124,8 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        840,
-        -120
+        1460,
+        -160
       ],
       "id": "de820789-a73c-4ad4-a016-8cad1101f957",
       "name": "HTTP Request"
@@ -156,16 +150,16 @@
         "columns": {
           "mappingMode": "defineBelow",
           "value": {
-            "Username": "={{ $('Telegram Trigger').item.json.message.chat.username }}",
-            "Conversation ID": "={{ $json.conversation_id }}"
+            "Conversation ID": "={{ $json.conversation_id }}",
+            "User ID": "={{ $('Telegram Trigger').item.json.message.from.id }}"
           },
           "matchingColumns": [
-            "Username"
+            "User ID"
           ],
           "schema": [
             {
-              "id": "Username",
-              "displayName": "Username",
+              "id": "User ID",
+              "displayName": "User ID",
               "required": false,
               "defaultMatch": false,
               "display": true,
@@ -191,8 +185,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        1000,
-        -120
+        1720,
+        -160
       ],
       "id": "63086700-8edd-4937-8b05-bc2098ad15bb",
       "name": "Google Sheets",
@@ -218,7 +212,7 @@
         },
         "sendBody": true,
         "specifyBody": "json",
-        "jsonBody": "={\n  \"inputs\": {},\n  \"query\": \"{{ $('Telegram Trigger').item.json.message.text }}\",\n  \"response_mode\": \"blocking\",\n  \"conversation_id\": \"{{ $json['Conversation ID'] }}\",\n  \"user\": \"{{ $('Telegram Trigger').item.json.message.chat.username }}\"\n} ",
+        "jsonBody": "={\n  \"inputs\": {},\n  \"query\": \"{{ $('Telegram Trigger').item.json.message.text }}\",\n  \"response_mode\": \"blocking\",\n  \"conversation_id\": \"\",\n  \"user\": \"{{ $('Telegram Trigger').item.json.message.from.id }}\"\n} ",
         "options": {
           "redirect": {
             "redirect": {}
@@ -228,97 +222,11 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        840,
-        80
+        1240,
+        -360
       ],
       "id": "512c9a08-a528-47de-93df-c5f822ecc002",
       "name": "HTTP Request2"
-    },
-    {
-      "parameters": {
-        "conditions": {
-          "options": {
-            "caseSensitive": true,
-            "leftValue": "",
-            "typeValidation": "strict",
-            "version": 2
-          },
-          "conditions": [
-            {
-              "id": "19a9eab5-3d90-440b-80a1-3faaeddb29d7",
-              "leftValue": "={{ $('Telegram Trigger').item.json.message.chat.username }}",
-              "rightValue": "",
-              "operator": {
-                "type": "string",
-                "operation": "exists",
-                "singleValue": true
-              }
-            },
-            {
-              "id": "052268f7-57a7-4ecd-b4be-e9acb218f7e3",
-              "leftValue": "={{ $json['Conversation ID'] }}",
-              "rightValue": "",
-              "operator": {
-                "type": "string",
-                "operation": "empty",
-                "singleValue": true
-              }
-            }
-          ],
-          "combinator": "and"
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.if",
-      "typeVersion": 2.2,
-      "position": [
-        580,
-        -80
-      ],
-      "id": "fe835166-eae5-4339-aaf1-2f3c60a6b0f1",
-      "name": "If1"
-    },
-    {
-      "parameters": {
-        "documentId": {
-          "__rl": true,
-          "value": "1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o",
-          "mode": "list",
-          "cachedResultName": "Báo giá",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": 1638909860,
-          "mode": "list",
-          "cachedResultName": "Chat Logs",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit#gid=1638909860"
-        },
-        "filtersUI": {
-          "values": [
-            {
-              "lookupColumn": "Username",
-              "lookupValue": "={{ $json.message.from.username }}"
-            }
-          ]
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.5,
-      "position": [
-        340,
-        -60
-      ],
-      "id": "95184e01-1c7b-45f5-9434-969d7f64d2b7",
-      "name": "Google Sheets1",
-      "alwaysOutputData": true,
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "YoIXrvHkddxXAEp7",
-          "name": "Google Sheets account 2"
-        }
-      }
     },
     {
       "parameters": {
@@ -331,8 +239,8 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1220,
-        -120
+        1920,
+        -160
       ],
       "id": "89a7cc91-75c6-4c90-872a-3c8d26216338",
       "name": "Telegram",
@@ -355,8 +263,8 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1060,
-        80
+        1460,
+        -360
       ],
       "id": "eae417f9-62b4-4727-8db5-f37fd521317a",
       "name": "Telegram1",
@@ -365,6 +273,81 @@
         "telegramApi": {
           "id": "IdrrCPMQtILmnfj3",
           "name": "Báo Giá Xe Tải"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "e68101e6-6c01-4f27-ab71-408213cb2f5a",
+              "leftValue": "={{ $json.message.from.id }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        800,
+        -160
+      ],
+      "id": "74650835-1bb3-4be2-ac3c-e98c76e67fca",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o",
+          "mode": "list",
+          "cachedResultName": "Báo giá",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1638909860,
+          "mode": "list",
+          "cachedResultName": "Chat Logs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit#gid=1638909860"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "User ID",
+              "lookupValue": "={{ $json.message.from.id }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1240,
+        -160
+      ],
+      "id": "656d46fa-7f9f-4b15-99b6-d4b50be6ded8",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
         }
       }
     }
@@ -376,6 +359,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-04-25T01:47:08.000Z",
-  "versionId": "ad708fb6-97b0-4bbc-a685-cf36cfd8a71d"
+  "updatedAt": "2025-04-27T04:43:57.000Z",
+  "versionId": "1ed46fe3-0d9c-4cb5-8747-69221894cc19"
 }
