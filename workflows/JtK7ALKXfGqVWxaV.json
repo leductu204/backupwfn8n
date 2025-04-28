@@ -16,17 +16,6 @@
       "main": [
         [
           {
-            "node": "Google Sheets",
-            "type": "main",
-            "index": 0
-          }
-        ]
-      ]
-    },
-    "Google Sheets": {
-      "main": [
-        [
-          {
             "node": "Telegram",
             "type": "main",
             "index": 0
@@ -38,7 +27,7 @@
       "main": [
         [
           {
-            "node": "Telegram1",
+            "node": "Google Sheets2",
             "type": "main",
             "index": 0
           }
@@ -49,14 +38,36 @@
       "main": [
         [
           {
-            "node": "HTTP Request2",
+            "node": "Google Sheets3",
             "type": "main",
             "index": 0
           }
         ]
       ]
     },
-    "Google Sheets1": {
+    "Google Sheets2": {
+      "main": [
+        [
+          {
+            "node": "Telegram2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets3": {
+      "main": [
+        [
+          {
+            "node": "If1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If1": {
       "main": [
         [
           {
@@ -86,8 +97,8 @@
       "type": "n8n-nodes-base.telegramTrigger",
       "typeVersion": 1.1,
       "position": [
-        440,
-        -120
+        320,
+        -200
       ],
       "id": "0b9da452-f8b0-4ce4-98f2-97ad304b054b",
       "name": "Telegram Trigger",
@@ -124,78 +135,11 @@
       "type": "n8n-nodes-base.httpRequest",
       "typeVersion": 4.2,
       "position": [
-        1460,
-        -160
+        1240,
+        -520
       ],
       "id": "de820789-a73c-4ad4-a016-8cad1101f957",
       "name": "HTTP Request"
-    },
-    {
-      "parameters": {
-        "operation": "appendOrUpdate",
-        "documentId": {
-          "__rl": true,
-          "value": "1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o",
-          "mode": "list",
-          "cachedResultName": "Báo giá",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit?usp=drivesdk"
-        },
-        "sheetName": {
-          "__rl": true,
-          "value": 1638909860,
-          "mode": "list",
-          "cachedResultName": "Chat Logs",
-          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit#gid=1638909860"
-        },
-        "columns": {
-          "mappingMode": "defineBelow",
-          "value": {
-            "Conversation ID": "={{ $json.conversation_id }}",
-            "User ID": "={{ $('Telegram Trigger').item.json.message.from.id }}"
-          },
-          "matchingColumns": [
-            "User ID"
-          ],
-          "schema": [
-            {
-              "id": "User ID",
-              "displayName": "User ID",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true,
-              "removed": false
-            },
-            {
-              "id": "Conversation ID",
-              "displayName": "Conversation ID",
-              "required": false,
-              "defaultMatch": false,
-              "display": true,
-              "type": "string",
-              "canBeUsedToMatch": true
-            }
-          ],
-          "attemptToConvertTypes": false,
-          "convertFieldsToString": false
-        },
-        "options": {}
-      },
-      "type": "n8n-nodes-base.googleSheets",
-      "typeVersion": 4.5,
-      "position": [
-        1720,
-        -160
-      ],
-      "id": "63086700-8edd-4937-8b05-bc2098ad15bb",
-      "name": "Google Sheets",
-      "credentials": {
-        "googleSheetsOAuth2Api": {
-          "id": "YoIXrvHkddxXAEp7",
-          "name": "Google Sheets account 2"
-        }
-      }
     },
     {
       "parameters": {
@@ -239,36 +183,12 @@
       "type": "n8n-nodes-base.telegram",
       "typeVersion": 1.2,
       "position": [
-        1920,
-        -160
+        1680,
+        -520
       ],
       "id": "89a7cc91-75c6-4c90-872a-3c8d26216338",
       "name": "Telegram",
       "webhookId": "5e554cc0-32bd-4804-9132-f7e095c48edd",
-      "credentials": {
-        "telegramApi": {
-          "id": "IdrrCPMQtILmnfj3",
-          "name": "Báo Giá Xe Tải"
-        }
-      }
-    },
-    {
-      "parameters": {
-        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
-        "text": "={{ $json.answer }}",
-        "additionalFields": {
-          "appendAttribution": false
-        }
-      },
-      "type": "n8n-nodes-base.telegram",
-      "typeVersion": 1.2,
-      "position": [
-        1460,
-        -360
-      ],
-      "id": "eae417f9-62b4-4727-8db5-f37fd521317a",
-      "name": "Telegram1",
-      "webhookId": "363dc770-a38c-48c0-8b21-0f7ba77c860a",
       "credentials": {
         "telegramApi": {
           "id": "IdrrCPMQtILmnfj3",
@@ -304,11 +224,102 @@
       "type": "n8n-nodes-base.if",
       "typeVersion": 2.2,
       "position": [
-        800,
-        -160
+        560,
+        -200
       ],
       "id": "74650835-1bb3-4be2-ac3c-e98c76e67fca",
       "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o",
+          "mode": "list",
+          "cachedResultName": "Báo giá",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 1638909860,
+          "mode": "list",
+          "cachedResultName": "Chat Logs",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1Ejjl9G0O0x_CJGmYEiV-H_URkfyzLI_M-iHxlBudG8o/edit#gid=1638909860"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "User ID": "={{ $json.result.chat.id }}",
+            "Conversation ID": "={{ $('HTTP Request2').item.json.conversation_id }}"
+          },
+          "matchingColumns": [
+            "User ID"
+          ],
+          "schema": [
+            {
+              "id": "User ID",
+              "displayName": "User ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Conversation ID",
+              "displayName": "Conversation ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        1480,
+        -360
+      ],
+      "id": "80058cdd-b0c2-4ceb-bb0f-dacea54836dc",
+      "name": "Google Sheets2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "chatId": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+        "text": "={{ $('Telegram1').item.json.result.text }}",
+        "additionalFields": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.telegram",
+      "typeVersion": 1.2,
+      "position": [
+        1700,
+        -360
+      ],
+      "id": "6ebe8659-5c52-4b28-a287-e730790aa741",
+      "name": "Telegram2",
+      "webhookId": "5e554cc0-32bd-4804-9132-f7e095c48edd",
+      "credentials": {
+        "telegramApi": {
+          "id": "IdrrCPMQtILmnfj3",
+          "name": "Báo Giá Xe Tải"
+        }
+      }
     },
     {
       "parameters": {
@@ -330,7 +341,7 @@
           "values": [
             {
               "lookupColumn": "User ID",
-              "lookupValue": "={{ $json.message.from.id }}"
+              "lookupValue": "={{ $json.message.chat.id }}"
             }
           ]
         },
@@ -339,17 +350,52 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        1240,
-        -160
+        780,
+        -340
       ],
-      "id": "656d46fa-7f9f-4b15-99b6-d4b50be6ded8",
-      "name": "Google Sheets1",
+      "id": "821474b0-5017-476a-8e43-80aecce6b68b",
+      "name": "Google Sheets3",
+      "alwaysOutputData": true,
       "credentials": {
         "googleSheetsOAuth2Api": {
           "id": "YoIXrvHkddxXAEp7",
           "name": "Google Sheets account 2"
         }
       }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "765e1fa7-9baa-4132-8edb-30eeeee5ecdc",
+              "leftValue": "={{ $('Telegram Trigger').item.json.message.chat.id }}",
+              "rightValue": "={{ $json['User ID'] }}",
+              "operator": {
+                "type": "array",
+                "operation": "contains",
+                "rightType": "any"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1000,
+        -400
+      ],
+      "id": "3b356828-1bfe-4d85-9632-22dd9469f00e",
+      "name": "If1"
     }
   ],
   "pinData": {},
@@ -359,6 +405,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 1,
-  "updatedAt": "2025-04-27T04:43:57.000Z",
-  "versionId": "1ed46fe3-0d9c-4cb5-8747-69221894cc19"
+  "updatedAt": "2025-04-28T07:08:32.000Z",
+  "versionId": "8d3a6390-99b4-453b-97ad-d072114d3835"
 }
