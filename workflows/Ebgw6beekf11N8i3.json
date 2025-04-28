@@ -303,6 +303,17 @@
           }
         ]
       ]
+    },
+    "Google Docs": {
+      "ai_tool": [
+        [
+          {
+            "node": "IG",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
     }
   },
   "createdAt": "2025-04-17T17:49:44.431Z",
@@ -853,7 +864,7 @@
       "type": "@n8n/n8n-nodes-langchain.lmChatXAiGrok",
       "typeVersion": 1,
       "position": [
-        708,
+        620,
         -300
       ],
       "id": "689d76d4-c85a-444d-a163-cbfd89675c89",
@@ -2359,6 +2370,37 @@
           "name": "Google Sheets account 2"
         }
       }
+    },
+    {
+      "parameters": {
+        "rule": {
+          "interval": [
+            {
+              "field": "hours",
+              "hoursInterval": 6
+            }
+          ]
+        }
+      },
+      "type": "n8n-nodes-base.scheduleTrigger",
+      "typeVersion": 1.2,
+      "position": [
+        -140,
+        660
+      ],
+      "id": "9b3d0d94-f86e-4fa3-8342-8390c6f6c730",
+      "name": "Schedule Trigger"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.googleDocsTool",
+      "typeVersion": 2,
+      "position": [
+        840,
+        300
+      ],
+      "id": "9a14e451-97a7-46e5-acf6-c84582cde176",
+      "name": "Google Docs"
     }
   ],
   "pinData": {},
@@ -2368,6 +2410,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-04-19T14:47:47.000Z",
-  "versionId": "1bc79d4f-5736-4580-9547-fa36d789503b"
+  "updatedAt": "2025-04-28T02:18:42.000Z",
+  "versionId": "626751a8-624f-44e6-8ab3-d7edb1816605"
 }
