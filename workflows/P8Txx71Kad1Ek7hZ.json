@@ -743,7 +743,7 @@
     },
     {
       "parameters": {
-        "operation": "append",
+        "operation": "appendOrUpdate",
         "documentId": {
           "__rl": true,
           "value": "={{ $json.id }}",
@@ -759,19 +759,20 @@
         "columns": {
           "mappingMode": "defineBelow",
           "value": {
-            "TIKTOK Order ID": "={{ $('Loop Over Items4').item.json['TIKTOK Order ID'] }}",
-            "TRACK": "={{ $('Loop Over Items4').item.json.TRACK }}",
-            "Order ID": "={{ $('Loop Over Items4').item.json['Order ID'] }}",
-            "Mail": "={{ $('Loop Over Items4').item.json.Mail }}",
-            "VNĐ": "={{ $('Loop Over Items4').item.json['VNĐ'] }}",
-            "SL": "={{ $('Loop Over Items4').item.json.SL }}",
-            "Giá SP": "={{ $('Loop Over Items4').item.json['Giá SP'] }}",
-            "VOTE": "={{ $('Loop Over Items4').item.json.VOTE }}",
-            "LINK": "={{ $('Loop Over Items4').item.json.LINK }}",
+            "TIKTOK Order ID": "={{ $('Loop Over Items4').item.json[\"TIKTOK Order ID\"] }}",
+            "Order Date": "={{ $('Loop Over Items4').item.json[\"Order Date\"] }}",
             "Address": "={{ $('Loop Over Items4').item.json.Address }}",
-            "Order Date": "={{ $('Loop Over Items4').item.json['Order Date'] }}"
+            "LINK": "={{ $('Loop Over Items4').item.json.LINK }}",
+            "VOTE": "={{ $('Loop Over Items4').item.json.VOTE }}",
+            "Giá SP": "={{ $('Loop Over Items4').item.json[\"Giá SP\"] }}",
+            "SL": "={{ $('Loop Over Items4').item.json.SL }}",
+            "VNĐ": "={{ $('Loop Over Items4').item.json[\"VNĐ\"] }}",
+            "Mail": "={{ $('Loop Over Items4').item.json.Mail }}",
+            "Order ID": "={{ $('Loop Over Items4').item.json[\"Order ID\"] }}"
           },
-          "matchingColumns": [],
+          "matchingColumns": [
+            "TIKTOK Order ID"
+          ],
           "schema": [
             {
               "id": "STT",
@@ -780,7 +781,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "TIKTOK Order ID",
@@ -789,7 +791,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "Order Date",
@@ -798,7 +801,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "Address",
@@ -807,7 +811,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "LINK",
@@ -816,7 +821,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "VOTE",
@@ -825,7 +831,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "Giá SP",
@@ -834,7 +841,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "SL",
@@ -843,7 +851,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "VNĐ",
@@ -852,7 +861,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "Mail",
@@ -861,7 +871,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "Order ID",
@@ -870,7 +881,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "TRACK",
@@ -879,7 +891,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             }
           ],
           "attemptToConvertTypes": false,
@@ -904,7 +917,7 @@
     },
     {
       "parameters": {
-        "operation": "append",
+        "operation": "appendOrUpdate",
         "documentId": {
           "__rl": true,
           "value": "={{ $json.id }}",
@@ -932,7 +945,9 @@
             "Mail": "={{ $('Loop Over Items1').item.json.Mail }}",
             "VNĐ": "={{ $('Loop Over Items1').item.json['VNĐ'] }}"
           },
-          "matchingColumns": [],
+          "matchingColumns": [
+            "TIKTOK Order ID"
+          ],
           "schema": [
             {
               "id": "STT",
@@ -950,7 +965,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": false
             },
             {
               "id": "Order Date",
@@ -1051,8 +1067,8 @@
       "type": "n8n-nodes-base.googleSheets",
       "typeVersion": 4.5,
       "position": [
-        3620,
-        20
+        3640,
+        -20
       ],
       "id": "af9df23c-46e6-472d-a9cf-759260eb23a6",
       "name": "thêm dữ liệu mới",
@@ -1607,7 +1623,7 @@
     },
     {
       "parameters": {
-        "operation": "append",
+        "operation": "appendOrUpdate",
         "documentId": {
           "__rl": true,
           "value": "={{ $json.id }}",
@@ -1633,7 +1649,9 @@
             "Address": "={{ $('Loop Over Items5').item.json.Address }}",
             "Order Date": "={{ $('Loop Over Items5').item.json['Order Date'] }}"
           },
-          "matchingColumns": [],
+          "matchingColumns": [
+            "TIKTOK Order ID"
+          ],
           "schema": [
             {
               "id": "STT",
@@ -1982,8 +2000,8 @@
       "type": "n8n-nodes-base.set",
       "typeVersion": 3.4,
       "position": [
-        3200,
-        -120
+        3180,
+        -80
       ],
       "id": "2f506da2-0d5a-43a0-a2c1-afc1fc7e1ede",
       "name": "Edit Fields6"
@@ -1996,6 +2014,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-04-28T10:39:31.000Z",
-  "versionId": "e5a07b26-aea3-4cd8-baae-231269d227ae"
+  "updatedAt": "2025-05-01T08:17:27.000Z",
+  "versionId": "fb116178-3f52-4b07-80dc-79491062bebb"
 }
