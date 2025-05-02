@@ -1,0 +1,1917 @@
+{
+  "active": false,
+  "connections": {
+    "When clicking ‘Test workflow’": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Split Out",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lấy id file của nv2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Split Out": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Merge": {
+      "main": [
+        [
+          {
+            "node": "lọc data",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Code3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lọc data": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lấy id file của nv6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "node": "Code4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "node": "Code5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code5": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Loop Over Items5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Loop Over Items4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items3": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "lấy id file của nv4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets3": {
+      "main": [
+        [
+          {
+            "node": "Merge2",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Merge2": {
+      "main": [
+        [
+          {
+            "node": "Code6",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code6": {
+      "main": [
+        [
+          {
+            "node": "lấy id file của nv3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items4": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lấy id file của nv1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "xóa": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "thêm dữ liệu thay đổi": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "thêm dữ liệu mới": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets1": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lấy data từ nv": {
+      "main": [
+        [
+          {
+            "node": "chỉnh đầu ra dữ liệu",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "chỉnh đầu ra dữ liệu": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 1
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "Merge",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Loop Over Items5": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields5",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "lấy id file của nv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "add data vào sheet Huy của nv": {
+      "main": [
+        [
+          {
+            "node": "Loop Over Items5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lấy id file của nv": {
+      "main": [
+        [
+          {
+            "node": "add data vào sheet Huy của nv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lấy id file của nv1": {
+      "main": [
+        [
+          {
+            "node": "thêm dữ liệu thay đổi",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lấy id file của nv2": {
+      "main": [
+        [
+          {
+            "node": "lấy data từ nv",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lấy id file của nv4": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lấy id file của nv3": {
+      "main": [
+        [
+          {
+            "node": "xóa",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "lấy id file của nv6": {
+      "main": [
+        [
+          {
+            "node": "thêm dữ liệu mới",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields6": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "createdAt": "2025-05-02T05:12:54.833Z",
+  "id": "nHJjKJH2tTrsm5lu",
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Chia việc NV (Bản EDIT)",
+  "nodes": [
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.manualTrigger",
+      "typeVersion": 1,
+      "position": [
+        -180,
+        -280
+      ],
+      "id": "9cc6e024-4c00-4f37-91ee-2d2f48fc707f",
+      "name": "When clicking ‘Test workflow’"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU",
+          "mode": "list",
+          "cachedResultName": "ROOT",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Root",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU/edit#gid=0"
+        },
+        "options": {
+          "returnFirstMatch": true
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        40,
+        -280
+      ],
+      "id": "38780e1b-8e44-4fc1-b3ce-6b79c0826de2",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const allItems = $input.all();\nconst checkers = [...new Set(allItems.map(i => i.json[\"Checker\"]))];\nreturn checkers.map(name => ({ json: { checker: name } }));\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        480,
+        75
+      ],
+      "id": "80e13741-5e00-4cfe-9eb1-aa0470b99e68",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "fb48b053-5dab-4163-9188-a0029fe12e64",
+              "name": "nhanvien",
+              "value": "={{ $json.checker }}",
+              "type": "string"
+            }
+          ]
+        },
+        "includeOtherFields": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        920,
+        80
+      ],
+      "id": "a8eaa24c-99c7-435f-9526-cecbe636b48f",
+      "name": "Edit Fields",
+      "executeOnce": false,
+      "alwaysOutputData": false,
+      "retryOnFail": false
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        1320,
+        160
+      ],
+      "id": "14e1b977-7afd-4a1b-9df7-7878d0ed2fcf",
+      "name": "Loop Over Items"
+    },
+    {
+      "parameters": {
+        "fieldToSplitOut": "checker",
+        "include": "selectedOtherFields",
+        "fieldsToInclude": "checker",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitOut",
+      "typeVersion": 1,
+      "position": [
+        700,
+        75
+      ],
+      "id": "ceed0220-558a-4756-a9a7-87bf51229727",
+      "name": "Split Out"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        2460,
+        -600
+      ],
+      "id": "8aafb982-fbeb-4064-9272-6e85ffb3bf30",
+      "name": "Merge"
+    },
+    {
+      "parameters": {
+        "jsCode": "const idCount = {};\n\nfor (const item of items) {\n  const id = item.json['TIKTOK Order ID'];\n  idCount[id] = (idCount[id] || 0) + 1;\n}\n\nreturn items.filter(item => {\n  const id = item.json['TIKTOK Order ID'];\n  return idCount[id] === 1;\n});\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2680,
+        -175
+      ],
+      "id": "c8d1533c-6b66-43be-85fd-bfaf0fd6268e",
+      "name": "lọc data",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        2940,
+        -20
+      ],
+      "id": "55a7bbc8-970f-4b43-bcb7-6c603a3308df",
+      "name": "Loop Over Items1",
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "jsCode": "const allRows = items;\nconst checkerByID = {};\n\n// Bước 1: Gộp checker theo TikTok Order ID\nfor (const row of allRows) {\n  const id = row.json['TIKTOK Order ID'];\n  const checker = row.json.checker;\n\n  if (id && checker && checker !== 'undefined') {\n    checkerByID[id] = checker;\n  }\n}\n\n// Bước 2: Bổ sung checker nếu đang undefined\nconst output = allRows.map(row => {\n  const id = row.json['TIKTOK Order ID'];\n\n  if ((!row.json.checker || row.json.checker === 'undefined') && checkerByID[id]) {\n    row.json.checker = checkerByID[id];\n  }\n\n  return row;\n});\n\nreturn output;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2680,
+        -700
+      ],
+      "id": "33086363-c3ac-4b96-a3cb-1f34eaa4ffd4",
+      "name": "Code3"
+    },
+    {
+      "parameters": {
+        "jsCode": "// Bước 1: Tạo bản đồ ID -> row_number\nconst idToRowNumber = {};\n\nfor (const row of items) {\n  const id = row.json['TIKTOK Order ID'];\n  const rowNumber = row.json['row_number'];\n\n  if (id && rowNumber && rowNumber !== '[undefined]') {\n    idToRowNumber[id] = rowNumber;\n  }\n}\n\n// Bước 2: Lọc các dòng hợp lệ\nconst output = items.filter(row => {\n  const checker = row.json['Checker'];\n  const id = row.json['TIKTOK Order ID'];\n\n  // Nếu checker tồn tại và không undefined và có id đã map row_number\n  return checker && checker !== '[undefined]' && idToRowNumber[id];\n}).map(row => {\n  const id = row.json['TIKTOK Order ID'];\n  \n  // Gán lại row_number đúng\n  row.json['row_number'] = idToRowNumber[id];\n\n  return row;\n});\n\nreturn output;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        2900,
+        -700
+      ],
+      "id": "2d800dac-0f43-4db9-add0-2752f6f7852e",
+      "name": "Code4"
+    },
+    {
+      "parameters": {
+        "jsCode": "return items.filter(row => {\n  const checker = row.json['checker'];\n  const Checker = row.json['Checker'];\n\n  return (\n    checker !== Checker &&\n    checker !== undefined &&\n    Checker !== undefined\n  );\n});\n\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        3120,
+        -700
+      ],
+      "id": "0ac339d8-8bbf-4c08-9d54-a8cecf5ef181",
+      "name": "Code5"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        3300,
+        -480
+      ],
+      "id": "755f796d-ee06-4f43-8785-e24caf86b85f",
+      "name": "Loop Over Items3"
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Nhận",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1WVwaX7TnHVuI9BkOmnDMddIdOYuN4LzO4a1UfX8tmeg/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        3720,
+        -360
+      ],
+      "id": "acf236dd-b8d6-4c90-a400-c8cbe40b998b",
+      "name": "Google Sheets3",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.merge",
+      "typeVersion": 3.1,
+      "position": [
+        3960,
+        -460
+      ],
+      "id": "0a5c03c8-7b4a-489f-81ef-00df15cc701f",
+      "name": "Merge2"
+    },
+    {
+      "parameters": {
+        "jsCode": "const groups = {};\nfor (const item of items) {\n  const id = item.json[\"TIKTOK Order ID\"];\n  if (!groups[id]) groups[id] = [];\n  groups[id].push(item);\n}\n\nconst result = [];\n\nfor (const id in groups) {\n  const group = groups[id];\n  if (group.length === 1) continue;\n\n  const ref = group.find(i =>\n    i.json.Checker !== undefined &&\n    i.json.checker !== undefined\n  );\n\n  const target = group.find(i =>\n    i.json.Checker === undefined || i.json.checker === undefined\n  );\n\n  if (ref && target) {\n    target.json.Checker = ref.json.Checker;\n    target.json.checker = ref.json.checker;\n    result.push(target);\n  }\n}\n\nreturn result;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        4200,
+        -420
+      ],
+      "id": "74123cda-3815-43e9-8868-b8f0a443e8ee",
+      "name": "Code6"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        3420,
+        -1060
+      ],
+      "id": "45a18b6d-3ed8-4a55-ac6b-843bacb072d3",
+      "name": "Loop Over Items4"
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Nhận",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1WVwaX7TnHVuI9BkOmnDMddIdOYuN4LzO4a1UfX8tmeg/edit#gid=0"
+        },
+        "startIndex": "={{ $('Code6').item.json.row_number }}"
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        4620,
+        -300
+      ],
+      "id": "cdf737db-2e01-4484-a870-4b380130196d",
+      "name": "xóa",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Nhận",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11C1ODcrF9xRqh-c4iESTkXpfPyGr31YWQlsaZ1_m64Q/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "TIKTOK Order ID": "={{ $('Loop Over Items4').item.json[\"TIKTOK Order ID\"] }}",
+            "Order Date": "={{ $('Loop Over Items4').item.json[\"Order Date\"] }}",
+            "Address": "={{ $('Loop Over Items4').item.json.Address }}",
+            "LINK": "={{ $('Loop Over Items4').item.json.LINK }}",
+            "VOTE": "={{ $('Loop Over Items4').item.json.VOTE }}",
+            "Giá SP": "={{ $('Loop Over Items4').item.json[\"Giá SP\"] }}",
+            "SL": "={{ $('Loop Over Items4').item.json.SL }}",
+            "VNĐ": "={{ $('Loop Over Items4').item.json[\"VNĐ\"] }}",
+            "Mail": "={{ $('Loop Over Items4').item.json.Mail }}",
+            "Order ID": "={{ $('Loop Over Items4').item.json[\"Order ID\"] }}"
+          },
+          "matchingColumns": [
+            "TIKTOK Order ID"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TIKTOK Order ID",
+              "displayName": "TIKTOK Order ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Order Date",
+              "displayName": "Order Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Address",
+              "displayName": "Address",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "LINK",
+              "displayName": "LINK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "VOTE",
+              "displayName": "VOTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Giá SP",
+              "displayName": "Giá SP",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "SL",
+              "displayName": "SL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "VNĐ",
+              "displayName": "VNĐ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Mail",
+              "displayName": "Mail",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Order ID",
+              "displayName": "Order ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TRACK",
+              "displayName": "TRACK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        4000,
+        -1100
+      ],
+      "id": "ccde0fbe-37cf-418a-8f73-f05e26664e5c",
+      "name": "thêm dữ liệu thay đổi",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Nhận",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11C1ODcrF9xRqh-c4iESTkXpfPyGr31YWQlsaZ1_m64Q/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {},
+          "matchingColumns": [
+            "TIKTOK Order ID"
+          ],
+          "schema": [],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        3640,
+        -20
+      ],
+      "id": "d22e479b-7907-47c4-9508-d0c9f4e49d55",
+      "name": "thêm dữ liệu mới",
+      "retryOnFail": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU",
+          "mode": "list",
+          "cachedResultName": "Job 04/23",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Root",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Trạng thái đang giao xử lý": "Nhận",
+            "TIKTOK Order ID": "={{ $('Loop Over Items1').item.json['TIKTOK Order ID'] }}"
+          },
+          "matchingColumns": [
+            "TIKTOK Order ID"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "TIKTOK Order ID",
+              "displayName": "TIKTOK Order ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Order Date",
+              "displayName": "Order Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Address",
+              "displayName": "Address",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "LINK",
+              "displayName": "LINK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "VOTE",
+              "displayName": "VOTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Giá SP",
+              "displayName": "Giá SP",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "SL",
+              "displayName": "SL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "VNĐ",
+              "displayName": "VNĐ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Mail",
+              "displayName": "Mail",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Order ID",
+              "displayName": "Order ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "TRACK",
+              "displayName": "TRACK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Checker",
+              "displayName": "Checker",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            },
+            {
+              "id": "Trạng thái đang giao xử lý",
+              "displayName": "Trạng thái đang giao xử lý",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "TRANG THAI",
+              "displayName": "TRANG THAI",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        3860,
+        60
+      ],
+      "id": "7ac5dc21-8ce1-4b14-a4c2-26b2e15ab065",
+      "name": "Google Sheets1",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Nhận",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/11C1ODcrF9xRqh-c4iESTkXpfPyGr31YWQlsaZ1_m64Q/edit#gid=0"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2060,
+        120
+      ],
+      "id": "18ab7b42-a6db-4461-b4c0-3d791db83f6f",
+      "name": "lấy data từ nv",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a9cfc259-55e9-431e-b445-8dfc6dbb18e7",
+              "name": "row_number",
+              "value": "={{ $json.row_number }}",
+              "type": "string"
+            },
+            {
+              "id": "6c65771a-22c0-4629-af13-b773f37eceab",
+              "name": "TIKTOK Order ID",
+              "value": "={{ $json['TIKTOK Order ID'] }}",
+              "type": "string"
+            },
+            {
+              "id": "c7dd1930-aa68-426b-8122-c69b9a14bf32",
+              "name": "Order Date",
+              "value": "={{ $json['Order Date'] }}",
+              "type": "string"
+            },
+            {
+              "id": "f7ea20fd-4ffa-4695-8d98-dcc32b2c1fcb",
+              "name": "Address",
+              "value": "={{ $json.Address }}",
+              "type": "string"
+            },
+            {
+              "id": "29dbd2a7-5240-4d2f-bff9-0c4bd26d0274",
+              "name": "LINK",
+              "value": "={{ $json.LINK }}",
+              "type": "string"
+            },
+            {
+              "id": "ce16a5c4-611d-4fbb-b0ab-d8fa5cfcf47d",
+              "name": "VOTE",
+              "value": "={{ $json.VOTE }}",
+              "type": "number"
+            },
+            {
+              "id": "b84e7525-8694-493a-82ef-7313132f6402",
+              "name": "Giá SP",
+              "value": "={{ $json['Giá SP'] }}",
+              "type": "number"
+            },
+            {
+              "id": "d68fb636-fd19-4fa7-a0fd-2b910da2e0a3",
+              "name": "SL",
+              "value": "={{ $json.SL }}",
+              "type": "number"
+            },
+            {
+              "id": "10ebdea1-3f1f-4bfe-baa7-a60ba881528f",
+              "name": "VNĐ",
+              "value": "={{ $json['VNĐ'] }}",
+              "type": "number"
+            },
+            {
+              "id": "bf2ee7d6-cda8-41d4-a773-5228c6cd21cf",
+              "name": "Mail",
+              "value": "={{ $json.Mail }}",
+              "type": "string"
+            },
+            {
+              "id": "b4f6d937-60b9-4990-8610-c8677737d8c8",
+              "name": "Order ID",
+              "value": "={{ $json['Order ID'] }}",
+              "type": "string"
+            },
+            {
+              "id": "68da3381-08f4-4d71-b59b-3f444fe3bb8a",
+              "name": "TRACK",
+              "value": "={{ $json.TRACK }}",
+              "type": "string"
+            },
+            {
+              "id": "a0138a84-b18a-40ab-9d76-4463c2b95b0e",
+              "name": "checker",
+              "value": "={{ $('Loop Over Items').item.json.checker }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        2360,
+        140
+      ],
+      "id": "eca09724-ffd2-4a17-a685-eefd197d44be",
+      "name": "chỉnh đầu ra dữ liệu"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "3ae0dda3-e833-4616-a562-d34d9ce7f7f1",
+              "name": "row_number",
+              "value": "={{ $json.row_number }}",
+              "type": "string"
+            },
+            {
+              "id": "eb0e799b-f973-403e-8835-c1f911aca382",
+              "name": "TIKTOK Order ID",
+              "value": "={{ $json['TIKTOK Order ID'] }}",
+              "type": "string"
+            },
+            {
+              "id": "ccf04402-b4b6-4617-a146-58879777060b",
+              "name": "Order Date",
+              "value": "={{ $json['Order Date'] }}",
+              "type": "string"
+            },
+            {
+              "id": "6bd14788-3796-47d8-af2d-ee6cbc409f5b",
+              "name": "Address",
+              "value": "={{ $json.Address }}",
+              "type": "string"
+            },
+            {
+              "id": "59705ea8-8c61-4475-9bf8-61df21f9b79d",
+              "name": "LINK",
+              "value": "={{ $json.LINK }}",
+              "type": "string"
+            },
+            {
+              "id": "0c114ae2-f152-4534-babb-33ab6ceaf09b",
+              "name": "VOTE",
+              "value": "={{ $json.VOTE }}",
+              "type": "number"
+            },
+            {
+              "id": "9c6242cd-3a1e-4a84-a0e2-65b022915b64",
+              "name": "Giá SP",
+              "value": "={{ $json['Giá SP'] }}",
+              "type": "number"
+            },
+            {
+              "id": "bc710487-f4f8-4895-9f17-c55c7f2740f1",
+              "name": "SL",
+              "value": "={{ $json.SL }}",
+              "type": "number"
+            },
+            {
+              "id": "3d452ca3-fd7f-497a-8384-624399097cee",
+              "name": "VNĐ",
+              "value": "={{ $json['VNĐ'] }}",
+              "type": "number"
+            },
+            {
+              "id": "fb52fb6a-fa73-4509-b0e2-cd4210b3388e",
+              "name": "Mail",
+              "value": "={{ $json.Mail }}",
+              "type": "string"
+            },
+            {
+              "id": "46766102-5ea6-41dc-8554-802207571f1c",
+              "name": "Order ID",
+              "value": "={{ $json['Order ID'] }}",
+              "type": "string"
+            },
+            {
+              "id": "a4180c58-0ca1-4c23-bb5d-22428c63cf58",
+              "name": "TRACK",
+              "value": "={{ $json.TRACK }}",
+              "type": "string"
+            },
+            {
+              "id": "07e7b169-d5a1-4506-9e15-82ce5f1f6d96",
+              "name": "checker",
+              "value": "={{ $json.checker }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1860,
+        -160
+      ],
+      "id": "f4ce5a99-d9d7-4672-a373-75d1ba88c6b5",
+      "name": "Edit Fields2"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "92fbe823-51a0-484f-9a9d-508bf132a86f",
+              "name": "TIKTOK Order ID",
+              "value": "={{ $json['TIKTOK Order ID'] }}",
+              "type": "string"
+            },
+            {
+              "id": "511f4cbf-66c2-4089-ac42-f2f8b735083e",
+              "name": "Order Date",
+              "value": "={{ $json['Order Date'] }}",
+              "type": "string"
+            },
+            {
+              "id": "1c2e20fa-6715-43ba-b2ab-2afbdafc09e6",
+              "name": "Address",
+              "value": "={{ $json.Address }}",
+              "type": "string"
+            },
+            {
+              "id": "1c74ae68-4531-48d3-9a7a-a4e08c983e29",
+              "name": "LINK",
+              "value": "={{ $json.LINK }}",
+              "type": "string"
+            },
+            {
+              "id": "8d450f57-8b79-4628-9c60-d5bd817ecb7b",
+              "name": "VOTE",
+              "value": "={{ $json.VOTE }}",
+              "type": "number"
+            },
+            {
+              "id": "63755bed-cfbf-4d22-afb4-764c9fc9a823",
+              "name": "Giá SP",
+              "value": "={{ $json['Giá SP'] }}",
+              "type": "number"
+            },
+            {
+              "id": "b813fda0-10aa-4640-a892-5ef0db80e51b",
+              "name": "SL",
+              "value": "={{ $json.SL }}",
+              "type": "number"
+            },
+            {
+              "id": "19c01b33-ea6c-4c14-8133-9c692ee87773",
+              "name": "VNĐ",
+              "value": "={{ $json['VNĐ'] }}",
+              "type": "number"
+            },
+            {
+              "id": "5d60f7ec-c78f-4102-ac4f-14dcead888e9",
+              "name": "Mail",
+              "value": "={{ $json.Mail }}",
+              "type": "string"
+            },
+            {
+              "id": "aaa977f0-7e42-45f5-a0a7-922d20de5ae5",
+              "name": "Order ID",
+              "value": "={{ $json['Order ID'] }}",
+              "type": "string"
+            },
+            {
+              "id": "1677f71a-4476-4850-81ed-332e9c0b19eb",
+              "name": "TRACK",
+              "value": "={{ $json.TRACK }}",
+              "type": "string"
+            },
+            {
+              "id": "d3e881d3-50ef-41d3-af10-7435c49619e6",
+              "name": "Checker",
+              "value": "={{ $json.Checker }}",
+              "type": "string"
+            },
+            {
+              "id": "2a003e92-f39f-43b0-aaf2-dc426a00f107",
+              "name": "Trạng thái đang giao xử lý",
+              "value": "={{ $json['Trạng thái đang giao xử lý'] }}",
+              "type": "string"
+            },
+            {
+              "id": "1ad0f979-81bb-4f6e-b29a-97612eb713ff",
+              "name": "TRANG THAI",
+              "value": "={{ $json['TRANG THAI'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1260,
+        -380
+      ],
+      "id": "cde1fe18-8227-4781-923e-90a3ff52d599",
+      "name": "Edit Fields3"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3660,
+        -1240
+      ],
+      "id": "06a450b6-4fda-4075-a92d-1b250493f928",
+      "name": "Edit Fields4"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.splitInBatches",
+      "typeVersion": 3,
+      "position": [
+        4160,
+        -740
+      ],
+      "id": "f502a9c2-6ecf-4189-9406-aec067070911",
+      "name": "Loop Over Items5"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        4460,
+        -940
+      ],
+      "id": "3fa559fd-0283-4fde-ab80-16fdd052cd25",
+      "name": "Edit Fields5"
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "Huy",
+          "mode": "name"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "TIKTOK Order ID": "={{ $('Loop Over Items5').item.json['TIKTOK Order ID'] }}",
+            "TRACK": "={{ $('Loop Over Items5').item.json.TRACK }}",
+            "Order ID": "={{ $('Loop Over Items5').item.json['Order ID'] }}",
+            "Mail": "={{ $('Loop Over Items5').item.json.Mail }}",
+            "VNĐ": "={{ $('Loop Over Items5').item.json['VNĐ'] }}",
+            "SL": "={{ $('Loop Over Items5').item.json.SL }}",
+            "Giá SP": "={{ $('Loop Over Items5').item.json['Giá SP'] }}",
+            "VOTE": "={{ $('Loop Over Items5').item.json.VOTE }}",
+            "LINK": "={{ $('Loop Over Items5').item.json.LINK }}",
+            "Address": "={{ $('Loop Over Items5').item.json.Address }}",
+            "Order Date": "={{ $('Loop Over Items5').item.json['Order Date'] }}"
+          },
+          "matchingColumns": [
+            "TIKTOK Order ID"
+          ],
+          "schema": [
+            {
+              "id": "STT",
+              "displayName": "STT",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TIKTOK Order ID",
+              "displayName": "TIKTOK Order ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Order Date",
+              "displayName": "Order Date",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Address",
+              "displayName": "Address",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "LINK",
+              "displayName": "LINK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "VOTE",
+              "displayName": "VOTE",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Giá SP",
+              "displayName": "Giá SP",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "SL",
+              "displayName": "SL",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "VNĐ",
+              "displayName": "VNĐ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Mail",
+              "displayName": "Mail",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "Order ID",
+              "displayName": "Order ID",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "TRACK",
+              "displayName": "TRACK",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        4800,
+        -680
+      ],
+      "id": "dd8dd4db-9e80-4fd0-a478-ed2fd8e006c5",
+      "name": "add data vào sheet Huy của nv",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "YoIXrvHkddxXAEp7",
+          "name": "Google Sheets account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "queryString": "={{ $json.checker }}",
+        "returnAll": true,
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "1YH84ejY1Gz9LSPNF-_hTdPt7I8Swz9gK",
+            "mode": "list",
+            "cachedResultName": "Cường - n8n",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1YH84ejY1Gz9LSPNF-_hTdPt7I8Swz9gK"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        4520,
+        -760
+      ],
+      "id": "8492f83b-8e79-4fea-9117-b3b01bc48e28",
+      "name": "lấy id file của nv",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "N6i6s2BSw6Ghb0GK",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "queryString": "={{ $json.Checker }}",
+        "returnAll": true,
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "1YH84ejY1Gz9LSPNF-_hTdPt7I8Swz9gK",
+            "mode": "list",
+            "cachedResultName": "Cường - n8n",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1YH84ejY1Gz9LSPNF-_hTdPt7I8Swz9gK"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        3720,
+        -1080
+      ],
+      "id": "a0fe267c-b6da-4e9c-8596-001913f6fb54",
+      "name": "lấy id file của nv1",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "N6i6s2BSw6Ghb0GK",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "queryString": "={{ $json.nhanvien }}",
+        "returnAll": true,
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "1YH84ejY1Gz9LSPNF-_hTdPt7I8Swz9gK",
+            "mode": "list",
+            "cachedResultName": "Cường - n8n",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1YH84ejY1Gz9LSPNF-_hTdPt7I8Swz9gK"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1760,
+        120
+      ],
+      "id": "70826e9c-e258-425c-9b98-870869f6ed87",
+      "name": "lấy id file của nv2",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "N6i6s2BSw6Ghb0GK",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3700,
+        -620
+      ],
+      "id": "1f67a899-d0fc-4dcb-a3ae-3dbd06da629e",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "queryString": "={{ $json.checker }}",
+        "returnAll": true,
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "1YH84ejY1Gz9LSPNF-_hTdPt7I8Swz9gK",
+            "mode": "list",
+            "cachedResultName": "Cường - n8n",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1YH84ejY1Gz9LSPNF-_hTdPt7I8Swz9gK"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        3480,
+        -360
+      ],
+      "id": "3d49acc6-cf40-4150-a432-ccf4300b8032",
+      "name": "lấy id file của nv4",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "N6i6s2BSw6Ghb0GK",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "queryString": "={{ $json.checker }}",
+        "returnAll": true,
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "1YH84ejY1Gz9LSPNF-_hTdPt7I8Swz9gK",
+            "mode": "list",
+            "cachedResultName": "Cường - n8n",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1YH84ejY1Gz9LSPNF-_hTdPt7I8Swz9gK"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        4380,
+        -340
+      ],
+      "id": "64292088-4bf3-4504-bfeb-1d95d1844552",
+      "name": "lấy id file của nv3",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "N6i6s2BSw6Ghb0GK",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "resource": "fileFolder",
+        "queryString": "={{ $json.Checker }}",
+        "returnAll": true,
+        "filter": {
+          "folderId": {
+            "__rl": true,
+            "value": "1YH84ejY1Gz9LSPNF-_hTdPt7I8Swz9gK",
+            "mode": "list",
+            "cachedResultName": "Cường - n8n",
+            "cachedResultUrl": "https://drive.google.com/drive/folders/1YH84ejY1Gz9LSPNF-_hTdPt7I8Swz9gK"
+          }
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        3320,
+        40
+      ],
+      "id": "2231e2c6-e1c0-471e-ac11-b01df17375ec",
+      "name": "lấy id file của nv6",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "N6i6s2BSw6Ghb0GK",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        3180,
+        -80
+      ],
+      "id": "82707da8-a4ac-43de-85d0-1a66a06046db",
+      "name": "Edit Fields6"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-05-02T05:16:54.000Z",
+  "versionId": "024daf16-f4ee-461f-856c-4c6d37a300e7"
+}
