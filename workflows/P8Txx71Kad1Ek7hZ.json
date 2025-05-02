@@ -454,14 +454,14 @@
           "__rl": true,
           "value": "1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU",
           "mode": "list",
-          "cachedResultName": "Job 04/23",
+          "cachedResultName": "ROOT",
           "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU/edit?usp=drivesdk"
         },
         "sheetName": {
           "__rl": true,
           "value": "gid=0",
           "mode": "list",
-          "cachedResultName": "Trang tính1",
+          "cachedResultName": "Root",
           "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1T6un2p446wOz5BTlipqP56BIZspCKU2l666D2i5nFpU/edit#gid=0"
         },
         "options": {
@@ -1125,17 +1125,7 @@
           "mappingMode": "defineBelow",
           "value": {
             "Trạng thái đang giao xử lý": "Nhận",
-            "TIKTOK Order ID": "={{ $('Loop Over Items1').item.json['TIKTOK Order ID'] }}",
-            "Order Date": "=",
-            "Address": "=",
-            "LINK": "=",
-            "VOTE": "=",
-            "Giá SP": "=",
-            "SL": "=",
-            "VNĐ": "=",
-            "Mail": "=",
-            "Order ID": "=",
-            "TRACK": "="
+            "TIKTOK Order ID": "={{ $('Loop Over Items1').item.json['TIKTOK Order ID'] }}"
           },
           "matchingColumns": [
             "TIKTOK Order ID"
@@ -1148,7 +1138,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             },
             {
               "id": "TIKTOK Order ID",
@@ -1168,7 +1159,7 @@
               "display": true,
               "type": "string",
               "canBeUsedToMatch": true,
-              "removed": false
+              "removed": true
             },
             {
               "id": "Address",
@@ -1177,7 +1168,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             },
             {
               "id": "LINK",
@@ -1186,7 +1178,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             },
             {
               "id": "VOTE",
@@ -1195,7 +1188,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             },
             {
               "id": "Giá SP",
@@ -1204,7 +1198,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             },
             {
               "id": "SL",
@@ -1213,7 +1208,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             },
             {
               "id": "VNĐ",
@@ -1222,7 +1218,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             },
             {
               "id": "Mail",
@@ -1231,7 +1228,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             },
             {
               "id": "Order ID",
@@ -1240,7 +1238,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             },
             {
               "id": "TRACK",
@@ -1249,7 +1248,8 @@
               "defaultMatch": false,
               "display": true,
               "type": "string",
-              "canBeUsedToMatch": true
+              "canBeUsedToMatch": true,
+              "removed": true
             },
             {
               "id": "Checker",
@@ -1259,7 +1259,7 @@
               "display": true,
               "type": "string",
               "canBeUsedToMatch": true,
-              "removed": false
+              "removed": true
             },
             {
               "id": "Trạng thái đang giao xử lý",
@@ -1278,7 +1278,7 @@
               "display": true,
               "type": "string",
               "canBeUsedToMatch": true,
-              "removed": false
+              "removed": true
             }
           ],
           "attemptToConvertTypes": false,
@@ -2055,6 +2055,6 @@
   "staticData": null,
   "tags": [],
   "triggerCount": 0,
-  "updatedAt": "2025-05-02T04:53:16.000Z",
-  "versionId": "bd6fb8cc-39e9-495f-a8f2-8cdd5124ff02"
+  "updatedAt": "2025-05-02T05:12:41.000Z",
+  "versionId": "5a9ca8cc-1835-4eda-b945-f624e58e456d"
 }
